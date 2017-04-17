@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScappleDocument Version="1.1" ID="D29DF696-2F2B-4A85-B505-BB8E1DB7F838">
+    <Notes>
+        <Note ID="46" FontSize="12.0" Position="1041.0,822.0" Width="197.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Thing+ 개발 대기 시간이 발생합니다</String>
+        </Note>
+        <Note ID="0" FontSize="12.0" Position="123.0,433.0" Width="29.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.819323 0.034386 0.054097</Fill>
+            </Appearance>
+            <String>시작</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+            <PointsToNoteIDs>2</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="199.0,433.0" Width="195.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>사용하려는 하드웨어를 가지고 계신가요</String>
+            <ConnectedNoteIDs>0, 14, 51</ConnectedNoteIDs>
+            <PointsToNoteIDs>14, 51</PointsToNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="529.0,652.0" Width="239.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>해당 하드웨어가 게이트웨이 역할이 가능한가요? 
+또는 사용하실 게이트웨이가 있으신가요?</String>
+            <ConnectedNoteIDs>21, 25, 51, 58</ConnectedNoteIDs>
+            <PointsToNoteIDs>21, 58</PointsToNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="1156.0,851.0" Width="181.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border>0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>게이트웨이가 Thing+로 직접 연동</String>
+            <ConnectedNoteIDs>24, 38</ConnectedNoteIDs>
+            <PointsToNoteIDs>24</PointsToNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="436.0,433.0" Width="255.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Thing+를 지원하는 많은 장비중에서 선택해주세요</String>
+            <ConnectedNoteIDs>2, 16, 19</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="482.0,226.0" Width="163.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>Thing+ 가 지원하는 장비 리스트</String>
+            <ConnectedNoteIDs>14</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="1603.0,433.0" Width="174.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.819323 0.034386 0.054097</Fill>
+            </Appearance>
+            <String>IoT를 위한 장비 준비가 끝났습니다</String>
+            <ConnectedNoteIDs>14, 24</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="808.0,657.0" Width="244.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Thing+ 가 지원하는 게이트웨이를 선택해주세요</String>
+            <ConnectedNoteIDs>4, 23-24</ConnectedNoteIDs>
+            <PointsToNoteIDs>24</PointsToNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="827.0,224.0" Width="194.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>Thing+ 가 지원하는 게이트웨이 리스트</String>
+            <ConnectedNoteIDs>21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="24" FontSize="12.0" Position="1268.0,751.0" Width="221.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>게이트웨이와 Thing+ 간
+연동을 위해 추가 개발이 필요할 수 있습니다. 
+가이드를 참조하여 계속 진행해주세요</String>
+            <ConnectedNoteIDs>5, 19, 21, 29</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="549.0,508.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>고객님의 센서를 위해 
+Thing+에 추가 개발이 필요합니다 
+해당 문서를 읽고 내용을 채워주세요(sensorType, SensorDriver)</String>
+            <ConnectedNoteIDs>4, 26, 51</ConnectedNoteIDs>
+            <PointsToNoteIDs>4</PointsToNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="576.0,308.0" Width="146.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>센서 정의를 위한 고객입력 폼</String>
+            <ConnectedNoteIDs>25, 50</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="1293.0,225.0" Width="116.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>게이트웨이 연동가이드</String>
+            <ConnectedNoteIDs>24, 30</ConnectedNoteIDs>
+        </Note>
+        <Note ID="30" FontSize="12.0" Position="1454.0,225.0" Width="243.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>게이트웨이를 Thing+에 등록하기 위한 API가이드</String>
+            <ConnectedNoteIDs>29</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="944.0,751.0" Width="178.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>고객님의 게이트웨이를 위해 
+Thing+에 추가 개발이 필요합니다 
+해당 문서를 읽고 내용을 채워주세요
+(gatewayModel)</String>
+            <ConnectedNoteIDs>33, 38, 58</ConnectedNoteIDs>
+            <PointsToNoteIDs>38</PointsToNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="932.0,306.0" Width="202.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>게이트웨이모델 정의를 위한 고객 입력 폼</String>
+            <ConnectedNoteIDs>32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="974.0,968.0" Width="119.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>별도 문의가 필요합니다</String>
+            <ConnectedNoteIDs>37</ConnectedNoteIDs>
+        </Note>
+        <Note ID="37" FontSize="12.0" Position="937.0,905.0" Width="199.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border>0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>게이트웨이가 다른 IoT 플렛폼으로 연동</String>
+            <ConnectedNoteIDs>36, 38</ConnectedNoteIDs>
+            <PointsToNoteIDs>36</PointsToNoteIDs>
+        </Note>
+        <Note ID="38" FontSize="12.0" Position="967.0,850.0" Width="133.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>연동 방법을 확인해 주세요</String>
+            <ConnectedNoteIDs>5, 32, 37, 58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="394.0,417.0" Width="45.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>아니요</String>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="285.0,470.0" Width="20.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>네</String>
+        </Note>
+        <Note ID="42" FontSize="12.0" Position="658.0,712.0" Width="20.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>네</String>
+        </Note>
+        <Note ID="43" FontSize="12.0" Position="656.0,601.0" Width="206.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Thing+ 개발 대기시간이 발생합니다</String>
+        </Note>
+        <Note ID="44" FontSize="12.0" Position="770.0,636.0" Width="43.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>아니요</String>
+        </Note>
+        <Note ID="47" FontSize="12.0" Position="688.0,415.0" Width="74.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>장비 선택완료</String>
+        </Note>
+        <Note ID="48" FontSize="12.0" Position="1131.0,695.0" Width="74.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>장비 선택완료</String>
+        </Note>
+        <Note ID="50" FontSize="12.0" Position="659.0,272.0" Width="197.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="1">0.819323 0.034386 0.054097</Border>
+            </Appearance>
+            <String>actuator를 고려해서 폼을 만들어주세요</String>
+            <ConnectedNoteIDs>26</ConnectedNoteIDs>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="228.0,518.0" Width="135.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>해당 하드웨어가 Thing+에
+등록 되어있는 장비인가요</String>
+            <ConnectedNoteIDs>2, 4, 25</ConnectedNoteIDs>
+            <PointsToNoteIDs>4, 25, 59</PointsToNoteIDs>
+        </Note>
+        <Note ID="55" FontSize="12.0" Position="448.0,531.0" Width="45.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>아니요</String>
+        </Note>
+        <Note ID="56" FontSize="12.0" Position="419.0,576.0" Width="20.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>네</String>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="547.0,768.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>해당 게이트웨이가 Thing+에 등록 되어있는 장비인가요</String>
+            <ConnectedNoteIDs>4, 32, 38</ConnectedNoteIDs>
+            <PointsToNoteIDs>32, 38, 62</PointsToNoteIDs>
+        </Note>
+        <Note ID="60" FontSize="12.0" Position="830.0,778.0" Width="43.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>아니요</String>
+        </Note>
+        <Note ID="63" FontSize="12.0" Position="813.0,810.0" Width="20.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>네</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>0, 2, 4, 16, 19, 23, 26, 29-30, 32-33, 36, 38, 41-42, 47-48, 50-51, 56, 63</AutoFit>
+    <NoteStyles>
+        <Style Name="Blue Bubble" ID="84128187-43C3-47FC-A319-11CBC3E9CABC" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="F1C9B9AD-B299-49A4-9C64-A138FDE764DA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="0351B01C-F257-4E1F-B66F-BF13D8AC6A3D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882328 0.80198</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="F631E640-7127-407B-ADAF-5880F2BB82C4" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="FCBCABA5-712D-4602-9A5C-5532D3DD075D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="E657C9A4-6BA0-4FC1-AF29-B4A1FDF8DF5A" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Yellow Bubble" ID="EEF4450F-01DB-4F97-A644-E74D6536A979" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>1.0 1.0 1.0</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="595.275551,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

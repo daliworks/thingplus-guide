@@ -4,10 +4,13 @@
 * [용어 설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#용어-설명)
 * [장비 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#장비-연동-플로우)
 * [임베디드 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#임베디드-가이드)
-* [oAuth/앱 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#oAuth/앱-연동-플로우)
+* [oAuth/앱 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#oauth앱-연동-플로우)
 * [oAuth 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#장비-연동-플로우)
-* [API 문서](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#API-문서)
-* [타 IoT 플렛폼 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#타-IoT-플렛폼-연동-플로우)
+* [API 문서](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#api-문서)
+* [타 IoT 플렛폼 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#타-iot-플렛폼-연동-플로우)
+* [Portal 사용 가이드]()
+* [Changes history]()
+* [License]()
 
 ### 용어 설명
 - Sensor: 특정 값을 수집하거나 상태를 감지하는 HW. 외부로 부터 입력을 받는것은 불가능하고 전송만 가능하다.  (ex: 온도, 습도 센서 등)
@@ -37,4 +40,10 @@
 ### API 문서
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
-## 타 IoT 플렛폼 연동 플로우
+### 타 IoT 플렛폼 연동 플로우
+
+### Portal 사용 가이드
+
+### Changes history
+
+### License

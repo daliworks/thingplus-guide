@@ -2,18 +2,23 @@
 
 ## Conents
 * [용어 설명](#용어-설명)
-* [용어 설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#용어-설명)
-* [장비 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#장비-연동-플로우)
-* [임베디드 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#임베디드-가이드)
-* [oAuth/앱 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#oauth앱-연동-플로우)
-* [oAuth 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#oauth-가이드)
-* [API 문서](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#api-문서)
-* [타 IoT 플렛폼 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#타-iot-플렛폼-연동-플로우)
-* [Portal 사용 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#portal-사용-가이드)
-* [Changes history](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#changes-history)
-* [License](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#license)
+* [장비 연동 플로우](#장비-연동-플로우)
+* [임베디드 가이드](#임베디드-가이드)
+* [oAuth/앱 연동 플로우](#oauth앱-연동-플로우)
+* [oAuth 가이드](#oauth-가이드)
+* [API 문서](#api-문서)
+* [타 IoT 플렛폼 연동 플로우](#타-iot-플렛폼-연동-플로우)
+* [Portal 사용 가이드](#portal-사용-가이드)
+* [Changes history](#changes-history)
+* [License](#license)
 
-### 용어 설명
+## 1. 용어 설명
+
+| 용어 | 설명 | 예
+| --- | --- | ----
+| Sensor | 특정 값을 수집/전송/상태를 감지하는 HW. Actuator를 포함한 모든 센서를 Sensor로 정의 | 온도, 습도 센서 등  
+
+
 - Sensor: 특정 값을 수집/전송/상태를 감지하는 HW. Actuator를 포함한 모든 센서를 Sensor로 정의
     - 온도, 습도 센서 등
 - Actuator: 외부 입력을 받아 특정한 동작이 가능한 HW
@@ -29,19 +34,19 @@
   - Site Admin: 게이트웨이의 관리(추가, 삭제, 변경)가 가능한 User. 
   - End User: Site admin에게 게이트웨이 또는 센서의 권한을 할당받은 유저. 게이트웨이관리가 불가능.
   
-### 장비 연동 플로우
+## 2. 장비 연동 플로우
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[kr]flow_for_hardware_v1.1.pdf)
 
-### 임베디드 가이드
+## 3. 임베디드 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
-### oAuth/앱 연동 플로우
+## 4. oAuth/앱 연동 플로우
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[kr]flow_for_app_with_oauth2_v1.1.pdf)
 
-### oAuth 가이드
+## 5. oAuth 가이드
 
 
-### API 문서
+## 6. API 문서
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
 #### Test
@@ -52,14 +57,14 @@
 #### Thing+ Error Code
 
 
-### 타 IoT 플렛폼 연동 플로우
+## 7. 타 IoT 플렛폼 연동 플로우
 
 
-### Portal 사용 가이드
+## 8. Portal 사용 가이드
 
 
-### Changes history
+## 9. Changes history
 
 
 
-### License
+## 10. License

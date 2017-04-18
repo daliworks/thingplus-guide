@@ -1,4 +1,6 @@
-[Site](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | [contact](contact@thingplus.net)
+[Site](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | <contact@thingplus.net>
+
+
 ![thingplus_logo](./doc/images/tp_logo.png)
 
 

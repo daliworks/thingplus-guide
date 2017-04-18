@@ -15,9 +15,9 @@ asdasdasdasdasdasdasd
 
 
 ## Guide
-- [Use English Here](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_en.md)
+- [Use English Here](./doc/README_en.md)
 
-- [Use Korean Here](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md)
+- [Use Korean Here](./doc/README_kr.md)
 
 
 ```

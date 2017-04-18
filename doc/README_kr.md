@@ -1,6 +1,7 @@
 # Thing+ 가이드
 
 ## Conents
+* [용어 설명](#용어-설명)
 * [용어 설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#용어-설명)
 * [장비 연동 플로우](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#장비-연동-플로우)
 * [임베디드 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md#임베디드-가이드)

@@ -1,4 +1,4 @@
-![daliworks_logo](./doc/images/dali-2x.png) | ![thingplus_logo](./doc/images/thingplus-2x.png)
+![thingplus_logo](./doc/images/tp_logo.png)
 
 # Thing+ Developer Guide
 [Site](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | [contact](contact@thingplus.net)

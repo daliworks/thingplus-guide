@@ -1,21 +1,23 @@
 # Thing+ Guide
-용어설명을 읽고 플로우를 따라 개발을 진행해보세요.
-아직 장비가 없다해도 간단한 시뮬레이터를 제공하고 있습니다.
+Read the glossary and follow the flow to develop.
+Even if you do not have equipment yet, we provide a simple simulator.
 
-`SandBox` 는 상용서비스에 미반영된 기능이 일부 있을 수 있으며 중단 될 수 있습니다.<br>
-정식 서비스는 별도로 문의를 해주세요 <contact@thingplus.net>
+`SandBox` may have some incomplete features in commercial services and may be temporarily unavailable
+
+Sometime `SandBox` have some incomplete features. `SandBox` Service may be discontinued without notice.
+<br>Please contact us for commercial service <contact@thingplus.net>
 
 ## Conents
-* [용어 설명](#1-용어-설명)
-* [장비 연동 플로우](#2-장비-연동-플로우)
-* [임베디드 개발 가이드](#3-임베디드-개발-가이드)
-* [oAuth/앱 연동 플로우](#4-oauth앱-연동-플로우)
-* [oAuth 개발 가이드](#5-oauth-개발-가이드)
-* [API 문서](#6-api-문서)
-* [Portal 사용 가이드](#7-portal-사용-가이드)
-* [타 IoT 플렛폼 연동 플로우](#8-타-iot-플렛폼-연동-플로우)
+* [1. Glossary](#1-glossary)
+* [2. Flow for interworking hardware(embedded)](#2-flow-for-interworking-hardware(embedded))
+* [3. embedded Development Guide](#3-임베디드-개발-가이드)
+* [4. Flow for interworking oAuth/App](#4-oauth앱-연동-플로우)
+* [5. oAuth Development Guide](#5-oauth-개발-가이드)
+* [6. API document](#6-api-문서)
+* [7. Portal Use Guide](#7-portal-사용-가이드)
+* [Flow for interworking another Iot platform](#8-타-iot-플렛폼-연동-플로우)
 
-## 1. 용어 설명
+## 1. Glossary
 
 | Term | Description | example
 | --- | --- | ----
@@ -32,23 +34,22 @@
 | 규칙 | 특정 조건에 따라서 원하는 기능을 자동으로 실행하는 기능 | 온도 10도 이하일 때 보일러 turn on
 
 
-#### 1.1 추가 설명
-
-1. Service/Site 예시
-    * 학교의 각 교실의 온/습도를 모니터링 IoT
-        * Service - 학교 온습도 서비스
-        * Site - 각각의 교실을 사이트로 구분
-        * Service Admin - 해당 서비스를 제공하는 업체 관리자
-        * Site Admin - 각 교실에 측정기를 관리 하는 관리자 (ex: 선생님)
-        * User - 모든 학생. 각 교실별 온도를 웹사이트/앱을 통해 확인
-    * 아파트의 각 동별/호수별 전기사용량을 측정/분석하는 IoT
-        * Service - 전기사용량 서비스
-        * Site - 아파트 각 동을 사이트로 구분
-        * Service Admin - 해당 서비스를 제공하는 업체 관리자
-        * Site Admin - 각 동별 전기흐름을 관리하는 관리실 직원
-        * User - 아파트 거주민. 본인의 집 전기 사용량을 확인
+#### 1.1 Additional explanation
+1. example about Service/Site
+    * Monitor temperature / humidity of each classroom in school IoT
+        * Service - the school temperature / humidity management system service
+        * Site - each classroom
+        * Service Admin - Business managers who provide services
+        * Site Admin - Manager who manages the hw in each classroom (ex: teacher or caretaker)
+        * User - All Student. Check temperature for each classroom through website / app
+    * IoT to measure/analyze electricity usage by apartments
+        * Service - Real-time electricity usage service
+        * Site - each branch of apartments
+        * Service Admin - Business managers who provide services
+        * Site Admin - Electrical staff managing the power/usage of electricity by each branch
+        * User - Apartment resident. Check your home electricity usage
 1. example about Gateway/Device/Sensor/Tag
-    * 라즈베리파이 IoT 스타터 킷을 이용한 Home IoT. 이때 온습도 센서가 2개씩 있다고 가정
+    * Home IoT with RaspberryPi and IoT Starter Kit. Assume that there are two temperature and humidity sensors
         * Sensor - temperature sensor, humidity sensor
         * Actuator - Led sensor that can be turn on/off
         * Device - RaspberryPi Starter Kit

@@ -9,13 +9,13 @@ Sometime `SandBox` have some incomplete features. `SandBox` Service may be disco
 
 ## Conents
 * [1. Glossary](#1-glossary)
-* [2. Flow for interworking hardware(embedded)](#2-flow-for-interworking-hardware(embedded))
-* [3. embedded Development Guide](#3-임베디드-개발-가이드)
-* [4. Flow for interworking oAuth/App](#4-oauth앱-연동-플로우)
-* [5. oAuth Development Guide](#5-oauth-개발-가이드)
-* [6. API document](#6-api-문서)
-* [7. Portal Use Guide](#7-portal-사용-가이드)
-* [Flow for interworking another Iot platform](#8-타-iot-플렛폼-연동-플로우)
+* [2. Flow for interworking hardware(embedded)](#2-flow-for-interworking-hardwareembedded)
+* [3. embedded Development Guide](#3-embedded-development-guide)
+* [4. Flow for interworking oAuth/App](#4-flow-for-interworking-oauthapp)
+* [5. oAuth Development Guide](#5-oauth-development-guide)
+* [6. API document](#6-api-document)
+* [7. Portal Use Guide](#7-portal-use-guide)
+* [Flow for interworking another Iot platform](#8-flow-for-interworking-another-iot-platform)
 
 ## 1. Glossary
 
@@ -25,13 +25,13 @@ Sometime `SandBox` have some incomplete features. `SandBox` Service may be disco
 | Actuator | the hw to input command from outside | camera, switch
 | Device | Group of Sensor. Sometime the group is virtual but some time is real<br> Gateway have to composed by at least one device |
 | Gateway | HW / SW to communicate with server <br> send sensor value/status to server or forward command from server to sensor |
-| Tag | 여러 디바이스/게이트웨이에 흩어져 존재하는 Sensor를 그룹화하여 관리 할 수 있는 단위 |
-| oAuth2 | 권한 인증을 수행할 수 있는 표준 Open Protocol | 
-| Service | IoT서비스를 하려는 기업이 제공하는 전체 서비스 |
-| Site | 서비스 내부의 관리 그룹 또는 유저의 그룹 |
-| 관리자 | 서비스 또는 사이트를 관리하는 관리자 |
-| 사용자 | Site에 등록 되어있는 모든 사용자 |
-| 규칙 | 특정 조건에 따라서 원하는 기능을 자동으로 실행하는 기능 | 온도 10도 이하일 때 보일러 turn on
+| Tag | Units that can be grouped and managed by existing sensors scattered across multiple devices / gateways |
+| oAuth2 | The standard Open Protocol can be performed authorization authentication | 
+| Service | Iot Service which offered to customer |
+| Site | A management group inside a service or a group of users |
+| Admin | An administrator who manages a service or site |
+| User | Anyone registered on the site|
+| Rule | a feature to automatically execute the function according to specific conditions | When the temperature is less than 10 degrees Boiler turn on
 
 
 #### 1.1 Additional explanation

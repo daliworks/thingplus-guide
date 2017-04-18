@@ -1,8 +1,9 @@
+[Site](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | [contact](contact@thingplus.net)
 ![thingplus_logo](./doc/images/tp_logo.png)
 
 
 # Thing+ Developer Guide
-[Site](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | [contact](contact@thingplus.net)
+
 
 목적 설명! 영어
 Thingplus asdasdasd asdasdasdad asdasdasdasdasdasdasdasdasd asd asdasd
@@ -11,8 +12,6 @@ asdasdasd
 
 asdasdasdasdasdasdasdasdasdasdasdasdasdasd
 asdasdasdasdasdasdasd
-
-## Who
 
 
 ## Guide

@@ -2,7 +2,7 @@
 3rd party에서 Thing+ 자원을(resource) 이용하기 위한 authentication/authorization 획득 과정에 대한 가이드 
 
 ## Before description
-![oauth](https://github.com/daliworks/thingplus-portal/blob/master/docs/images/oauth2.png "oauth")
+![oauth](./images/oauth2.png "oauth")
 
 
 ## 사전 준비

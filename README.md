@@ -14,10 +14,15 @@ We hope this guide helps brings your IoT projects to life
 - [Use Korean Here](./doc/README_kr.md)
 
 
-[website](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | <contact@thingplus.net>
+
+
+---
 
 ```
 Copyright (c) 2015, Daliworks. All rights reserved.
 Reproduction and/or distribution in source and binary forms
 without the written consent of Daliworks, Inc. is prohibited.
 ```
+
+---
+[website](https://thingplus.net/) | [facebook](https://www.facebook.com/thingplus) | [youtube](https://www.youtube.com/channel/UCa7T7hj3F0x7brM6htUasyQ) | <contact@thingplus.net>

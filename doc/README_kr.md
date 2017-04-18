@@ -14,22 +14,22 @@
 
 ## 1. 용어 설명
 
-| 용어 | 설명 | 예
+| 용어 | 용어 설명 | 예
 | --- | --- | ----
 | Sensor | 특정 값을 수집/전송/상태를 감지하는 HW. Actuator를 포함한 모든 센서를 Sensor로 정의 | 온도, 습도 센서 등  
+| Actuator | 외부 입력을 받아 특정한 동작이 가능한 HW | LED Actuactor, on/off Actuator, Camera Actuator
+| Device | 센서의 그룹. 실제 HW일수 있음. 게이트웨이는 최소 1개 이상의 디바이스를 처리 | 
+| Gateway | 서버와 통신을 하는 HW/SW. 센서값/상태를 서버로 전달하거나 서버로부터 센서로 명령을 전달 |
+| Tag | 여러 디바이스/게이트웨이에 흩어져 존재하는 Sensor를 그룹화하여 관리 할 수 있는 단위 |
+| oAuth2 | 권한 인증을 수행할 수 있는 표준 Open Protocol  
+  ![oauth](https://github.com/daliworks/thingplus-guide/blob/master/doc/images/oauth2.png "oauth") |
+| Service | ddd | aa
+| Site | aa | aaa
+| 관리자 | ㅁㅁㅁ | 
+| 사용자 | ㅁㅁㅁ |
+| 규칙 | ㅁㅁㅁ | 
 
-
-- Sensor: 특정 값을 수집/전송/상태를 감지하는 HW. Actuator를 포함한 모든 센서를 Sensor로 정의
-    - 온도, 습도 센서 등
-- Actuator: 외부 입력을 받아 특정한 동작이 가능한 HW
-    - LED Actuactor, on/off Actuator, Camera Actuator
-- Device: 센서의 그룹. 실제 HW일수 있음. 게이트웨이는 최소 1개 이상의 디바이스를 처리
-- Gateway: 서버와 통신을 하는 HW/SW.
-    - 센서값/상태를 서버로 전달. 서버로부터 센서로 명령을 전달
-- Tag: 여러 디바이스/게이트웨이에 흩어져 존재하는 Sensor를 그룹화하여 관리 할 수 있는 단위
-- oAuth2 : 권한 인증을 수행할 수 있는 표준 Open Protocol  
-  ![oauth](https://github.com/daliworks/thingplus-guide/blob/master/doc/images/oauth2.png "oauth")
-- User Type  
+User Type  
   - Servive Admin: 특정 IoT서비스에 대한 관리를 하는 슈퍼 유저.
   - Site Admin: 게이트웨이의 관리(추가, 삭제, 변경)가 가능한 User. 
   - End User: Site admin에게 게이트웨이 또는 센서의 권한을 할당받은 유저. 게이트웨이관리가 불가능.

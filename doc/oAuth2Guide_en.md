@@ -28,12 +28,12 @@ https://oauth.net/2/
 
 
 
-## Resource Owner Password Credentials 방식
-
+## [Resource Owner Password Credentials 방식](./oauth2.md#resource-owner-password-credentials-grant)
 ```
 1. token을 요청한다
 1. 획득한 토큰을 header에 넣어 API를 사용한다
 1. 위의 과정을 필요한 서버에서 개발하도록 한다
 ```
 
-## [상세 설명](./oauth2.md)
+## 상세 설명
+[Link](./oauth2.md)

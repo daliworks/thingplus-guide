@@ -1,83 +1,83 @@
 # Thing+ Guide
-Read the glossary and follow the flow to develop.
-Even if you do not have equipment yet, we provide a simple simulator.
+Read the glossary and follow the flow to develop with Thing+.
+Even if you do not have equipment yet, we provide a simple virtual gateway and several sensor simulators.
 
-`SandBox` may have some incomplete features in commercial services and may be temporarily unavailable
+The `SandBox` may have some incomplete features compared with the commercial site and may be temporarily unavailable.
 
-Sometime `SandBox` have some incomplete features. `SandBox` Service may be discontinued without notice.
-<br>Please contact us for commercial service <contact@thingplus.net>
+From time to time, the `SandBox` will also have new features that are still in testing. Additionally, the `SandBox` Service may be discontinued without notice, so please keep this in mind when using it.
+<br>Please contact us here if you are ready to begin using Thing+ for commercial service - <contact@thingplus.net>
 
 ## Conents
 * [1. Glossary](#1-glossary)
-* [2. Flow for interworking hardware(embedded)](#2-flow-for-interworking-hardwareembedded)
-* [3. embedded Development Guide](#3-embedded-development-guide)
-* [4. Flow for interworking oAuth/App](#4-flow-for-interworking-oauthapp)
+* [2. Workflow for hardware interlock with Thing+(embedded)](#2-flow-for-interworking-hardwareembedded)
+* [3. Embedded Development Guide](#3-embedded-development-guide)
+* [4. Workflow for utilizing oAuth/App](#4-flow-for-interworking-oauthapp)
 * [5. oAuth Development Guide](#5-oauth-development-guide)
-* [6. API document](#6-api-document)
-* [7. Portal Use Guide](#7-portal-use-guide)
-* [Flow for interworking another Iot platform](#8-flow-for-interworking-another-iot-platform)
+* [6. API documentation](#6-api-document)
+* [7. Portal Usage Guide](#7-portal-use-guide)
+* [8. Flow for interlocking with another Iot platform](#8-flow-for-interworking-another-iot-platform)
 
 ## 1. Glossary
 
 | Term | Description | example
 | --- | --- | ----
-| Sensor | the hw to collect some value or state<br>Defiend All sensor include Actuator | temperature, humidity
-| Actuator | the hw to input command from outside | camera, switch
-| Device | Group of Sensor. Sometime the group is virtual but some time is real<br> Gateway have to composed by at least one device |
-| Gateway | HW / SW to communicate with server <br> send sensor value/status to server or forward command from server to sensor |
-| Tag | Units that can be grouped and managed by existing sensors scattered across multiple devices / gateways |
-| oAuth2 | The standard Open Protocol can be performed authorization authentication | 
-| Service | Iot Service which offered to customer |
-| Site | A management group inside a service or a group of users |
+| Sensor | hardware used to collect some value or state<br> | ex) temperature, humidity
+| Actuator | hardware designed to receive a command and perform an action | ex) camera, switch
+| Device | A group of Sensors. Sometime the group is virtual but most often is real - this can also be referred to as an "Edge Node", "Node","Sensor Node", or "Sensor Device" <br> Gateways have to include at least one device (in Thing+, not neccessarily physically) |
+| Gateway | HW / SW that allows communication with Thing+ servers <br> Sends sensor values/status to the server or forwards commands from the server to sensors/actuators |
+| Tag | "Tags" are identifiers used to group and manage sensors/actuators scattered across multiple devices / gateways |
+| oAuth2 | A standard Open Protocol that can be used to perform authorization and authentication on Thing+ | 
+| Service | A "Service" is the highest organizational level offered to customers and includes complete administration functions (dashboard locking, sensor selection, etc..). A service can include many "Sites", and in those sites, many gateways, users, sensors, etc.. |
+| Site | A division inside of a service designed to allow for management of specific groups of users, devices, etc.. - Site's can have their own administrators. <br> ex) A hospital may be a single "site", or may be divided into multiple sites, each designed to represent a specific physical location, or a specific user group. |
 | Admin | An administrator who manages a service or site |
-| User | Anyone registered on the site|
-| Rule | a feature to automatically execute the function according to specific conditions | When the temperature is less than 10 degrees Boiler turn on
+| User | Anyone registered directly to a site are "users"|
+| Rule | A feature to automatically execute a function/action according to specific conditions and triggers | ex) When the temperature is less than 10 degrees, send a command signal to the boiler actuator
 
 
 #### 1.1 Additional explanation
-1. example about Service/Site
-    * Monitor temperature / humidity of each classroom in school IoT
-        * Service - the school temperature / humidity management system service
-        * Site - each classroom
-        * Service Admin - Business managers who provide services
+1. Service/Site example
+    * Monitor temperature / humidity of each classroom in a school's IoT solution
+        * Service - represent the school's entire Thing+ related temperature / humidity management system
+        * Site - includes all of the users, devices, and gateways for each classroom
+        * Service Admin - Business manager and/or IT manager
         * Site Admin - Manager who manages the hw in each classroom (ex: teacher or caretaker)
-        * User - All Student. Check temperature for each classroom through website / app
-    * IoT to measure/analyze electricity usage by apartments
-        * Service - Real-time electricity usage service
-        * Site - each branch of apartments
-        * Service Admin - Business managers who provide services
-        * Site Admin - Electrical staff managing the power/usage of electricity by each branch
-        * User - Apartment resident. Check your home electricity usage
+        * User - All Students. Can check temperatures for each classroom through PC/Smartphone/etc..
+    * IoT solution to measure/analyze electricity usage by apartments
+        * Service - Real-time electricity usage across a city's apartments
+        * Site - each single apartment complex
+        * Service Admin - City-wide apartment director/manager
+        * Site Admin - Electrical staff managing the power/usage of electricity of each apartment complex
+        * User - Apartment residents. May check their home electricity usage
         
-1. example about Gateway/Device/Sensor/Tag
-    * Home IoT with RaspberryPi and IoT Starter Kit. Assume that there are two temperature and humidity sensors
+1b. Example regarding Gateway/Device/Sensor/Tag usage
+    * Home IoT with RaspberryPi and an IoT Starter Kit. Assume that there are two temperature and humidity sensors
         * Sensor - temperature sensor, humidity sensor
-        * Actuator - Led sensor that can be turn on/off
+        * Actuator - Led sensor that can be turned on/off
         * Device - RaspberryPi Starter Kit
         * Gateway - RaspberryPi
-        * Tag - temperature sensor 1, humidity sensor1 Tagged `Room`, temperature sensor 2, humidity sensor2 Taggged `Living Room`
+        * Tag - temperature sensor 1, humidity sensor 1 both tagged with `Room` (a geo-local tag basically), temperature sensor 2, humidity sensor2 Tagged `Living Room` - though this, easily create rules/actions on a per-room basis
 
 
-## 2. Flow for interworking hardware(embedded)
+## 2. Workflow for hardware interlock with Thing+(embedded)
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[en]flow_for_hardware_v1.1.pdf)
 
-## 3. embedded Development Guide
+## 3. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 4. Flow for interworking oAuth/App
+## 4. Workflow for utilizing oAuth/App 
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[en]flow_for_app_with_oauth2_v1.1.pdf)
 
 ## 5. oAuth Development Guide
 [Link](./oAuth2Guide_en.md)
 
-## 6. API document
+## 6.  API documentation
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
 #### 6.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-#### 6.2 Response Status Code
-basically the http response status code is the same
+#### 6.2 Response Status Codes
+The http response status code is the same as here.
 
 | StatusCode | Description
 | --- | ---
@@ -98,8 +98,8 @@ basically the http response status code is the same
 | 600 | Gateway Error
 
 
-#### 6.3 API Error Code
-Thing+ API Error Category & Code is `string`
+#### 6.3 API Error Codes
+Thing+ API Error Categories & Codes are `strings`
 
 | Category | Code | Description
 | --- | --- | ---
@@ -122,15 +122,15 @@ Thing+ API Error Category & Code is `string`
 | DB_ERROR | NOT_FOUND_IN_ITEM | internal error
 | DB_ERROR | DB_INTERNAL_ERROR | internal error
 | BILLING_ERROR | BILLING | need increase billing
-| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receive result from gateway
+| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receiving result from gateway
 | UNKNOWN | - |
 
 
 
-## 7. Portal Use Guide
+## 7. Portal Usage Guide
 [Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
-## 8. Flow for interworking another Iot platform
+## 8. Flow for interlocking with another Iot platform
 [To be provided later]
 
 ## Changes history

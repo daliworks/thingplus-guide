@@ -9,13 +9,13 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 ## Conents
 * [1. Glossary](#1-glossary)
-* [2. Workflow for hardware interlock with Thing+(embedded)](#2-flow-for-interworking-hardwareembedded)
+* [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
 * [3. Embedded Development Guide](#3-embedded-development-guide)
-* [4. Workflow for utilizing oAuth/App](#4-flow-for-interworking-oauthapp)
+* [4. Workflow for utilizing oAuth/App](#4-workflow-for-utilizing-oauthapp)
 * [5. oAuth Development Guide](#5-oauth-development-guide)
-* [6. API documentation](#6-api-document)
-* [7. Portal Usage Guide](#7-portal-use-guide)
-* [8. Flow for interlocking with another Iot platform](#8-flow-for-interworking-another-iot-platform)
+* [6. API documentation](#6--api-documentation)
+* [7. Portal Usage Guide](#7-portal-usage-guide)
+* [8. Flow for interlocking with another Iot platform](#8-flow-for-interlocking-with-another-iot-platform)
 
 ## 1. Glossary
 

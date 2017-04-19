@@ -1,258 +1,245 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ScappleDocument Version="1.1" ID="AF24D07B-AD83-4F49-89E7-5D02FE9994E5">
     <Notes>
-        <Note ID="0" FontSize="12.0" Position="218.0,226.0" Width="29.0">
+        <Note ID="0" FontSize="12.0" Position="192.0,235.0" Width="64.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2"></Border>
                 <Fill>0.819323 0.034386 0.054097</Fill>
             </Appearance>
-            <String>시작</String>
+            <String>Start</String>
             <ConnectedNoteIDs>1</ConnectedNoteIDs>
             <PointsToNoteIDs>1</PointsToNoteIDs>
         </Note>
-        <Note ID="1" FontSize="12.0" Position="335.0,219.0" Width="177.0">
+        <Note ID="1" FontSize="12.0" Position="310.0,209.0" Width="177.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Do you have app/website for service? or did you have a plan to create?</String>
+            <String>모바일 앱 / 별도 웹사이트가 있거나 
+제작할 계획인가요?</String>
             <ConnectedNoteIDs>0, 9, 21</ConnectedNoteIDs>
             <PointsToNoteIDs>9, 21</PointsToNoteIDs>
         </Note>
-        <Note ID="9" FontSize="12.0" Position="586.039062,213.0" Width="200.0">
+        <Note ID="9" FontSize="12.0" Position="1004.0,202.0" Width="200.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Use Thing+ Portal. 
-It provides features for users as well as features for administrators</String>
+            <String>Thing+ 포탈을 이용해보세요. 사용자를 위한 기능 뿐아니라 관리자를 위한 기능도 제공 하고 있습니다</String>
             <ConnectedNoteIDs>1, 10</ConnectedNoteIDs>
         </Note>
-        <Note ID="10" FontSize="12.0" Position="618.0,147.0" Width="119.0">
+        <Note ID="10" FontSize="12.0" Position="1035.960938,140.0" Width="135.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>Portal Usage Guide</String>
+            <String>Thing+ Portal 이용가이드</String>
             <ConnectedNoteIDs>9</ConnectedNoteIDs>
-            <Formatting>
-                <FormatRange Bold="Yes">0,18</FormatRange>
-            </Formatting>
         </Note>
-        <Note ID="12" FontSize="12.0" Position="482.0,465.0" Width="164.0">
+        <Note ID="12" FontSize="12.0" Position="475.808594,465.957031" Width="164.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>I'll work through a separate server.</String>
+            <String>앱/웹사이트를 위한 
+별도 서버를 통해 연동하겠습니다</String>
             <ConnectedNoteIDs>20, 25</ConnectedNoteIDs>
             <PointsToNoteIDs>20</PointsToNoteIDs>
         </Note>
-        <Note ID="13" FontSize="12.0" Position="1214.335938,541.875" Width="245.0">
+        <Note ID="13" FontSize="12.0" Position="1335.0,537.0" Width="245.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>You need development to work between your app and Thing +.
-Please refer to guide to develop</String>
+            <String>앱과 Thing+ 간의 연동을 위한 개발이 필요합니다.
+가이드를 참조하여 개발해주세요</String>
             <ConnectedNoteIDs>15, 29-30, 43</ConnectedNoteIDs>
             <PointsToNoteIDs>43</PointsToNoteIDs>
         </Note>
-        <Note ID="15" FontSize="12.0" Position="1211.0,76.0" Width="159.0">
+        <Note ID="15" FontSize="12.0" Position="1371.085938,107.464844" Width="159.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>oAuth Development Guide
- - Authorization Code </String>
+            <String>oAuth 연동가이드 - Authorization Code 방식</String>
             <ConnectedNoteIDs>13</ConnectedNoteIDs>
-            <Formatting>
-                <FormatRange Bold="Yes">0,24</FormatRange>
-            </Formatting>
         </Note>
-        <Note ID="17" FontSize="12.0" Position="1819.0,145.0" Width="185.0">
+        <Note ID="17" FontSize="12.0" Position="1895.382812,146.957031" Width="131.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>API Documentation / Restrictions</String>
+            <String>API 사용가이드/제약 사항</String>
             <ConnectedNoteIDs>33</ConnectedNoteIDs>
         </Note>
-        <Note ID="20" FontSize="12.0" Position="494.0,555.0" Width="191.0">
+        <Note ID="20" FontSize="12.0" Position="486.449219,567.738281" Width="140.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Interworking decision is necessary</String>
+            <String>연동방식 결정이 필요합니다</String>
             <ConnectedNoteIDs>12, 37-38</ConnectedNoteIDs>
             <PointsToNoteIDs>37-38</PointsToNoteIDs>
         </Note>
-        <Note ID="21" FontSize="12.0" Position="434.0,315.0" Width="200.0">
+        <Note ID="21" FontSize="12.0" Position="446.0,319.0" Width="192.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Creation of AuthClient for interworking is required</String>
+            <String>연동을 위한 AuthClient 생성이 필요합니다.</String>
             <ConnectedNoteIDs>1, 23, 25</ConnectedNoteIDs>
             <PointsToNoteIDs>25</PointsToNoteIDs>
         </Note>
-        <Note ID="23" FontSize="12.0" Position="438.0,76.0" Width="159.0">
+        <Note ID="23" FontSize="12.0" Position="463.0,102.0" Width="159.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>oAuth Development Guide
- - create a AuthClient</String>
+            <String>oAuth연동 가이드 - oAuthClient 생성</String>
             <ConnectedNoteIDs>21</ConnectedNoteIDs>
-            <Formatting>
-                <FormatRange Bold="Yes">0,24</FormatRange>
-            </Formatting>
         </Note>
-        <Note ID="25" FontSize="12.0" Position="571.0,393.0" Width="191.0">
+        <Note ID="25" FontSize="12.0" Position="573.0,399.0" Width="140.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Interworking decision is necessary</String>
+            <String>연동방식 결정이 필요합니다</String>
             <ConnectedNoteIDs>12, 21, 26</ConnectedNoteIDs>
+            <PointsToNoteIDs>12, 26</PointsToNoteIDs>
         </Note>
-        <Note ID="26" FontSize="12.0" Position="730.0,457.0" Width="204.0">
+        <Note ID="26" FontSize="12.0" Position="839.957031,461.042969" Width="204.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>I'll work directly with native apps.
-* Users need to register to Thing+ when without a separate server</String>
+            <String>네이티브 앱에서 직접 연동을 하겠습니다.
+* 별도 서버없이 Thing+와 연동시에는
+유저는 반드시 Thing+에 가입해야 합니다</String>
             <ConnectedNoteIDs>25, 29</ConnectedNoteIDs>
             <PointsToNoteIDs>29</PointsToNoteIDs>
         </Note>
-        <Note ID="29" FontSize="12.0" Position="996.0,554.0" Width="148.0">
+        <Note ID="29" FontSize="12.0" Position="1105.0,551.0" Width="152.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Do you need native push?</String>
+            <String>네이티브 push가 필요한가요?</String>
             <ConnectedNoteIDs>13, 26, 30, 38</ConnectedNoteIDs>
             <PointsToNoteIDs>13, 30</PointsToNoteIDs>
         </Note>
-        <Note ID="30" FontSize="12.0" Position="967.0,641.0" Width="212.0">
+        <Note ID="30" FontSize="12.0" Position="1082.171875,635.617188" Width="212.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>0.0 0.0 0.0</TextColor>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Create a cert file and send it to Thing+</String>
+            <String>cert 파일을 생성후 Thing+에 전달해주세요</String>
             <ConnectedNoteIDs>13, 29</ConnectedNoteIDs>
             <PointsToNoteIDs>13</PointsToNoteIDs>
         </Note>
-        <Note ID="33" FontSize="12.0" Position="1555.0,145.0" Width="243.0">
+        <Note ID="33" FontSize="12.0" Position="1631.382812,146.957031" Width="243.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>API Guide for Registering a Gateway on Thing +</String>
+            <String>게이트웨이를 Thing+에 등록하기 위한 API가이드</String>
             <ConnectedNoteIDs>17, 43</ConnectedNoteIDs>
         </Note>
-        <Note ID="35" FontSize="12.0" Position="1143.582031,603.402344" Width="208.0">
+        <Note ID="35" FontSize="12.0" Position="1250.210938,594.574219" Width="180.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
-            <String>Thing+ need to time for development.</String>
+            <String>Thing+ 개발 대기시간이 발생합니다</String>
         </Note>
-        <Note ID="37" FontSize="12.0" Position="561.0,636.957031" Width="246.0">
+        <Note ID="37" FontSize="12.0" Position="359.957031,629.0" Width="246.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>Users do not sign up for Thing + separately.
-The server uses the Thing + API as an administrator and may require per-user management / branching in your server.</String>
+            <String>사용자가 별도로 Thing+에 가입을 하지 않습니다.
+서버는 관리자 권한으로 Thing+ API를 이용하며 사용자별 관리/분기가 필요할 수 있습니다.</String>
             <ConnectedNoteIDs>20, 44</ConnectedNoteIDs>
             <PointsToNoteIDs>44</PointsToNoteIDs>
         </Note>
-        <Note ID="38" FontSize="12.0" Position="717.0,539.0" Width="231.0">
+        <Note ID="38" FontSize="12.0" Position="776.0,621.0" Width="231.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>All users must register Thing +.
-The server calls the API with the privileges of the user.
-The server needs to be managed for each user's Token.</String>
+            <String>모든 사용자는 Thing+에 가입하여야만 합니다. 
+서버는 해당 유저의 권한으로 API를 호출하며 
+각 사용자의 Token에 대한 관리가 필요합니다.</String>
             <ConnectedNoteIDs>20, 29</ConnectedNoteIDs>
             <PointsToNoteIDs>29</PointsToNoteIDs>
         </Note>
-        <Note ID="42" FontSize="12.0" Position="743.0,75.0" Width="240.0">
+        <Note ID="42" FontSize="12.0" Position="635.0,157.0" Width="240.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2">0.0 0.0 0.0</Border>
                 <Fill>0.022702 0.079734 0.499862</Fill>
             </Appearance>
-            <String>oAuth Development Guide
- -Resource Owner Password Credentials</String>
+            <String>oAuth 연동가이드 - Resource Owner Password Credentials 방식</String>
             <ConnectedNoteIDs>44</ConnectedNoteIDs>
-            <Formatting>
-                <FormatRange Bold="Yes">0,24</FormatRange>
-                <FormatRange Bold="Yes">26,35</FormatRange>
-            </Formatting>
         </Note>
-        <Note ID="43" FontSize="12.0" Position="1566.0,547.0" Width="195.0">
+        <Note ID="43" FontSize="12.0" Position="1659.425781,532.660156" Width="195.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <TextColor>1.0 1.0 1.0</TextColor>
                 <Border Weight="2"></Border>
                 <Fill>0.819323 0.034386 0.054097</Fill>
             </Appearance>
-            <String>All is done.
-Use the guide to develop your app.</String>
+            <String>준비가 완료 되었습니다.
+가이드를 참조하여 원하는 앱을 개발하세요</String>
             <ConnectedNoteIDs>13, 33, 44</ConnectedNoteIDs>
         </Note>
-        <Note ID="44" FontSize="12.0" Position="790.0,774.0" Width="245.0">
+        <Note ID="44" FontSize="12.0" Position="635.0,800.0" Width="245.0">
             <Appearance>
                 <Alignment>Left</Alignment>
                 <Border Weight="2"></Border>
             </Appearance>
-            <String>You need development to work between your app and Thing +.
-Please refer to guide to develop</String>
+            <String>앱과 Thing+ 간의 연동을 위한 개발이 필요합니다.
+가이드를 참조하여 개발해주세요</String>
             <ConnectedNoteIDs>37, 42-43</ConnectedNoteIDs>
             <PointsToNoteIDs>43</PointsToNoteIDs>
         </Note>
-        <Note ID="45" FontSize="12.0" Position="527.0,230.0" Width="24.0">
+        <Note ID="45" FontSize="12.0" Position="642.0,230.0" Width="24.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>No</String>
         </Note>
-        <Note ID="48" FontSize="12.0" Position="440.890625,279.777344" Width="46.0" Level="1">
+        <Note ID="48" FontSize="12.0" Position="441.0,280.0" Width="46.0" Level="1">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>Yes</String>
         </Note>
-        <Note ID="51" FontSize="12.0" Position="541.488281,507.097656" Width="46.0" Level="1">
+        <Note ID="51" FontSize="12.0" Position="527.914062,520.042969" Width="67.0" Level="1">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>Yes</String>
         </Note>
-        <Note ID="52" FontSize="12.0" Position="1037.917969,601.082031" Width="78.0" Level="1">
+        <Note ID="52" FontSize="12.0" Position="1157.253906,589.445312" Width="62.0" Level="1">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
             <String>Yes</String>
         </Note>
-        <Note ID="53" FontSize="12.0" Position="1161.832031,552.960938" Width="24.0">
+        <Note ID="53" FontSize="12.0" Position="1276.0,551.0" Width="24.0">
             <Appearance>
                 <Alignment>Left</Alignment>
             </Appearance>
@@ -260,7 +247,7 @@ Please refer to guide to develop</String>
         </Note>
     </Notes>
     <BackgroundShapes></BackgroundShapes>
-    <AutoFit>0, 10, 15, 17, 20, 23, 25, 29-30, 35, 42-43, 45, 48, 51, 53</AutoFit>
+    <AutoFit>1, 10, 12-13, 17, 20, 25-26, 29, 33, 35, 38, 44-45, 48, 53</AutoFit>
     <NoteStyles>
         <Style Name="Blue Bubble" ID="548DB849-9226-4CA5-A0AA-13C55C2AE521" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
             <BorderThickness>1</BorderThickness>

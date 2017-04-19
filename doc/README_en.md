@@ -41,17 +41,17 @@ Sometime `SandBox` have some incomplete features. `SandBox` Service may be disco
         * Site - each classroom
         * Service Admin - Business managers who provide services
         * Site Admin - Manager who manages the hw in each classroom (ex: teacher or caretaker)
-        * User - All Student. Check temperature for each classroom through website / app
-    * IoT to measure/analyze electricity usage by apartments
-        * Service - Real-time electricity usage service
+        * User - All Student. Check temperature for each classroom through website / app
+    * IoT to measure/analyze electricity usage by apartments
+        * Service - Real-time electricity usage service
         * Site - each branch of apartments
         * Service Admin - Business managers who provide services
-        * Site Admin - Electrical staff managing the power/usage of electricity by each branch
+        * Site Admin - Electrical staff managing the power/usage of electricity by each branch
         * User - Apartment resident. Check your home electricity usage
         
 1. example about Gateway/Device/Sensor/Tag
-    * Home IoT with RaspberryPi and IoT Starter Kit. Assume that there are two temperature and humidity sensors
-        * Sensor - temperature sensor, humidity sensor
+    * Home IoT with RaspberryPi and IoT Starter Kit. Assume that there are two temperature and humidity sensors
+        * Sensor - temperature sensor, humidity sensor
         * Actuator - Led sensor that can be turn on/off
         * Device - RaspberryPi Starter Kit
         * Gateway - RaspberryPi

@@ -72,7 +72,7 @@
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
 #### 6.1 Test URL
-https://www.sandbox.thingplus.net/
+https://nocert.sandbox.thingplus.net/
 
 #### 6.2 Response Status Code
 기본적으로 http response status code 동일
@@ -126,7 +126,7 @@ Thing+ API Error Category & Code is `string`
 
 
 ## 7. Portal 사용 가이드
-[추후 제공]
+[Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
 ## 8. 타 IoT 플렛폼 연동 플로우
 [추후 제공]

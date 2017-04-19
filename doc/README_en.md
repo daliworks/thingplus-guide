@@ -74,7 +74,7 @@ Sometime `SandBox` have some incomplete features. `SandBox` Service may be disco
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
 #### 6.1 Test URL
-https://www.sandbox.thingplus.net/
+https://nocert.sandbox.thingplus.net/
 
 #### 6.2 Response Status Code
 basically the http response status code is the same
@@ -128,7 +128,7 @@ Thing+ API Error Category & Code is `string`
 
 
 ## 7. Portal Use Guide
-[To be provided later]
+[Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
 ## 8. Flow for interworking another Iot platform
 [To be provided later]

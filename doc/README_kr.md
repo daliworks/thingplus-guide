@@ -57,13 +57,14 @@
 
 
 ## 2. 장비 연동 플로우
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[kr]flow_for_hardware_v1.1.pdf)
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
+
 
 ## 3. 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
 ## 4. oAuth/앱 연동 플로우
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[kr]flow_for_app_with_oauth2_v1.1.pdf)
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
 ## 5. oAuth 개발 가이드
 [Link](./oAuth2Guide_kr.md)

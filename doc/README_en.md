@@ -59,13 +59,13 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 
 ## 2. Workflow for hardware interlock with Thing+(embedded)
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[en]flow_for_hardware_v1.1.pdf)
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
 
 ## 3. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 4. Workflow for utilizing oAuth/App 
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/[en]flow_for_app_with_oauth2_v1.1.pdf)
+## 4. Workflow for utilizing oAuth/App
+ [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
 ## 5. oAuth Development Guide
 [Link](./oAuth2Guide_en.md)

@@ -23,8 +23,7 @@ https://oauth.net/2/
 ## [Authorization Code 방식](./oauth2.md#authorization-code-grant-or-web-server)
 특정 user의 지정된 권한에 대한 위임을 받는다
 
->
->1. oauth2/authorize API를 통해 thing+ page 이동
+1. oauth2/authorize API를 통해 thing+ page 이동
 1. 로그인이 되어 있지 않을경우 Login. 이미 로그인이 되어있다면 다음 단계로
 1. Redirect 된 URL의 query에서 code 를 획득
 1. oauth2/token API를 통해 access_token 획득

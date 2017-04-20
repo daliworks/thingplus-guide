@@ -18,11 +18,10 @@ https://oauth.net/2/
 2. authClient 생성
     - api guide의 authClients 항목을 참조하여 authClient를 생성
     - 생성된 authClient 에 대하여 별도 유지/관리 필요
-
-
+ 
+ 
 ## [Authorization Code 방식](./oauth2.md#authorization-code-grant-or-web-server)
 특정 user의 지정된 권한에 대한 위임을 받는다
-
 
 1. oauth2/authorize API를 통해 thing+ page 이동
 1. 로그인이 되어 있지 않을경우 Login. 이미 로그인이 되어있다면 다음 단계로
@@ -33,7 +32,7 @@ https://oauth.net/2/
     * Request Header 에 Authorization 필드 추가
     * Value에 token API response의 Token_Type과 access_token 활용 값을 채움
     * {token_type} {access_token} 형태
-    * > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIyIiwiY2xpZW50SWQiOiJzd2l0aGVyIiwiaWF0IjoxNDkxMjc1MTMxLCJleHAiOjE0OTI1NzExMzF9.bG1pusWH5pwJ4_BxQ-v0tmgkqMix3H82uUSxZycBWOo
+    * ```Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIyIiwiY2xpZW50SWQiOiJzd2l0aGVyIiwiaWF0IjoxNDkxMjc1MTMxLCJleHAiOjE0OTI1NzExMzF9.bG1pusWH5pwJ4_BxQ-v0tmgkqMix3H82uUSxZycBWOo```
 1. 위의 과정을 이용하여 개발한다
 
 
@@ -47,9 +46,10 @@ serviceAdmin 의 권한으로 서비스내 리소스를 접근한다.
     * Request Header 에 Authorization 필드 추가
     * Value에 token API response의 Token_Type과 access_token 활용 값을 채움
     * {token_type} {access_token} 형태
-    * > Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIyIiwiY2xpZW50SWQiOiJzd2l0aGVyIiwiaWF0IjoxNDkxMjc1MTMxLCJleHAiOjE0OTI1NzExMzF9.bG1pusWH5pwJ4_BxQ-v0tmgkqMix3H82uUSxZycBWOo
+    * ```Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIyIiwiY2xpZW50SWQiOiJzd2l0aGVyIiwiaWF0IjoxNDkxMjc1MTMxLCJleHAiOjE0OTI1NzExMzF9.bG1pusWH5pwJ4_BxQ-v0tmgkqMix3H82uUSxZycBWOo```
 1. 위의 과정을 이용하여 개발한다
 1. serviceAdmin으로 리소스 접근시 여러 사용자의 데이터가 접근됨으로 해당 기능을 고려하여 개발한다
 
 ## 상세 설명
 [Link](./oauth2.md)
+

@@ -59,7 +59,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 
 ## 2. Workflow for hardware interlock with Thing+(embedded)
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
 
 ## 3. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)

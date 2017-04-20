@@ -76,29 +76,47 @@ From time to time, the `SandBox` will also have new features that are still in t
 #### 6.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-#### 6.2 Response Status Codes
+#### 6.2 Thing+ API Response Structure
+
+All Most response next style
+
+```
+{
+  "statusCode": 200
+  "message": "OK",
+  "data": {
+    //some data
+  },
+  "errors": [
+    //some error
+  ]
+}
+```
+
+#### 6.3 Response Status Codes
 The http response status code is the same as here.
 
-| StatusCode | Description
-| --- | ---
-| 200 | OK
-| 201 | Created
-| 204 | No Content
-| 207 | Multi-Status
-| 400 | Bad Request
-| 401 | Unauthorized
-| 403 | Forbidden
-| 404 | Not Found
-| 409 | Conflict
-| 429 | Too Many Requests
-| 444 | Unknown
-| 471 | Billing (Temporary)
-| 500 | Internal Server Error
-| 504 | Gateway Time-out
-| 600 | Gateway Error
+
+| StatusCode | Description | example
+| --- | --- | ---
+| 200 | OK |
+| 201 | Created |
+| 204 | No Content |
+| 207 | Multi-Status| gateway create success but create sensor is fail when you use `registerGateway`
+| 400 | Bad Request |
+| 401 | Unauthorized |
+| 403 | Forbidden | try access a resource what you don't have permition
+| 404 | Not Found |
+| 409 | Conflict | resource is already exist when you try create
+| 429 | Too Many Requests |
+| 444 | Unknown |
+| 471 | Billing (Temporary) | over your billing plan when you add `gateway, sensor, device, rule`
+| 500 | Internal Server Error |
+| 504 | Gateway Time-out | occurd timeout from gateway when you use `controlActuator`
+| 600 | Gateway Error |
 
 
-#### 6.3 API Error Codes
+#### 6.4 API Error Codes
 Thing+ API Error Categories & Codes are `strings`
 
 | Category | Code | Description

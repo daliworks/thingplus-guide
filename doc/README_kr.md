@@ -103,23 +103,23 @@ Thing+ API Error Category & Code is `string`
 | Category | Code | Description
 | --- | --- | ---
 | REQUEST_ERROR | SCHEMA_VALIDATE | validate schema fail
-| REQUEST_ERROR | NOT_FOUND | resource not found
-| REQUEST_ERROR | MISMATCH_ERROR | request value is not equal value in DB
-| REQUEST_ERROR | CONFLICT | already exist
-| REQUEST_ERROR | INVALID_INPUT | wrong parameter
+|  | NOT_FOUND | resource not found
+|  | MISMATCH_ERROR | request value is not equal value in DB
+|  | CONFLICT | already exist
+|  | INVALID_INPUT | wrong parameter
 | AUTHENTICATION_ERROR | NEED_LOGIN | need login
 | AUTHORIZATION_ERROR | ACCESSGROUP_DENY | ACL deny
-| AUTHORIZATION_ERROR | ACL_DENY | ACL deny
+|  | ACL_DENY | ACL deny
 | SERVER_ERROR | JSON_PARSING | json parsing exception
-| SERVER_ERROR | USER_ERROR | internal error
-| SERVER_ERROR | AUTH_ERROR | internal error
-| SERVER_ERROR | ACL_ERROR | internal error
-| SERVER_ERROR | LIBRARY_ERROR | internal error
-| SERVER_ERROR | INTERNAL_ERROR | internal error
+|  | USER_ERROR | internal error
+|  | AUTH_ERROR | internal error
+|  | ACL_ERROR | internal error
+|  | LIBRARY_ERROR | internal error
+|  | INTERNAL_ERROR | internal error
 | DB_ERROR | RELATION_ERROR | internal error
-| DB_ERROR | QUERY_RESULT_EMPTY | internal error
-| DB_ERROR | NOT_FOUND_IN_ITEM | internal error
-| DB_ERROR | DB_INTERNAL_ERROR | internal error
+|  | QUERY_RESULT_EMPTY | internal error
+|  | NOT_FOUND_IN_ITEM | internal error
+|  | DB_INTERNAL_ERROR | internal error
 | BILLING_ERROR | BILLING | need increase billing
 | GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receive result from gateway
 | UNKNOWN | - |

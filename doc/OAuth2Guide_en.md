@@ -1,12 +1,12 @@
-# Thing+ oAuth2 Guide
+# Thing+ OAuth2 Guide
 This is a simple guide to using Thing+ with 3rd party resources.
-It will help you acquire authentication & authorization using oAuth2.
-See here for details [Link](./oauth2.md)
+It will help you acquire authentication & authorization using OAuth2.
+See here for details [Link](./OAuth2.md)
 
-## What is oAuth2?
+## What is OAuth2?
 https://oauth.net/2/
 
-![oauth](./images/oauth2.png "oauth")
+![OAuth](./images/OAuth2.png "OAuth")
 
 
 ## Initial Setup
@@ -19,7 +19,7 @@ https://oauth.net/2/
     - Separate maintenance / management required for generated authClient
  
  
-## [Authorization Code system](./oauth2.md#authorization-code-grant-or-web-server)
+## [Authorization Code system](./OAuth2.md#authorization-code-grant-or-web-server)
 Receiving delegation for the specified privilege of a specific user
 
 1. Move to the thing+ login page - required for oauth2 / authorization API usage
@@ -36,7 +36,7 @@ Receiving delegation for the specified privilege of a specific user
 
 
 
-## [Resource Owner Password Credentials Method](./oauth2.md#resource-owner-password-credentials-grant)
+## [Resource Owner Password Credentials Method](./OAuth2.md#resource-owner-password-credentials-grant)
 Access the resources in your service using the privileges of a serviceAdmin.
 
 1. Obtain access_token via oauth2 / token API
@@ -50,5 +50,5 @@ Access the resources in your service using the privileges of a serviceAdmin.
 4. When data is accessed by the serviceAdmin, multiple users' data can be accessed
 
 ## In Detail
-[Link](./oauth2.md)
+[Link](./OAuth2.md)
 

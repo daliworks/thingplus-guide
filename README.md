@@ -14,7 +14,6 @@ We hope this guide helps brings your IoT projects to life
 - [Use Korean Here](./doc/README_kr.md)
 
 
-jkhkhjhjj
 
 ---
 

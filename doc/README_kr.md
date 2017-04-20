@@ -9,8 +9,8 @@
 * [용어 설명](#1-용어-설명)
 * [장비 연동 플로우](#2-장비-연동-플로우)
 * [임베디드 개발 가이드](#3-임베디드-개발-가이드)
-* [oAuth/앱 연동 플로우](#4-oauth앱-연동-플로우)
-* [oAuth 개발 가이드](#5-oauth-개발-가이드)
+* [OAuth/앱 연동 플로우](#4-oauth앱-연동-플로우)
+* [OAuth 개발 가이드](#5-oauth-개발-가이드)
 * [API 문서](#6-api-문서)
 * [Portal 사용 가이드](#7-portal-사용-가이드)
 * [타 IoT 플렛폼 연동 플로우](#8-타-iot-플렛폼-연동-플로우)
@@ -24,7 +24,7 @@
 | Device | 센서의 그룹. 가상의 그룹 또는 실제 HW 로 구성된 그룹 <br>게이트웨이는 최소 1개 이상의 디바이스를 처리 |
 | Gateway | 서버와 통신을 하는 HW/SW <br>센서값/상태를 서버로 전달하거나 서버로부터 센서로 명령을 전달 |
 | Tag | 여러 디바이스/게이트웨이에 흩어져 존재하는 Sensor를 그룹화하여 관리 할 수 있는 단위 |
-| oAuth2 | 권한 인증을 수행할 수 있는 표준 Open Protocol | 
+| OAuth2 | 권한 인증을 수행할 수 있는 표준 Open Protocol |
 | Service | IoT서비스를 하려는 기업이 제공하는 전체 서비스 |
 | Site | 서비스 내부의 관리 그룹 또는 유저의 그룹 |
 | 관리자 | 서비스 또는 사이트를 관리하는 관리자 |
@@ -63,11 +63,11 @@
 ## 3. 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
-## 4. oAuth/앱 연동 플로우
+## 4. OAuth/앱 연동 플로우
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-## 5. oAuth 개발 가이드
-[Link](./oAuth2Guide_kr.md)
+## 5. OAuth 개발 가이드
+[Link](./OAuth2Guide_kr.md)
 
 ## 6. API 문서
 [Link](https://thingplus-10.api-docs.io/2.0/)

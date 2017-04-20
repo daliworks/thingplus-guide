@@ -1,13 +1,13 @@
-# Thing+ oAuth2 가이드
+# Thing+ OAuth2 가이드
 3rd party에서 Thing+ 자원을(resource) 이용하기 위해
-oAuth2 를 이용하여 authentication/authorization 획득 과정에 대한 간단한 가이드이다.
-상세한 내용은 [여기](./oauth2.md) 에서 설명한다.
+OAuth2 를 이용하여 authentication/authorization 획득 과정에 대한 간단한 가이드이다.
+상세한 내용은 [여기](./OAuth2.md) 에서 설명한다.
 
 
-## What is oAuth2
+## What is OAuth2
 https://oauth.net/2/
 
-![oauth](./images/oauth2.png "oauth")
+![OAuth](./images/oauth2.png "OAuth")
 
 
 ## 사전 준비
@@ -20,7 +20,7 @@ https://oauth.net/2/
     - 생성된 authClient 에 대하여 별도 유지/관리 필요
  
  
-## [Authorization Code 방식](./oauth2.md#authorization-code-grant-or-web-server)
+## [Authorization Code 방식](./OAuth2.md#authorization-code-grant-or-web-server)
 특정 user의 지정된 권한에 대한 위임을 받는다
 
 1. oauth2/authorize API를 통해 thing+ page 이동
@@ -37,7 +37,7 @@ https://oauth.net/2/
 
 
 
-## [Resource Owner Password Credentials 방식](./oauth2.md#resource-owner-password-credentials-grant)
+## [Resource Owner Password Credentials 방식](./OAuth2.md#resource-owner-password-credentials-grant)
 serviceAdmin 의 권한으로 서비스내 리소스를 접근한다.
 
 1. oauth2/token API를 통해 access_token 획득
@@ -51,5 +51,5 @@ serviceAdmin 의 권한으로 서비스내 리소스를 접근한다.
 1. serviceAdmin으로 리소스 접근시 여러 사용자의 데이터가 접근됨으로 해당 기능을 고려하여 개발한다
 
 ## 상세 설명
-[Link](./oauth2.md)
+[Link](./OAuth2.md)
 

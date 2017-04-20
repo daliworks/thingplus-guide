@@ -11,8 +11,8 @@ From time to time, the `SandBox` will also have new features that are still in t
 * [1. Glossary](#1-glossary)
 * [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
 * [3. Embedded Development Guide](#3-embedded-development-guide)
-* [4. Workflow for utilizing oAuth/App](#4-workflow-for-utilizing-oauthapp)
-* [5. oAuth Development Guide](#5-oauth-development-guide)
+* [4. Workflow for utilizing OAuth/App](#4-workflow-for-utilizing-oauthapp)
+* [5. OAuth Development Guide](#5-oauth-development-guide)
 * [6. API documentation](#6--api-documentation)
 * [7. Portal Usage Guide](#7-portal-usage-guide)
 * [8. Flow for interlocking with another Iot platform](#8-flow-for-interlocking-with-another-iot-platform)
@@ -26,7 +26,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 | Device | A group of Sensors. Sometime the group is virtual but most often is real - this can also be referred to as an "Edge Node", "Node","Sensor Node", or "Sensor Device" <br> Gateways have to include at least one device (in Thing+, not neccessarily physically) |
 | Gateway | HW / SW that allows communication with Thing+ servers <br> Sends sensor values/status to the server or forwards commands from the server to sensors/actuators |
 | Tag | "Tags" are identifiers used to group and manage sensors/actuators scattered across multiple devices / gateways |
-| oAuth2 | A standard Open Protocol that can be used to perform authorization and authentication on Thing+ | 
+| OAuth2 | A standard Open Protocol that can be used to perform authorization and authentication on Thing+ |
 | Service | A "Service" is the highest organizational level offered to customers and includes complete administration functions (dashboard locking, sensor selection, etc..). A service can include many "Sites", and in those sites, many gateways, users, sensors, etc.. |
 | Site | A division inside of a service designed to allow for management of specific groups of users, devices, etc.. - Site's can have their own administrators. <br> ex) A hospital may be a single "site", or may be divided into multiple sites, each designed to represent a specific physical location, or a specific user group. |
 | Admin | An administrator who manages a service or site |
@@ -64,11 +64,11 @@ From time to time, the `SandBox` will also have new features that are still in t
 ## 3. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 4. Workflow for utilizing oAuth/App
+## 4. Workflow for utilizing OAuth/App
  [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-## 5. oAuth Development Guide
-[Link](./oAuth2Guide_en.md)
+## 5. OAuth Development Guide
+[Link](./OAuth2Guide_en.md)
 
 ## 6.  API documentation
 [Link](https://thingplus-10.api-docs.io/2.0/)

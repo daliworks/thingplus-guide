@@ -129,7 +129,7 @@ Thing+ API Error Category & Code is `string`
 ## 7. Portal 사용 가이드
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
-## 8. 타 IoT 플렛폼 연동 플로우
+## 8. 타 IoT 플랫폼 연동 플로우
 [추후 제공]
 
 ## Changes history

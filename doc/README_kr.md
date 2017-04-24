@@ -62,7 +62,7 @@
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
 
 ## 3. 센서 타입
-[Link](./SensorType_kr.md)
+[Link](./SensorTypes_kr.md)
 
 ## 4. 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)

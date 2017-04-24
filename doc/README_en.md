@@ -22,8 +22,8 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 | Term | Description | example
 | --- | --- | ----
-| Sensor | hardware used to collect some value or state | ex) temperature sensor, humidity sensor, etc
-| Actuator | hardware designed to receive a command and perform an action | ex) camera, switch, etc
+| Sensor | A hardware used to collect some value or state | ex) temperature sensor, humidity sensor, etc
+| Actuator | A hardware designed to receive a command and perform an action | ex) camera, switch, etc
 | Device | A group of Sensors. Sometime the group is virtual but most often is real - this can also be referred to as an "Edge Node", "Node","Sensor Node", or "Sensor Device" <br> Gateways have to include at least one device (in Thing+, not neccessarily physically) |
 | Gateway | HW / SW that allows communication with Thing+ servers <br> Sends sensor values/status to the server or forwards commands from the server to sensors/actuators |
 | Sensor Type | Refers to a sensor’s classification regarding the physical quantity that it is capable of taking. On a per-sensor type basis, the unit, icon, etc… is usually different, as well as the rules that can be set using that sensor. | ex) temperature, humidity, etc

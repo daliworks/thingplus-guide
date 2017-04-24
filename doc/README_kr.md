@@ -8,12 +8,13 @@
 ## Conents
 * [용어 설명](#1-용어-설명)
 * [장비 연동 플로우](#2-장비-연동-플로우)
-* [임베디드 개발 가이드](#3-임베디드-개발-가이드)
-* [OAuth/앱 연동 플로우](#4-oauth앱-연동-플로우)
-* [OAuth 개발 가이드](#5-oauth-개발-가이드)
-* [API 문서](#6-api-문서)
-* [Portal 사용 가이드](#7-portal-사용-가이드)
-* [타 IoT 플렛폼 연동 플로우](#8-타-iot-플렛폼-연동-플로우)
+* [센서 타입](#3-센서-타입)
+* [임베디드 개발 가이드](#4-임베디드-개발-가이드)
+* [OAuth/앱 연동 플로우](#5-oauth앱-연동-플로우)
+* [OAuth 개발 가이드](#6-oauth-개발-가이드)
+* [API 문서](#7-api-문서)
+* [Portal 사용 가이드](#8-portal-사용-가이드)
+* [타 IoT 플렛폼 연동 플로우](#9-타-iot-플렛폼-연동-플로우)
 
 ## 1. 용어 설명
 
@@ -60,23 +61,25 @@
 ## 2. 장비 연동 플로우
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
 
+## 3. 센서 타입
+[Link](./SensorType_kr.md)
 
-## 3. 임베디드 개발 가이드
+## 4. 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
-## 4. OAuth/앱 연동 플로우
+## 5. OAuth/앱 연동 플로우
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-## 5. OAuth 개발 가이드
+## 6. OAuth 개발 가이드
 [Link](./OAuth2Guide_kr.md)
 
-## 6. API 문서
+## 7. API 문서
 [Link](https://thingplus-10.api-docs.io/2.0/)
 
-#### 6.1 Test URL
+### 7.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-#### 6.2 Response Status Code
+### 7.2 Response Status Code
 기본적으로 http response status code 동일
 
 | StatusCode | Description
@@ -98,7 +101,7 @@ https://nocert.sandbox.thingplus.net/
 | 600 | Gateway Error
 
 
-#### 6.3 API Error Code
+### 7.3 API Error Code
 Thing+ API Error Category & Code is `string`
 
 | Category | Code | Description
@@ -127,10 +130,10 @@ Thing+ API Error Category & Code is `string`
 
 
 
-## 7. Portal 사용 가이드
+## 8. Portal 사용 가이드
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
-## 8. 타 IoT 플랫폼 연동 플로우
+## 9. 타 IoT 플랫폼 연동 플로우
 [추후 제공]
 
 ## Changes history

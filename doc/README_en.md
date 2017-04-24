@@ -10,21 +10,23 @@ From time to time, the `SandBox` will also have new features that are still in t
 ## Contents
 * [1. Glossary](#1-glossary)
 * [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
-* [3. Embedded Development Guide](#3-embedded-development-guide)
-* [4. Workflow for utilizing OAuth/App](#4-workflow-for-utilizing-oauthapp)
-* [5. OAuth Development Guide](#5-oauth-development-guide)
-* [6. API documentation](#6--api-documentation)
-* [7. Portal Usage Guide](#7-portal-usage-guide)
-* [8. Flow for interlocking with another Iot platform](#8-flow-for-interlocking-with-another-iot-platform)
+* [3. Sensor Types](#3-sensor-types)
+* [4. Embedded Development Guide](#3-embedded-development-guide)
+* [5. Workflow for utilizing OAuth/App](#4-workflow-for-utilizing-oauthapp)
+* [6. OAuth Development Guide](#5-oauth-development-guide)
+* [7. API documentation](#6--api-documentation)
+* [8. Portal Usage Guide](#7-portal-usage-guide)
+* [9. Flow for interlocking with another Iot platform](#8-flow-for-interlocking-with-another-iot-platform)
 
 ## 1. Glossary
 
 | Term | Description | example
 | --- | --- | ----
-| Sensor | hardware used to collect some value or state<br> | ex) temperature, humidity
-| Actuator | hardware designed to receive a command and perform an action | ex) camera, switch
+| Sensor | hardware used to collect some value or state | ex) temperature sensor, humidity sensor, etc
+| Actuator | hardware designed to receive a command and perform an action | ex) camera, switch, etc
 | Device | A group of Sensors. Sometime the group is virtual but most often is real - this can also be referred to as an "Edge Node", "Node","Sensor Node", or "Sensor Device" <br> Gateways have to include at least one device (in Thing+, not neccessarily physically) |
 | Gateway | HW / SW that allows communication with Thing+ servers <br> Sends sensor values/status to the server or forwards commands from the server to sensors/actuators |
+| Sensor Type | Refers to a sensor’s classification regarding the physical quantity that it is capable of taking. On a per-sensor type basis, the unit, icon, etc… is usually different, as well as the rules that can be set using that sensor. | ex) temperature, humidity, etc
 | Tag | "Tags" are identifiers used to group and manage sensors/actuators scattered across multiple devices / gateways |
 | OAuth2 | A standard Open Protocol that can be used to perform authorization and authentication on Thing+ |
 | Service | A "Service" is the highest organizational level offered to customers and includes complete administration functions (dashboard locking, sensor selection, etc..). A service can include many "Sites", and in those sites, many gateways, users, sensors, etc.. |
@@ -57,26 +59,28 @@ From time to time, the `SandBox` will also have new features that are still in t
         * Gateway - RaspberryPi
         * Tag - temperature sensor 1, humidity sensor 1 both tagged with `Room` (a geo-local tag basically), temperature sensor 2, humidity sensor2 Tagged `Living Room` - though this, easily create rules/actions on a per-room basis
 
-
 ## 2. Workflow for hardware interlock with Thing+(embedded)
 [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
 
-## 3. Embedded Development Guide
+## 3. Sensor Types
+[Link](./SensorTypes_en.md)
+
+## 4. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 4. Workflow for utilizing OAuth/App
+## 5. Workflow for utilizing OAuth/App
  [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-## 5. OAuth Development Guide
+## 6. OAuth Development Guide
 [Link](./OAuth2Guide_en.md)
 
-## 6.  API documentation
+## 7.  API documentation
 [Link](https://thingplus-en.api-docs.io/2.0)
 
-#### 6.1 Test URL
+### 7.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-#### 6.2 Thing+ API Response Structure
+### 7.2 Thing+ API Response Structure
 
 All Most response next style
 
@@ -93,7 +97,7 @@ All Most response next style
 }
 ```
 
-#### 6.3 Response Status Codes
+### 7.3 Response Status Codes
 The http response status code is the same as here.
 
 
@@ -116,7 +120,7 @@ The http response status code is the same as here.
 | 600 | Gateway Error |
 
 
-#### 6.4 API Error Codes
+### 7.4 API Error Codes
 Thing+ API Error Categories & Codes are `strings`
 
 | Category | Code | Description
@@ -145,10 +149,10 @@ Thing+ API Error Categories & Codes are `strings`
 
 
 
-## 7. Portal Usage Guide
+## 8. Portal Usage Guide
 [Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
-## 8. Flow for interlocking with another Iot platform
+## 9. Flow for interlocking with another Iot platform
 [To be provided later]
 
 ## Changes history

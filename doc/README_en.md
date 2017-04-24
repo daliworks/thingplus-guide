@@ -7,7 +7,7 @@ The `SandBox` may have some incomplete features compared with the commercial sit
 From time to time, the `SandBox` will also have new features that are still in testing. Additionally, the `SandBox` Service may be discontinued without notice, so please keep this in mind when using it.
 <br>Please contact us here if you are ready to begin using Thing+ for commercial service - <contact@thingplus.net>
 
-## Conents
+## Contents
 * [1. Glossary](#1-glossary)
 * [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
 * [3. Embedded Development Guide](#3-embedded-development-guide)

@@ -1,8 +1,6 @@
-Sensor Type|센서명|asdf
------------|------|---
-accelerometer|가속도|asdf
-
-
+Sensor Type|센서명
+-----------|------
+accelerometer|가속도
 airConditioner|에어컨
 airPurifier|공기 청정기
 batteryGauge|배터리

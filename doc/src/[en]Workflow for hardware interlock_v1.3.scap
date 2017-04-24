@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ScappleDocument Version="1.1" ID="D29DF696-2F2B-4A85-B505-BB8E1DB7F838">
+    <Notes>
+        <Note ID="0" FontSize="12.0" Position="91.0,438.0" Width="48.0">
+            <Appearance>
+                <Alignment>Center</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.819323 0.034386 0.054097</Fill>
+            </Appearance>
+            <String>Start</String>
+            <ConnectedNoteIDs>2</ConnectedNoteIDs>
+            <PointsToNoteIDs>2</PointsToNoteIDs>
+        </Note>
+        <Note ID="2" FontSize="12.0" Position="180.0,436.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Do you have existing hardware which you want to use with Thing+?</String>
+            <ConnectedNoteIDs>0, 14, 64</ConnectedNoteIDs>
+            <PointsToNoteIDs>14, 64</PointsToNoteIDs>
+        </Note>
+        <Note ID="4" FontSize="12.0" Position="174.0,767.0" Width="212.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Is your hardware a gateway, or gateway-like device? (ie. can connect directly to Thing+ via HTTPS, etc..)</String>
+            <ConnectedNoteIDs>21, 25, 51, 58</ConnectedNoteIDs>
+            <PointsToNoteIDs>21, 58</PointsToNoteIDs>
+        </Note>
+        <Note ID="5" FontSize="12.0" Position="1200.0,979.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Does the gateway connect directly to Thing+, or does it connect through another IoT platform/service?</String>
+            <ConnectedNoteIDs>32, 36, 58, 83, 90</ConnectedNoteIDs>
+            <PointsToNoteIDs>36, 83</PointsToNoteIDs>
+        </Note>
+        <Note ID="14" FontSize="12.0" Position="1185.5,433.0" Width="229.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Is any pre-integrated hardware registered on Thing+ suitable for your IoT service’s usage?</String>
+            <ConnectedNoteIDs>2, 16, 36, 72, 90, 97</ConnectedNoteIDs>
+            <PointsToNoteIDs>36, 90</PointsToNoteIDs>
+        </Note>
+        <Note ID="16" FontSize="12.0" Position="1190.5,203.0" Width="220.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>List of Thing+ pre-integrated equipment</String>
+            <ConnectedNoteIDs>14</ConnectedNoteIDs>
+        </Note>
+        <Note ID="19" FontSize="12.0" Position="1701.144312,1098.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.819323 0.034386 0.054097</Fill>
+            </Appearance>
+            <String>You are now ready to connect your IoT device.</String>
+            <ConnectedNoteIDs>83</ConnectedNoteIDs>
+        </Note>
+        <Note ID="21" FontSize="12.0" Position="932.0,760.0" Width="166.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Are there any gateways pre-integrated on Thing+ already that you can use with your device?</String>
+            <ConnectedNoteIDs>4, 23, 36, 90</ConnectedNoteIDs>
+            <PointsToNoteIDs>36, 90</PointsToNoteIDs>
+        </Note>
+        <Note ID="23" FontSize="12.0" Position="883.198155,196.0" Width="135.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>List of Gateway models registered on Thing+</String>
+            <ConnectedNoteIDs>21, 58</ConnectedNoteIDs>
+        </Note>
+        <Note ID="25" FontSize="12.0" Position="551.0,636.0" Width="178.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Additional development is required to bring your sensors onto Thing+. Use the above document and request to do this.</String>
+            <ConnectedNoteIDs>4, 26, 51</ConnectedNoteIDs>
+            <PointsToNoteIDs>4</PointsToNoteIDs>
+        </Note>
+        <Note ID="26" FontSize="12.0" Position="559.0,251.0" Width="162.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>Partner input form for adding a new sensor type</String>
+            <ConnectedNoteIDs>25</ConnectedNoteIDs>
+        </Note>
+        <Note ID="29" FontSize="12.0" Position="1449.126297,258.0" Width="176.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>Embedded Development Guide</String>
+            <ConnectedNoteIDs>83</ConnectedNoteIDs>
+        </Note>
+        <Note ID="32" FontSize="12.0" Position="1033.0,861.0" Width="178.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>You will need to create a new gateway model with our support - please read the above document and fill in the form.</String>
+            <ConnectedNoteIDs>5, 33, 58</ConnectedNoteIDs>
+            <PointsToNoteIDs>5, 38, 67</PointsToNoteIDs>
+        </Note>
+        <Note ID="33" FontSize="12.0" Position="1031.0,251.0" Width="182.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>Input form for registering a new gateway model &amp; definition</String>
+            <ConnectedNoteIDs>32</ConnectedNoteIDs>
+        </Note>
+        <Note ID="36" FontSize="12.0" Position="1701.0,781.0" Width="66.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2"></Border>
+                <Fill>1.0 0.0 0.0</Fill>
+            </Appearance>
+            <String>Contact us</String>
+            <ConnectedNoteIDs>5, 14, 21</ConnectedNoteIDs>
+        </Note>
+        <Note ID="40" FontSize="12.0" Position="391.0,444.0" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="41" FontSize="12.0" Position="266.985962,495.0" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="51" FontSize="12.0" Position="176.0,657.0" Width="208.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Is the type of sensor you are using already registered/modeled on thing+ (ex. temperature, humidity, etc..)?</String>
+            <ConnectedNoteIDs>4, 25, 64</ConnectedNoteIDs>
+            <PointsToNoteIDs>4, 25</PointsToNoteIDs>
+        </Note>
+        <Note ID="58" FontSize="12.0" Position="791.0,870.0" Width="155.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Is your gateway modelled and registered on Thing+ already?</String>
+            <ConnectedNoteIDs>4-5, 23, 32</ConnectedNoteIDs>
+            <PointsToNoteIDs>5, 32</PointsToNoteIDs>
+        </Note>
+        <Note ID="64" FontSize="12.0" Position="181.0,546.0" Width="198.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Is your hardware a sensor or sensor device?</String>
+            <ConnectedNoteIDs>2, 51, 72</ConnectedNoteIDs>
+            <PointsToNoteIDs>51, 72</PointsToNoteIDs>
+        </Note>
+        <Note ID="70" FontSize="12.0" Position="266.0,602.0" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="71" FontSize="12.0" Position="397.340157,665.014087" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="72" FontSize="12.0" Position="431.5,532.0" Width="166.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Is the sensor type you require already supported by Thing+? (Ex. Temperature, Humidity, etc..)</String>
+            <ConnectedNoteIDs>14, 64, 73, 97</ConnectedNoteIDs>
+            <PointsToNoteIDs>14, 97</PointsToNoteIDs>
+        </Note>
+        <Note ID="73" FontSize="12.0" Position="446.0,196.0" Width="137.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <TextColor>1.0 1.0 1.0</TextColor>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+                <Fill>0.113012 0.061553 0.378771</Fill>
+            </Appearance>
+            <String>List of sensor types in Thing +</String>
+            <ConnectedNoteIDs>72</ConnectedNoteIDs>
+        </Note>
+        <Note ID="74" FontSize="12.0" Position="385.413979,553.366269" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="76" FontSize="12.0" Position="268.15604,723.42041" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="77" FontSize="12.0" Position="430.728023,809.222304" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="79" FontSize="12.0" Position="434.170078,780.361802" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="80" FontSize="12.0" Position="965.0,880.380308" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="82" FontSize="12.0" Position="962.15604,912.973887" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="83" FontSize="12.0" Position="1411.5,1098.267461" Width="251.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2"></Border>
+            </Appearance>
+            <String>Please refer to the guide to develop and get your device set up for Thing+.</String>
+            <ConnectedNoteIDs>5, 19, 29</ConnectedNoteIDs>
+            <PointsToNoteIDs>19</PointsToNoteIDs>
+        </Note>
+        <Note ID="84" FontSize="12.0" Position="1316.143966,935.890543" Width="213.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Connects via another platform/service</String>
+        </Note>
+        <Note ID="85" FontSize="12.0" Position="1357.85795,1060.148481" Width="103.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Directly Connects</String>
+        </Note>
+        <Note ID="88" FontSize="12.0" Position="1287.0,500.531832" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="90" FontSize="12.0" Position="1200.0,657.0" Width="200.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Select the gateway you would like to use</String>
+            <ConnectedNoteIDs>5, 14, 21</ConnectedNoteIDs>
+            <PointsToNoteIDs>5</PointsToNoteIDs>
+        </Note>
+        <Note ID="92" FontSize="12.0" Position="1353.340503,496.247829" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="93" FontSize="12.0" Position="1138.0,727.659843" Width="32.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+        <Note ID="94" FontSize="12.0" Position="1138.440091,784.08423" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="96" FontSize="12.0" Position="605.0,562.0" Width="24.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>No</String>
+        </Note>
+        <Note ID="97" FontSize="12.0" Position="679.0,550.0" Width="186.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+                <Border Weight="2">0.0 0.0 0.0</Border>
+            </Appearance>
+            <String>Additional development is required to bring your sensor onto Thing+. Use the above document and request to do this.</String>
+            <ConnectedNoteIDs>14, 72</ConnectedNoteIDs>
+            <PointsToNoteIDs>14</PointsToNoteIDs>
+        </Note>
+        <Note ID="98" FontSize="12.0" Position="603.624208,538.205714" Width="28.0">
+            <Appearance>
+                <Alignment>Left</Alignment>
+            </Appearance>
+            <String>Yes</String>
+        </Note>
+    </Notes>
+    <BackgroundShapes></BackgroundShapes>
+    <AutoFit>29, 36, 40, 71, 74, 79-80, 85, 92, 94, 96, 98</AutoFit>
+    <NoteStyles>
+        <Style Name="Blue Bubble" ID="84128187-43C3-47FC-A319-11CBC3E9CABC" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.477193 0.557066 0.76433</BorderColor>
+            <FillColor>0.840969 0.866828 0.925903</FillColor>
+        </Style>
+        <Style Name="Brown Bubble" ID="F1C9B9AD-B299-49A4-9C64-A138FDE764DA" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.290055 0.1523 0.182215</BorderColor>
+            <FillColor>0.940019 0.892907 0.779716</FillColor>
+        </Style>
+        <Style Name="Green Bubble" ID="0351B01C-F257-4E1F-B66F-BF13D8AC6A3D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.331867 0.609932 0.356197</BorderColor>
+            <FillColor>0.790123 0.882328 0.80198</FillColor>
+        </Style>
+        <Style Name="Pink Bubble" ID="F631E640-7127-407B-ADAF-5880F2BB82C4" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.747881 0.366532 0.542813</BorderColor>
+            <FillColor>0.918452 0.807302 0.863467</FillColor>
+        </Style>
+        <Style Name="Red Text" ID="FCBCABA5-712D-4602-9A5C-5532D3DD075D" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="Yes" AffectNoteBody="No" AffectFade="No">
+            <TextColor>1.0 0.0 0.0</TextColor>
+        </Style>
+        <Style Name="Title Text" ID="E657C9A4-6BA0-4FC1-AF29-B4A1FDF8DF5A" AffectFontStyle="Yes" AffectAlignment="Yes" AffectTextColor="No" AffectNoteBody="No" AffectFade="No">
+            <FontSize>28.0</FontSize>
+            <IsBold>Yes</IsBold>
+        </Style>
+        <Style Name="Yellow Bubble" ID="EEF4450F-01DB-4F97-A644-E74D6536A979" AffectFontStyle="No" AffectAlignment="No" AffectTextColor="No" AffectNoteBody="Yes" AffectFade="No">
+            <BorderThickness>1</BorderThickness>
+            <BorderColor>0.756763 0.785592 0.373258</BorderColor>
+            <FillColor>0.906773 0.910625 0.634363</FillColor>
+        </Style>
+    </NoteStyles>
+    <UISettings>
+        <BackgroundColor>1.0 1.0 1.0</BackgroundColor>
+        <DefaultFont>Helvetica</DefaultFont>
+        <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+    </UISettings>
+    <PrintSettings PaperSize="595.275551,841.889771" LeftMargin="72.0" RightMargin="72.0" TopMargin="90.0" BottomMargin="90.0" PaperType="iso-a4" Orientation="Portrait" HorizontalPagination="Clip" VerticalPagination="Auto" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="Yes" PagesAcross="1" PagesDown="1"></PrintSettings>
+</ScappleDocument>

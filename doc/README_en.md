@@ -11,12 +11,16 @@ From time to time, the `SandBox` will also have new features that are still in t
 * [1. Glossary](#1-glossary)
 * [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
 * [3. Sensor Types](#3-sensor-types)
-* [4. Embedded Development Guide](#3-embedded-development-guide)
-* [5. Workflow for utilizing OAuth/App](#4-workflow-for-utilizing-oauthapp)
-* [6. OAuth Development Guide](#5-oauth-development-guide)
-* [7. API documentation](#6--api-documentation)
-* [8. Portal Usage Guide](#7-portal-usage-guide)
-* [9. Flow for interlocking with another Iot platform](#8-flow-for-interlocking-with-another-iot-platform)
+* [4. Sensor Type Registration Form](#4-sensor-type-registration-form)
+* [5. Registered Gateway Model List](#5-registered-gateway-model-list)
+* [6. Gateway Model Registration Form](#6-gateway-model-registration-form)
+* [7. Registered Gateway, Device and Sensor List](#7-registered-gateway-device-and-sensor-list)
+* [8. Embedded Development Guide](#8-embedded-development-guide)
+* [9. Workflow for utilizing OAuth/App](#9-workflow-for-utilizing-oauthapp)
+* [10. OAuth Development Guide](#10-oauth-development-guide)
+* [11. API documentation](#11--api-documentation)
+* [12. Portal Usage Guide](#12-portal-usage-guide)
+* [13. Flow for interlocking with another Iot platform](#13-flow-for-interlocking-with-another-iot-platform)
 
 ## 1. Glossary
 
@@ -65,22 +69,34 @@ From time to time, the `SandBox` will also have new features that are still in t
 ## 3. Sensor Types
 [Link](./SensorTypes_en.md)
 
-## 4. Embedded Development Guide
+## 4. Sensor Type Registration Form
+[Download](./Sensor-type-registration-form.xlsx)
+
+## 5. Registered Gateway Model List
+[Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayModelList.html)
+
+## 6. Gateway Model Registration Form
+[Download](./Gateway-model-registration-form.xlsx)
+
+## 7. Registered Gateway, Device and Sensor List
+[Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayDeviceAndSensorList.html)
+
+## 8. Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 5. Workflow for utilizing OAuth/App
- [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
+## 9. Workflow for utilizing OAuth/App
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-## 6. OAuth Development Guide
+## 10. OAuth Development Guide
 [Link](./OAuth2Guide_en.md)
 
-## 7.  API documentation
+## 11.  API documentation
 [Link](https://thingplus-en.api-docs.io/2.0)
 
-### 7.1 Test URL
+### 11.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-### 7.2 Thing+ API Response Structure
+### 11.2 Thing+ API Response Structure
 
 All Most response next style
 
@@ -97,7 +113,7 @@ All Most response next style
 }
 ```
 
-### 7.3 Response Status Codes
+### 11.3 Response Status Codes
 The http response status code is the same as here.
 
 
@@ -120,7 +136,7 @@ The http response status code is the same as here.
 | 600 | Gateway Error |
 
 
-### 7.4 API Error Codes
+### 11.4 API Error Codes
 Thing+ API Error Categories & Codes are `strings`
 
 | Category | Code | Description
@@ -149,10 +165,10 @@ Thing+ API Error Categories & Codes are `strings`
 
 
 
-## 8. Portal Usage Guide
+## 12. Portal Usage Guide
 [Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
-## 9. Flow for interlocking with another Iot platform
+## 13. Flow for interlocking with another Iot platform
 [To be provided later]
 
 ## Changes history

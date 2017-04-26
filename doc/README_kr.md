@@ -63,7 +63,7 @@
 
 
 ## 2. 장비 연동 플로우
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.2.pdf)
+[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
 
 ## 3. 센서 타입
 [Link](./SensorTypes_kr.md)

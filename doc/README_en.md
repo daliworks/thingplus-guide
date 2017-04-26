@@ -10,22 +10,22 @@ From time to time, the `SandBox` will also have new features that are still in t
 ## Contents
 * [1. Glossary](#1-glossary)
 * [2. Workflow](#2-workflow)
-* [2.1 for hardware interlock with Thing+(embedded)](#2.1-for-hardware-interlock-with-thingembedded)
-* [2.2 for utilizing OAuth/App](#2.2-for-utilizing-oauthapp)
-* [2.3 for interlocking with another Iot platform](#2.3-for-interlocking-with-another-iot-platform)
+* [2.1 for hardware interlock with Thing+(embedded)](#21-for-hardware-interlock-with-thingembedded)
+* [2.2 for utilizing OAuth/App](#22-for-utilizing-oauthapp)
+* [2.3 for interlocking with another Iot platform](#23-for-interlocking-with-another-iot-platform)
 
 * [3. Guides](#3-guides)
-* [3.1 Sensor Types](#3.1-sensor-types)
-* [3.2 Sensor Type Registration Form](#3.2-sensor-type-registration-form)
-* [3.3 Registered Gateway Model List](#3.3-registered-gateway-model-list)
-* [3.4 Gateway Model Registration Form](#3.4-gateway-model-registration-form)
-* [3.5 Registered Gateway, Device and Sensor List](#3.5-registered-gateway-device-and-sensor-list)
-* [3.6 Embedded Development Guide](#3.6-embedded-development-guide)
-* [3.7 OAuth Development Guide](#3.7-oauth-development-guide)
-* [3.8 Portal Usage Guide](#3.8-portal-usage-guide)
+* [3.1 Sensor Types](#31-sensor-types)
+* [3.2 Sensor Type Registration Form](#32-sensor-type-registration-form)
+* [3.3 Registered Gateway Model List](#33-registered-gateway-model-list)
+* [3.4 Gateway Model Registration Form](#34-gateway-model-registration-form)
+* [3.5 Registered Gateway, Device and Sensor List](#35-registered-gateway-device-and-sensor-list)
+* [3.6 Embedded Development Guide](#36-embedded-development-guide)
+* [3.7 OAuth Development Guide](#37-oauth-development-guide)
+* [3.8 Portal Usage Guide](#38-portal-usage-guide)
 
 * [4. API documentation](#11--api-documentation)
-* [4.1 Test URL](#4.1-test-url)
+* [4.1 Test URL](#41-test-url)
 
 
 ## 1. Glossary

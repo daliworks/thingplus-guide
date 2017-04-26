@@ -95,56 +95,6 @@
 ### 11.1 Test URL
 https://nocert.sandbox.thingplus.net/
 
-### 11.2 Response Status Code
-기본적으로 http response status code 동일
-
-| StatusCode | Description
-| --- | ---
-| 200 | OK
-| 201 | Created
-| 204 | No Content
-| 207 | Multi-Status
-| 400 | Bad Request
-| 401 | Unauthorized
-| 403 | Forbidden
-| 404 | Not Found
-| 409 | Conflict
-| 429 | Too Many Requests
-| 444 | Unknown
-| 471 | Billing (Temporary)
-| 500 | Internal Server Error
-| 504 | Gateway Time-out
-| 600 | Gateway Error
-
-
-### 11.3 API Error Code
-Thing+ API Error Category & Code is `string`
-
-| Category | Code | Description
-| --- | --- | ---
-| REQUEST_ERROR | SCHEMA_VALIDATE | schema validation failed
-|  | NOT_FOUND | resource was not found
-|  | MISMATCH_ERROR | request value is not equal to the value in the DB
-|  | CONFLICT | resource already exists
-|  | JSON_PARSING | there was a json parsing exception
-|  | INVALID_INPUT | wrong parameter used
-| AUTHENTICATION_ERROR | NEED_LOGIN | a correct login is required
-| AUTHORIZATION_ERROR | ACCESSGROUP_DENY | ACL denied access
-|  | ACL_DENY | ACL denied access
-| SERVER_ERROR | USER_ERROR | internal error
-|  | AUTH_ERROR | internal error
-|  | ACL_ERROR | internal error
-|  | LIBRARY_ERROR | internal error
-|  | INTERNAL_ERROR | internal error
-| DB_ERROR | RELATION_ERROR | internal error
-|  | QUERY_RESULT_EMPTY | internal error
-|  | NOT_FOUND_IN_ITEM | internal error
-|  | DB_INTERNAL_ERROR | internal error
-| BILLING_ERROR | BILLING | need increase billing
-| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receiving a result from the gateway
-| UNKNOWN | - |
-
-
 ## 12. Portal 사용 가이드
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 

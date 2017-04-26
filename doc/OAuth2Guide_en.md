@@ -6,7 +6,7 @@ See here for details [Link](./OAuth2.md)
 ## What is OAuth2?
 https://oauth.net/2/
 
-![OAuth](./images/OAuth2.png "OAuth")
+![OAuth](./images/oauth2.png "OAuth")
 
 
 ## Initial Setup
@@ -51,4 +51,3 @@ Access the resources in your service using the privileges of a serviceAdmin.
 
 ## In Detail
 [Link](./OAuth2.md)
-

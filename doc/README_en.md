@@ -9,18 +9,24 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 ## Contents
 * [1. Glossary](#1-glossary)
-* [2. Workflow for hardware interlock with Thing+(embedded)](#2-workflow-for-hardware-interlock-with-thingembedded)
-* [3. Sensor Types](#3-sensor-types)
-* [4. Sensor Type Registration Form](#4-sensor-type-registration-form)
-* [5. Registered Gateway Model List](#5-registered-gateway-model-list)
-* [6. Gateway Model Registration Form](#6-gateway-model-registration-form)
-* [7. Registered Gateway, Device and Sensor List](#7-registered-gateway-device-and-sensor-list)
-* [8. Embedded Development Guide](#8-embedded-development-guide)
-* [9. Workflow for utilizing OAuth/App](#9-workflow-for-utilizing-oauthapp)
-* [10. OAuth Development Guide](#10-oauth-development-guide)
-* [11. API documentation](#11--api-documentation)
-* [12. Portal Usage Guide](#12-portal-usage-guide)
-* [13. Flow for interlocking with another Iot platform](#13-flow-for-interlocking-with-another-iot-platform)
+* [2. Workflow](#2-workflow)
+* [2.1 for hardware interlock with Thing+(embedded)](#2.1-for-hardware-interlock-with-thingembedded)
+* [2.2 for utilizing OAuth/App](#2.2-for-utilizing-oauthapp)
+* [2.3 for interlocking with another Iot platform](#2.3-for-interlocking-with-another-iot-platform)
+
+* [3. Guides](#3-guides)
+* [3.1 Sensor Types](#3.1-sensor-types)
+* [3.2 Sensor Type Registration Form](#3.2-sensor-type-registration-form)
+* [3.3 Registered Gateway Model List](#3.3-registered-gateway-model-list)
+* [3.4 Gateway Model Registration Form](#3.4-gateway-model-registration-form)
+* [3.5 Registered Gateway, Device and Sensor List](#3.5-registered-gateway-device-and-sensor-list)
+* [3.6 Embedded Development Guide](#3.6-embedded-development-guide)
+* [3.7 OAuth Development Guide](#3.7-oauth-development-guide)
+* [3.8 Portal Usage Guide](#3.8-portal-usage-guide)
+
+* [4. API documentation](#11--api-documentation)
+* [4.1 Test URL](#4.1-test-url)
+
 
 ## 1. Glossary
 
@@ -63,113 +69,48 @@ From time to time, the `SandBox` will also have new features that are still in t
         * Gateway - RaspberryPi
         * Tag - temperature sensor 1, humidity sensor 1 both tagged with `Room` (a geo-local tag basically), temperature sensor 2, humidity sensor2 Tagged `Living Room` - though this, easily create rules/actions on a per-room basis
 
-## 2. Workflow for hardware interlock with Thing+(embedded)
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
+## 2. Workflow
 
-## 3. Sensor Types
+### 2.1 for hardware interlock with Thing+(embedded)
+ - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
+
+### 2.2 for utilizing OAuth/App
+ - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
+
+### 2.3 for interlocking with another Iot platform
+ - [To be provided later]
+
+## 3. Guides
+
+### 3.1 Sensor Types
 [Link](./SensorTypes_en.md)
 
-## 4. Sensor Type Registration Form
+### 3.2 Sensor Type Registration Form
 [Download](./Sensor-type-registration-form.xlsx)
 
-## 5. Registered Gateway Model List
+### 3.3 Registered Gateway Model List
 [Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayModelList.html)
 
-## 6. Gateway Model Registration Form
+### 3.4 Gateway Model Registration Form
 [Download](./Gateway-model-registration-form.xlsx)
 
-## 7. Registered Gateway, Device and Sensor List
+### 3.5 Registered Gateway, Device and Sensor List
 [Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayDeviceAndSensorList.html)
 
-## 8. Embedded Development Guide
+### 3.6 Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-## 9. Workflow for utilizing OAuth/App
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
-
-## 10. OAuth Development Guide
+### 3.7 OAuth Development Guide
 [Link](./OAuth2Guide_en.md)
 
-## 11.  API documentation
-[Link](https://thingplus-en.api-docs.io/2.0)
-
-### 11.1 Test URL
-https://nocert.sandbox.thingplus.net/
-
-### 11.2 Thing+ API Response Structure
-
-All Most response next style
-
-```
-{
-  "statusCode": 200
-  "message": "OK",
-  "data": {
-    //some data
-  },
-  "errors": [
-    //some error
-  ]
-}
-```
-
-### 11.3 Response Status Codes
-The http response status code is the same as here.
-
-
-| StatusCode | Description | example
-| --- | --- | ---
-| 200 | OK |
-| 201 | Created |
-| 204 | No Content |
-| 207 | Multi-Status| gateway create success but create sensor is fail when you use `registerGateway`
-| 400 | Bad Request |
-| 401 | Unauthorized |
-| 403 | Forbidden | try access a resource what you don't have permition
-| 404 | Not Found |
-| 409 | Conflict | resource is already exist when you try create
-| 429 | Too Many Requests |
-| 444 | Unknown |
-| 471 | Billing (Temporary) | over your billing plan when you add `gateway, sensor, device, rule`
-| 500 | Internal Server Error |
-| 504 | Gateway Time-out | occurd timeout from gateway when you use `controlActuator`
-| 600 | Gateway Error |
-
-
-### 11.4 API Error Codes
-Thing+ API Error Categories & Codes are `strings`
-
-| Category | Code | Description
-| --- | --- | ---
-| REQUEST_ERROR | SCHEMA_VALIDATE | schema validation failed
-|  | NOT_FOUND | resource was not found
-|  | MISMATCH_ERROR | request value is not equal to the value in the DB
-|  | CONFLICT | resource already exists
-|  | JSON_PARSING | there was a json parsing exception
-|  | INVALID_INPUT | wrong parameter used
-| AUTHENTICATION_ERROR | NEED_LOGIN | a correct login is required
-| AUTHORIZATION_ERROR | ACCESSGROUP_DENY | ACL denied access
-|  | ACL_DENY | ACL denied access
-| SERVER_ERROR | USER_ERROR | internal error
-|  | AUTH_ERROR | internal error
-|  | ACL_ERROR | internal error
-|  | LIBRARY_ERROR | internal error
-|  | INTERNAL_ERROR | internal error
-| DB_ERROR | RELATION_ERROR | internal error
-|  | QUERY_RESULT_EMPTY | internal error
-|  | NOT_FOUND_IN_ITEM | internal error
-|  | DB_INTERNAL_ERROR | internal error
-| BILLING_ERROR | BILLING | need increase billing
-| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receiving a result from the gateway
-| UNKNOWN | - |
-
-
-
-## 12. Portal Usage Guide
+### 3.8 Portal Usage Guide
 [Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
-## 13. Flow for interlocking with another Iot platform
-[To be provided later]
+## 4.  API documentation
+[Link](https://thingplus-en.api-docs.io/2.0)
+
+### 4.1 Test URL
+https://nocert.sandbox.thingplus.net/
 
 ## Changes history
 

@@ -55,7 +55,7 @@ From time to time, the `SandBox` will also have new features that are still in t
         * Site Admin - Electrical staff managing the power/usage of electricity of each apartment complex
         * User - Apartment residents. May check their home electricity usage
         
-1b. Example regarding Gateway/Device/Sensor/Tag usage
+2. Example regarding Gateway/Device/Sensor/Tag usage
     * Home IoT with RaspberryPi and an IoT Starter Kit. Assume that there are two temperature and humidity sensors
         * Sensor - temperature sensor, humidity sensor
         * Actuator - Led sensor that can be turned on/off

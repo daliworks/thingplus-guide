@@ -122,16 +122,16 @@ Thing+ API Error Category & Code is `string`
 
 | Category | Code | Description
 | --- | --- | ---
-| REQUEST_ERROR | SCHEMA_VALIDATE | validate schema fail
-|  | NOT_FOUND | resource not found
-|  | MISMATCH_ERROR | request value is not equal value in DB
-|  | CONFLICT | already exist
-|  | INVALID_INPUT | wrong parameter
-| AUTHENTICATION_ERROR | NEED_LOGIN | need login
-| AUTHORIZATION_ERROR | ACCESSGROUP_DENY | ACL deny
-|  | ACL_DENY | ACL deny
-| SERVER_ERROR | JSON_PARSING | json parsing exception
-|  | USER_ERROR | internal error
+| REQUEST_ERROR | SCHEMA_VALIDATE | schema validation failed
+|  | NOT_FOUND | resource was not found
+|  | MISMATCH_ERROR | request value is not equal to the value in the DB
+|  | CONFLICT | resource already exists
+|  | JSON_PARSING | there was a json parsing exception
+|  | INVALID_INPUT | wrong parameter used
+| AUTHENTICATION_ERROR | NEED_LOGIN | a correct login is required
+| AUTHORIZATION_ERROR | ACCESSGROUP_DENY | ACL denied access
+|  | ACL_DENY | ACL denied access
+| SERVER_ERROR | USER_ERROR | internal error
 |  | AUTH_ERROR | internal error
 |  | ACL_ERROR | internal error
 |  | LIBRARY_ERROR | internal error
@@ -141,9 +141,8 @@ Thing+ API Error Category & Code is `string`
 |  | NOT_FOUND_IN_ITEM | internal error
 |  | DB_INTERNAL_ERROR | internal error
 | BILLING_ERROR | BILLING | need increase billing
-| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receive result from gateway
+| GATEWAY_ERROR | PROCESS_COMMAND_RESULT | unknown error when receiving a result from the gateway
 | UNKNOWN | - |
-
 
 
 ## 12. Portal 사용 가이드

@@ -7,18 +7,21 @@
 
 ## Contents
 * [1. 용어 설명](#1-용어-설명)
-* [2. 장비 연동 플로우](#2-장비-연동-플로우)
-* [3. 센서 타입](#3-센서-타입)
-* [4. 센서 타입 정의를 위한 고객 입력 폼](#4-센서-타입-정의를-위한-고객-입력-폼)
-* [5. Thing+에 등록된 게이트웨이 모델 리스트](#5-thing에-등록된-게이트웨이-모델-리스트)
-* [6. 게이트웨이 모델 정의를 위한 고객 입력 폼](#6-게이트웨이-모델-정의를-위한-고객-입력-폼)
-* [7. Thing+에 등록된 장비 리스트](#7-thing에-등록된-장비-리스트)
-* [8. 임베디드 개발 가이드](#8-임베디드-개발-가이드)
-* [9. OAuth/앱 연동 플로우](#9-oauth앱-연동-플로우)
-* [10. OAuth 개발 가이드](#10-oauth-개발-가이드)
-* [11. API 문서](#11-api-문서)
-* [12. Portal 사용 가이드](#12-portal-사용-가이드)
-* [13. 타 IoT 플렛폼 연동 플로우](#13-타-iot-플렛폼-연동-플로우)
+[2. 워크플로우](#2-워크플로우)
+  [2.1 장비 연동 플로우](#21-장비-연동-플로우)
+  [2.2 OAuth/앱 연동 플로우](#22-oauth앱-연동-플로우)
+  [2.3 타 IoT 플랫폼 연동 플로우](#23-타-iot-플랫폼-연동-플로우)
+[3. 가이드](#3-가이드)
+  [3.1 센서 타입](#31-센서-타입)
+  [3.2 센서 타입 정의를 위한 고객 입력 폼](#32-센서-타입-정의를-위한-고객-입력-폼)
+  [3.3 Thing+에 등록된 게이트웨이 모델 리스트](#33-thing에-등록된-게이트웨이-모델-리스트)
+  [3.4 게이트웨이 모델 정의를 위한 고객 입력 폼](#34-게이트웨이-모델-정의를-위한-고객-입력-폼)
+  [3.5 Thing+에 등록된 장비 리스트](#35-thing에-등록된-장비-리스트)
+  [3.6 임베디드 개발 가이드](#36-임베디드-개발-가이드)
+  [3.7 OAuth 개발 가이드](#37-oauth-개발-가이드)
+  [3.8 Portal 사용 가이드](#38-portal-사용-가이드)
+[4. API 문서](#4-api-문서)
+[4.1 Test URL](#41-test-url)
 
 ## 1. 용어 설명
 
@@ -62,44 +65,47 @@
         * Tag - 온도센서1, 습도센서1을 Tag Room, 온도센서2, 습도센서2를 Tag Living Room
 
 
-## 2. 장비 연동 플로우
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
+## 2. 워크플로우
+### 2.1 장비 연동 플로우
+ - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
 
-## 3. 센서 타입
+## 2.2 OAuth/앱 연동 플로우
+ - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
+
+### 2.3 타 IoT 플랫폼 연동 플로우
+ - [추후 제공]
+
+## 3. 가이드
+### 3.1 센서 타입
 [Link](./SensorTypes_kr.md)
 
-## 4. 센서 타입 정의를 위한 고객 입력 폼
+### 3.2 센서 타입 정의를 위한 고객 입력 폼
 [Download](./Sensor-type-registration-form.xlsx)
 
-## 5. Thing+에 등록된 게이트웨이 모델 리스트
+### 3.3 Thing+에 등록된 게이트웨이 모델 리스트
 [Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayModelList.html)
 
-## 6. 게이트웨이 모델 정의를 위한 고객 입력 폼
+### 3.4 게이트웨이 모델 정의를 위한 고객 입력 폼
 [Download](./Gateway-model-registration-form.xlsx)
 
-## 7. Thing+에 등록된 장비 리스트
+### 3.5 Thing+에 등록된 장비 리스트
 [Link](https://rawgit.com/daliworks/thingplus-guide/master/doc/RegisteredGatewayDeviceAndSensorList.html)
 
-## 8. 임베디드 개발 가이드
+### 3.6 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
-## 9. OAuth/앱 연동 플로우
-[Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Bkr%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
-
-## 10. OAuth 개발 가이드
+### 3.7 OAuth 개발 가이드
 [Link](./OAuth2Guide_kr.md)
 
-## 11. API 문서
-[Link](https://thingplus-10.api-docs.io/2.0/)
-
-### 11.1 Test URL
-https://nocert.sandbox.thingplus.net/
-
-## 12. Portal 사용 가이드
+### 3.8 Portal 사용 가이드
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
-## 13. 타 IoT 플랫폼 연동 플로우
-[추후 제공]
+## 4. API 문서
+[Link](https://thingplus-20.api-docs.io/2.0/)
+
+### 4.1 Test URL
+https://nocert.sandbox.thingplus.net/
+
 
 ## Changes history
 

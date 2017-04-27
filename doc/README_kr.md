@@ -10,7 +10,7 @@
 * [2. 워크플로우](#2-워크플로우)
   * [2.1 장비 연동 플로우](#21-장비-연동-플로우)
   * [2.2 OAuth/앱 연동 플로우](#22-oauth앱-연동-플로우)
-* [2.3 타 IoT 플랫폼 연동 플로우](#23-타-iot-플랫폼-연동-플로우)
+  * [2.3 타 IoT 플랫폼 연동 플로우](#23-타-iot-플랫폼-연동-플로우)
 * [3. 가이드](#3-가이드)
   * [3.1 센서 타입](#31-센서-타입)
   * [3.2 센서 타입 정의를 위한 고객 입력 폼](#32-센서-타입-정의를-위한-고객-입력-폼)
@@ -21,7 +21,7 @@
   * [3.7 OAuth 개발 가이드](#37-oauth-개발-가이드)
   * [3.8 Portal 사용 가이드](#38-portal-사용-가이드)
 * [4. API 문서](#4-api-문서)
-* [4.1 Test URL](#41-test-url)
+  * [4.1 Test URL](#41-test-url)
 
 ## 1. 용어 설명
 
@@ -101,7 +101,7 @@
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
 ## 4. API 문서
-[Link](https://thingplus-20.api-docs.io/2.0/)
+[Link](https://thingplus-22.api-docs.io/2.0/)
 
 ### 4.1 Test URL
 https://nocert.sandbox.thingplus.net/

@@ -26,7 +26,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 * [4. API documentation](#4--api-documentation)
   * [4.1 Test URL](#41-test-url)
-  * [4.2 API Version](42-api-version)
+  * [4.2 API Version](#42-api-version)
 
 
 ## 1. Glossary

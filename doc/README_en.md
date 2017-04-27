@@ -26,6 +26,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 * [4. API documentation](#4--api-documentation)
   * [4.1 Test URL](#41-test-url)
+  * [4.2 API Version](42-api-version)
 
 
 ## 1. Glossary
@@ -111,6 +112,14 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 ### 4.1 Test URL
 https://nocert.sandbox.thingplus.net/
+
+### 4.2 API Version
+The current Thing+ API version and documentation is v2.0.
+
+However, for the time being, only sandbox.thingplus.net is on the v2.0 system.
+Other services are currently using v1.0 of the API.
+
+This is temporary, and we intend to update all service locations to v2.0 soon.
 
 ## Changes history
 

@@ -22,6 +22,7 @@
   * [3.8 Portal 사용 가이드](#38-portal-사용-가이드)
 * [4. API 문서](#4-api-문서)
   * [4.1 Test URL](#41-test-url)
+  * [4.2 API 버전](#42-API-버전)
 
 ## 1. 용어 설명
 
@@ -105,6 +106,14 @@
 
 ### 4.1 Test URL
 https://nocert.sandbox.thingplus.net/
+
+### 4.2 API 버전
+Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 있습니다.
+
+하지만, sandbox.thingplus.net 에서만 당분간 v2.0으로 서비스되고 있고,
+iot.thingplus.net 등은 v1.0으로 서비스되고 있습니다.
+
+추후 iot.thingplus.net 도 v2.0으로 업그레이드 될 예정입니다.
 
 
 ## Changes history

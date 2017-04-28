@@ -102,7 +102,7 @@
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
 
 ## 4. API 문서
-[Link](https://thingplus-22.api-docs.io/2.0/)
+[Link](https://thingplus.api-docs.io/2.0/)
 
 ### 4.1 Test URL
 https://nocert.sandbox.thingplus.net/

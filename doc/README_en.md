@@ -108,7 +108,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 [Link](http://support.thingplus.net/en/user-guide/registration.html#id-enduser)
 
 ## 4.  API documentation
-[Link](https://thingplus-22.api-docs.io/2.0)
+[Link](https://thingplus.api-docs.io/2.0)
 
 ### 4.1 Test URL
 https://nocert.sandbox.thingplus.net/

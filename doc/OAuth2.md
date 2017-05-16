@@ -138,7 +138,7 @@ ___TBD___ : Not available now
 }
 ```
 
-* Unauthorized Clinet ID
+* Unauthorized Client ID
   * If the client_id is not existing or not allowed to use, you will receive unauthorized_client AuthorizationError
 
 ```json

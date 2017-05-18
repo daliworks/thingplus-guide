@@ -87,7 +87,7 @@ Content-Type : application/x-www-form-urlencoded
 
 * Access token
   - Authorization Code Grant: Expire in 15 days
-  - Resource Owner Password Credentials Grant: Expire in 90 days
+  - Resource Owner Password Credentials Grant: Expire in 90 days
   - Possibly can be changed without advance notification
 
 ## Scopes

@@ -86,7 +86,9 @@ Content-Type : application/x-www-form-urlencoded
   - Exchange for the Access token is possible only one time
 
 * Access token
-  - Expire in 15 days (possibly can be changed without advance notification)
+  - Authorization Code Grant: Expire in 15 days
+  - Resource Owner Password Credentials Grant: Expire in 90 days
+  - Possibly can be changed without advance notification
 
 ## Scopes
 Scopes let you specify exactly what type of access you need. Scopes limit access for OAuth tokens. They do not grant any additional permission beyond that which the user already has.

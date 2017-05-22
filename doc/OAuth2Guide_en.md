@@ -18,6 +18,7 @@ https://oauth.net/2/
     - Refer to the authClients entry in api guide to create authClient
     - Separate maintenance / management required for generated authClient
  
+## [Scopes](./OAuth2.md#scopes)
  
 ## [Authorization Code system](./OAuth2.md#authorization-code-grant-or-web-server)
 Receiving delegation for the specified privilege of a specific user

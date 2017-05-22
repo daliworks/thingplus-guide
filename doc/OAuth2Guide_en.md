@@ -20,6 +20,7 @@ https://oauth.net/2/
  
 ## [Scopes](./OAuth2.md#scopes)
 Scopes let you specify exactly what type of access you need. Scopes limit access for OAuth tokens. They do not grant any additional permission beyond that which the user already has.
+
 [More](./OAuth2.md#scopes)
 
 

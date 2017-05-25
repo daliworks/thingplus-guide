@@ -95,22 +95,22 @@ Scopes let you specify exactly what type of access you need. Scopes limit access
 
 For the Authorization Code Grant, requested scopes will be displayed to the user on the authorize form.
 
-|     Scope          |                Name              |                         Description
-| ------------------ | -------------------------------- | ------------------------------------------------------------ 
-| (no scope)         |                                  | Cannot access any scopes
-| user-profile       | User Profile Read and Update     | ___TBD___ Read and update the profile of the user
-| user-profile-read  | User Profile Read                | Read the profile of the user
-| gateway            | Gateway Ceate/Read/Update/Delete | ___TBD___ Register a gateway/device/sensor and read, update, delete gateways/devices/sensors for which the user has permissions
-| gateway-read       | Gateway Read                     | Read gateways/devices/sensors and control actuator for which the user has permissions
-| gateway-update     | Gateway Read/Update              | Read and update gateways/devices/sensors, control actuator, and manage the gateways for which the user has permissions
-| timeline-read      | Timeline Read                    | Read timelines of the user
-| tag                | Tag Ceate/Read/Update/Delete     | Create, read, update and delete tags of the user
-| tag-read           | Tag Read                         | Read tags of the user
-| rule               | Rule Read/Update/Delete          | ___TBD___ Read, update and delete rules of the user
-| rule-read          | Rule Read                        | Read rules of the user
-| service-read       | Service Read                     | Read service for which the user is registered
-| site-read          | Site Read                        | Read site in which the user is registered
-| billing-read       | Billing Read                     | ___TBD___ Read billing information of the user
+|     Scope          |                Name              | resources (API) |                          Description
+| ------------------ | -------------------------------- | --- | ------------------------------------------------------------
+| (no scope)         |                                  | | Cannot access any scopes
+| user-profile       | User Profile Read and Update     | users/me, /changePassword | ___TBD___ Read and update the profile of the user
+| user-profile-read  | User Profile Read                | users/me | Read the profile of the user
+| gateway            | Gateway Ceate/Read/Update/Delete | /gateways, /registerGateway, /registerGatewayKey, /manageGateway, /controlActuator, /sensorTypes, /sensorDrivers, /gatewayModels | ___TBD___ Register a gateway/device/sensor and read, update, delete gateways/devices/sensors for which the user has permissions
+| gateway-read       | Gateway Read                     | /gateways, /controlActuator | Read gateways/devices/sensors and control actuator for which the user has permissions
+| gateway-update     | Gateway Read/Update              | /gateways, /manageGateway, /controlActuator | Read and update gateways/devices/sensors, control actuator, and manage the gateways for which the user has permissions
+| timeline-read      | Timeline Read                    | /timelines | Read timelines of the user
+| tag                | Tag Ceate/Read/Update/Delete     | /tags | Create, read, update and delete tags of the user
+| tag-read           | Tag Read                         | /tags | Read tags of the user
+| rule               | Rule Read/Update/Delete          | /rules, /pushDevices | ___TBD___ Read, update and delete rules of the user
+| rule-read          | Rule Read                        | /rules | Read rules of the user
+| service-read       | Service Read                     | /services | Read service for which the user is registered
+| site-read          | Site Read                        | /site | Read site in which the user is registered
+| billing-read       | Billing Read                     | /billings | ___TBD___ Read billing information of the user
 
 ___TBD___ : Not available now
 

@@ -2,13 +2,13 @@
 ## 목차
 1. [개요](#1-개요)
 2. [준비 사항](#2-준비-사항)
-3. [OAuth Client 생성](#3-OAuth-Client-등록)
-4. [Access Token 획득](#4-Access-Token-획득)
-5. [Gateway 등록](#5-Gateway-등록)
-6. [Device 등록](#6-Device-등록)
-7. [Sensor 등록](#7-Sensor-등록)
-8. [Status 전송](#8-Status-전송)
-9. [Sensor 값 전송](#9-Sensor-값-전송)
+3. [OAuth Client 생성](#3-oauth-client-등록)
+4. [Access Token 획득](#4-access-token-획득)
+5. [Gateway 등록](#5-gateway-등록)
+6. [Device 등록](#6-device-등록)
+7. [Sensor 등록](#7-sensor-등록)
+8. [Status 전송](#8-status-전송)
+9. [Sensor 값 전송](#9-sensor-값-전송)
 
 ## 1. 개요
 이 문서는 서비스 관리자나 사이트 관리자처럼 게이트웨이를 등록할 수 있는 사용자의 권한으로 게이트웨이와 센서를 등록하고 센서값을 전송하는 방법을 설명한 문서입니다.

@@ -2,7 +2,7 @@
 ## 목차
 1. [개요](#1-개요)
 2. [준비 사항](#2-준비-사항)
-3. [OAuth Client 생성](#3-oauth-client-등록)
+3. [OAuth Client 생성](#3-oauth-client-생성)
 4. [Access Token 획득](#4-access-token-획득)
 5. [Gateway 등록](#5-gateway-등록)
 6. [Device 등록](#6-device-등록)

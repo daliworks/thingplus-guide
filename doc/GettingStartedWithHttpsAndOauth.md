@@ -40,10 +40,10 @@
 
           ```json
           {
-               "name": "Test Client for Daliworks",
-               "reqId": "testClientId",
-               "clientSecret": "testClientPwd12!@",
-               "scopes": ["gateway", "site-read"]
+            "name": "Test Client for Daliworks",
+            "reqId": "testClientId",
+            "clientSecret": "testClientPwd12!@",
+            "scopes": ["gateway", "site-read"]
           }
           ```
         - name: auth client의 이름으로 자유롭게 입력하시면 됩니다.
@@ -56,20 +56,20 @@
 
           ```json
           {
-               "statusCode": 201,
-               "message": "Created",
-               "data": {
-                 "name": "Test Client for Daliworks",
-                 "clientSecret": "testClientPwd12!@",
-                 "scopes": [
-                   "gateway",
-                   "site-read"
-                 ],
-                 "_user": "1",
-                 "mtime": 1495422902432,
-                 "ctime": 1495422902432,
-                 "id": "testClient"
-               }
+            "statusCode": 201,
+            "message": "Created",
+            "data": {
+              "name": "Test Client for Daliworks",
+              "clientSecret": "testClientPwd12!@",
+              "scopes": [
+                "gateway",
+                "site-read"
+              ],
+              "_user": "1",
+              "mtime": 1495422902432,
+              "ctime": 1495422902432,
+              "id": "testClient"
+            }
           }
           ```
 
@@ -82,11 +82,11 @@
 
           ```json
           {
-               "grant_type": "password",
-               "client_id": "testClient",
-               "client_secret": "testClientPwd12!@",
-               "username": "serviceadmin",
-               "password": "0b54b2a7b72f1efeb2c86885c3247787"
+            "grant_type": "password",
+            "client_id": "testClient",
+            "client_secret": "testClientPwd12!@",
+            "username": "serviceadmin",
+            "password": "0b54b2a7b72f1efeb2c86885c3247787"
           }
           ```
         - grant_type: "password"라는 문자열 그대로 입력합니다. (**사용자의 password를 입력하는 것이 아닙니다. 주의하세요.**)
@@ -108,8 +108,8 @@
 
           ```json
           {
-               "access_token": "2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk",
-               "token_type": "Bearer"
+            "access_token": "2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk",
+            "token_type": "Bearer"
           }
           ```
 2. 획득한 access token는 API를 호출할 때 아래와 같은 방식으로 사용합니다.
@@ -129,23 +129,23 @@
 
           ```json
           {
-                "statusCode": 200,
-                "message": "OK",
-                "data": [
-                  {
-              "billing": "site:1",
-                    "code": "iotservice",
-                    "ctime": "1431416762406",
-                    "_service": "1",
-                    "billingReserve": "site:1:reserve",
-                    "billingLimit": "site:1:limit",
-                    "name": "default",
-                    "id": "1",
-                    "billingMeter": "site:1:meter",
-                    "mtime": "1431416762406",
-                    "billingCurrent": "site:1:current"
-                  }
-                ]
+             "statusCode": 200,
+             "message": "OK",
+             "data": [
+               {
+                 "billing": "site:1",
+                 "code": "iotservice",
+                 "ctime": "1431416762406",
+                 "_service": "1",
+                 "billingReserve": "site:1:reserve",
+                 "billingLimit": "site:1:limit",
+                 "name": "default",
+                 "id": "1",
+                 "billingMeter": "site:1:meter",
+                 "mtime": "1431416762406",
+                 "billingCurrent": "site:1:current"
+               }
+             ]
           }
           ```
     - response의 `data`에 site의 목록이 반환됩니다. (일반적으로는 1개이지만, 여러 개의 site를 생성했을 경우에는 여러 개의 site data가 반환됩니다.)
@@ -159,77 +159,77 @@
 
           ```json
           {
-                "statusCode": 200,
-                "message": "OK",
-                "data": {
-                  "reportInterval": "300000",
-                  "displayName": "Open API Gateway",
-                  "id": "52",
-                  "model": "open-api-gateway-v1.0",
-                  "deviceModels": [
-                    {
-                      "id": "open-api-device-v1.0",
-                      "displayName": "Open API Device",
-                      "idTemplate": "{gatewayId}-{deviceAddress}",
-                      "discoverable": "y",
-                      "sensors": [
-                        {
-                          "network": "daliworks",
-                          "driverName": "openApiSensor",
-                          "model": "openApiTemp",
-                          "type": "temperature",
-                          "category": "sensor"
-                        },
-                        {
-                          "network": "daliworks",
-                          "driverName": "openApiSensor",
-                          "model": "openApiHumi",
-                          "type": "humidity",
-                          "category": "sensor"
-                        },
-      
-                        ...
-      
-                        {
-                          "network": "daliworks",
-                          "driverName": "openApiSensor",
-                          "model": "openApiConductivity",
-                          "type": "conductivity",
-                          "category": "sensor"
-                        }
-                      ],
-                      "max": 99
-                    }
-                  ],
-                  "gatewayIdConfig": "n",
-                  "mtime": "1495609234518",
-                  "idFormat": "uuid",
-                  "vendor": "OPEN API",
-                  "ctime": "1495609234518",
-                  "deviceMgmt": {
-                    "reportInterval": {
-                      "show": "y",
-                      "change": "y"
-                    },
-                    "DM": {
-                      "poweroff": {
-                        "support": "n"
-                      },
-                      "reboot": {
-                        "support": "n"
-                      },
-                      "restart": {
-                        "support": "n"
-                      },
-                      "swUpdate": {
-                        "support": "n"
-                      },
-                      "swInfo": {
-                        "support": "n"
-                      }
-                    }
-                  }
-                }
+             "statusCode": 200,
+             "message": "OK",
+             "data": {
+               "reportInterval": "300000",
+               "displayName": "Open API Gateway",
+               "id": "52",
+               "model": "open-api-gateway-v1.0",
+               "deviceModels": [
+                 {
+                   "id": "open-api-device-v1.0",
+                   "displayName": "Open API Device",
+                   "idTemplate": "{gatewayId}-{deviceAddress}",
+                   "discoverable": "y",
+                   "sensors": [
+                     {
+                       "network": "daliworks",
+                       "driverName": "openApiSensor",
+                       "model": "openApiTemp",
+                       "type": "temperature",
+                       "category": "sensor"
+                     },
+                     {
+                       "network": "daliworks",
+                       "driverName": "openApiSensor",
+                       "model": "openApiHumi",
+                       "type": "humidity",
+                       "category": "sensor"
+                     },
+     
+                     ...
+    
+                     {
+                       "network": "daliworks",
+                       "driverName": "openApiSensor",
+                       "model": "openApiConductivity",
+                       "type": "conductivity",
+                       "category": "sensor"
+                     }
+                   ],
+                   "max": 99
+                 }
+               ],
+               "gatewayIdConfig": "n",
+               "mtime": "1495609234518",
+               "idFormat": "uuid",
+               "vendor": "OPEN API",
+               "ctime": "1495609234518",
+               "deviceMgmt": {
+                 "reportInterval": {
+                   "show": "y",
+                   "change": "y"
+                 },
+                 "DM": {
+                   "poweroff": {
+                     "support": "n"
+                   },
+                   "reboot": {
+                     "support": "n"
+                   },
+                   "restart": {
+                     "support": "n"
+                   },
+                   "swUpdate": {
+                     "support": "n"
+                   },
+                   "swInfo": {
+                     "support": "n"
+                   }
+                 }
+               }
+             }
           }
           ```
     - 게이트웨이 모델은 등록할 게이트웨이의 특성을 정의한 것입니다. 어떤 형식의 게이트웨이 ID를 사용할지, 어떤 디바이스와 센서를 등록할 수 있는지 등에 관한 정보가 들어 있습니다.
@@ -256,12 +256,12 @@
 
           ```json
           {
-               "id": "87cd2a6e407511e7922eb724f8803770",
-               "params": {
-                 "siteId": "1",
-                 "model": "52",
-                 "name": "Open Gateway 1"
-               }
+            "id": "87cd2a6e407511e7922eb724f8803770",
+            "params": {
+              "siteId": "1",
+              "model": "52",
+              "name": "Open Gateway 1"
+            }
           }
           ```
         - id: UUID로 생성한 ID를 사용합니다.
@@ -275,19 +275,19 @@
 
           ```json
           {
-               "statusCode": 201,
-               "message": "Created",
-               "data": {
-                 "name": "Open Gateway 1",
-                 "model": "52",
-                 "_site": "1",
-                 "_service": "1",
-                 "reportInterval": "300000",
-                 "mtime": 1495626410619,
-                 "ctime": 1495626410619,
-                 "tree": "87cd2a6e407511e7922eb724f8803770",
-                 "id": "87cd2a6e407511e7922eb724f8803770"
-               }
+            "statusCode": 201,
+            "message": "Created",
+            "data": {
+              "name": "Open Gateway 1",
+              "model": "52",
+              "_site": "1",
+              "_service": "1",
+              "reportInterval": "300000",
+              "mtime": 1495626410619,
+              "ctime": 1495626410619,
+              "tree": "87cd2a6e407511e7922eb724f8803770",
+              "id": "87cd2a6e407511e7922eb724f8803770"
+            }
           }
           ```
         - reportInterval: `전송 주기`로서 게이트웨이가 센서에서 측정한 값을 Thing+로 전달하는 주기(msec)를 의미합니다. 이 값은 Thing+ Portal의 `게이트웨이 관리`에서 수정할 수 있습니다.
@@ -303,9 +303,9 @@
 
           ```json
           {
-                "reqId": "366d685f93f5477a8d29e8c45bae0a31",
-                "name": "Open Gateway Device 1",
-                "model": "open-api-device-v1.0"
+             "reqId": "366d685f93f5477a8d29e8c45bae0a31",
+             "name": "Open Gateway Device 1",
+             "model": "open-api-device-v1.0"
           }
           ```
         - reqId: UUID를 이용하여 디바이스 ID를 생성하여 사용합니다.
@@ -318,19 +318,19 @@
 
           ```json
           {
-               "statusCode": 201,
-               "message": "Created",
-               "data": {
-                 "name": "Open Gateway 1",
-                 "model": "52",
-                 "_site": "1",
-                 "_service": "1",
-                 "reportInterval": "300000",
-                 "mtime": 1495626410619,
-                 "ctime": 1495626410619,
-                 "tree": "87cd2a6e407511e7922eb724f8803770",
-                 "id": "87cd2a6e407511e7922eb724f8803770"
-               }
+            "statusCode": 201,
+            "message": "Created",
+            "data": {
+              "name": "Open Gateway 1",
+              "model": "52",
+              "_site": "1",
+              "_service": "1",
+              "reportInterval": "300000",
+              "mtime": 1495626410619,
+              "ctime": 1495626410619,
+              "tree": "87cd2a6e407511e7922eb724f8803770",
+              "id": "87cd2a6e407511e7922eb724f8803770"
+            }
           }
           ```
 
@@ -344,13 +344,13 @@
 
           ```json
           {
-               "reqId": "d815ba2f84eb490b8e68d9dd744da397",
-               "name": "온도센서",
-               "type": "temperature",
-               "driverName": "openApiSensor",
-               "model": "openApiTemp",
-               "category": "sensor",
-               "deviceId": "366d685f93f5477a8d29e8c45bae0a31"
+            "reqId": "d815ba2f84eb490b8e68d9dd744da397",
+            "name": "온도센서",
+            "type": "temperature",
+            "driverName": "openApiSensor",
+            "model": "openApiTemp",
+            "category": "sensor",
+            "deviceId": "366d685f93f5477a8d29e8c45bae0a31"
           }
           ```
         - reqId: UUID를 이용하여 센서 ID를 생성하여 사용합니다.
@@ -365,20 +365,20 @@
 
           ```json
           {
-               "statusCode": 201,
-               "message": "Created",
-               "data": {
-                 "name": "온도센서",
-                 "type": "temperature",
-                 "driverName": "openApiSensor",
-                 "model": "openApiTemp",
-                 "category": "sensor",
-                 "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
-                 "owner": "87cd2a6e407511e7922eb724f8803770",
-                 "mtime": 1495681664335,
-                 "ctime": 1495681664335,
-                 "id": "d815ba2f84eb490b8e68d9dd744da397"
-               }
+            "statusCode": 201,
+            "message": "Created",
+            "data": {
+              "name": "온도센서",
+              "type": "temperature",
+              "driverName": "openApiSensor",
+              "model": "openApiTemp",
+              "category": "sensor",
+              "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
+              "owner": "87cd2a6e407511e7922eb724f8803770",
+              "mtime": 1495681664335,
+              "ctime": 1495681664335,
+              "id": "d815ba2f84eb490b8e68d9dd744da397"
+            }
           }
           ```
 
@@ -392,8 +392,8 @@
 
           ```json
           {
-               "validDuration": 450,
-               "value": "on"
+            "validDuration": 450,
+            "value": "on"
           }
           ```
         - validDuration: `status`가 유효한 기간(sec)을 의미합니다. 일반적으로 `reportInterval`의 1.5배를 사용합니다.
@@ -404,22 +404,22 @@
 
           ```json
           {
-               "statusCode": 200,
-               "message": "OK",
-               "data": {
-                 "type": "status",
-                 "value": "on",
-                 "srcDbType": "gateway",
-                 "time": "1495703469608",
-                 "expireAt": "1495703919608",
-                 "vtime": "1495703469608",
-                 "status": "87cd2a6e407511e7922eb724f8803770",
-                 "owner": "87cd2a6e407511e7922eb724f8803770",
-                 "gateway": "87cd2a6e407511e7922eb724f8803770",
-                 "mtime": "1495703469610",
-                 "ctime": "1495683245619",
-                 "id": "status.gateway.pCMjRP"
-               }
+            "statusCode": 200,
+            "message": "OK",
+            "data": {
+              "type": "status",
+              "value": "on",
+              "srcDbType": "gateway",
+              "time": "1495703469608",
+              "expireAt": "1495703919608",
+              "vtime": "1495703469608",
+              "status": "87cd2a6e407511e7922eb724f8803770",
+              "owner": "87cd2a6e407511e7922eb724f8803770",
+              "gateway": "87cd2a6e407511e7922eb724f8803770",
+              "mtime": "1495703469610",
+              "ctime": "1495683245619",
+              "id": "status.gateway.pCMjRP"
+            }
           }
           ```
         - expireAt: `status`가 언제까지 유효한지 나타내며, msec 단위의 Unix time입니다.
@@ -436,8 +436,8 @@
 
           ```json
           {
-               "validDuration": 450,
-               "value": "on"
+            "validDuration": 450,
+            "value": "on"
           }
           ```
         - validDuration: `status`가 유효한 기간(sec)을 의미합니다. 일반적으로 `reportInterval`의 1.5배를 사용합니다.
@@ -448,24 +448,24 @@
 
           ```json
           {
-               "statusCode": 200,
-               "message": "OK",
-               "data": {
-                 "type": "status",
-                 "value": "on",
-                 "srcType": "temperature",
-                 "srcCategory": "sensor",
-                 "srcDbType": "sensor",
-                 "time": "1495715734508",
-                 "expireAt": "1495716184508",
-                 "vtime": "1495715720489",
-                 "status": "d815ba2f84eb490b8e68d9dd744da397",
-                 "owner": "87cd2a6e407511e7922eb724f8803770",
-                 "sensor": "d815ba2f84eb490b8e68d9dd744da397",
-                 "mtime": "1495715734508",
-                 "ctime": "1495715720489",
-                 "id": "status.sensor.0uRmI2"
-               }
+            "statusCode": 200,
+            "message": "OK",
+            "data": {
+              "type": "status",
+              "value": "on",
+              "srcType": "temperature",
+              "srcCategory": "sensor",
+              "srcDbType": "sensor",
+              "time": "1495715734508",
+              "expireAt": "1495716184508",
+              "vtime": "1495715720489",
+              "status": "d815ba2f84eb490b8e68d9dd744da397",
+              "owner": "87cd2a6e407511e7922eb724f8803770",
+              "sensor": "d815ba2f84eb490b8e68d9dd744da397",
+              "mtime": "1495715734508",
+              "ctime": "1495715720489",
+              "id": "status.sensor.0uRmI2"
+            }
           }
           ```
         - expireAt: `status`가 언제까지 유효한지 나타내며, msec 단위의 Unix time입니다.
@@ -484,22 +484,22 @@
 
               ```json
               {
-                   "value": "36.5",
-                   "time": 1495715734508
+                "value": "36.5",
+                "time": 1495715734508
               }
               ```
             - 여러 개의 센서값을 전송할 경우
 
               ```json
               [
-                   {
-                     "value": "36.5",
-                     "time": 1495716734508
-                   },
-                   {
-                     "value": "36.3",
-                     "time": 1495717184508
-                   }
+                {
+                  "value": "36.5",
+                  "time": 1495716734508
+                },
+                {
+                  "value": "36.3",
+                  "time": 1495717184508
+                }
               ]
               ```
 
@@ -513,53 +513,53 @@
 
               ```json
               {
-                   "statusCode": 200,
-                   "message": "OK",
-                   "data": {
-                     "name": "온도센서",
-                     "type": "temperature",
-                     "driverName": "openApiSensor",
-                     "model": "openApiTemp",
-                     "category": "sensor",
-                     "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
-                     "owner": "87cd2a6e407511e7922eb724f8803770",
-                     "mtime": "1495717726517",
-                     "ctime": "1495681664335",
-                     "status": "status.sensor.0uRmI2",
-                     "series": "series.sensor.tOZhgI",
-                     "id": "d815ba2f84eb490b8e68d9dd744da397"
-                   }
+                "statusCode": 200,
+                "message": "OK",
+                "data": {
+                  "name": "온도센서",
+                  "type": "temperature",
+                  "driverName": "openApiSensor",
+                  "model": "openApiTemp",
+                  "category": "sensor",
+                  "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
+                  "owner": "87cd2a6e407511e7922eb724f8803770",
+                  "mtime": "1495717726517",
+                  "ctime": "1495681664335",
+                  "status": "status.sensor.0uRmI2",
+                  "series": "series.sensor.tOZhgI",
+                  "id": "d815ba2f84eb490b8e68d9dd744da397"
+                }
               }
               ```
             - 여러 개의 센서값을 전송했을 경우
 
               ```json
               {
-                   "statusCode": 200,
-                   "message": "OK",
-                   "data": {
-                     "type": "series",
-                     "srcType": "temperature",
-                     "seriesPack": [
-                       {
-                         "value": "36.5",
-                         "time": 1495718222169
-                       },
-                       {
-                         "value": "36.3",
-                         "time": 1495718672169
-                       }
-                     ],
-                     "mtime": "1495718691465",
-                     "ctime": "1495717726516",
-                     "time": "1495718672169",
-                     "value": "36.3",
-                     "owner": "87cd2a6e407511e7922eb724f8803770",
-                     "series": "d815ba2f84eb490b8e68d9dd744da397",
-                     "sensor": "d815ba2f84eb490b8e68d9dd744da397",
-                     "srcCategory": "sensor",
-                     "srcDbType": "sensor",
-                     "id": "series.sensor.tOZhgI"
-                   }
+                "statusCode": 200,
+                "message": "OK",
+                "data": {
+                  "type": "series",
+                  "srcType": "temperature",
+                  "seriesPack": [
+                    {
+                      "value": "36.5",
+                      "time": 1495718222169
+                    },
+                    {
+                      "value": "36.3",
+                      "time": 1495718672169
+                    }
+                  ],
+                  "mtime": "1495718691465",
+                  "ctime": "1495717726516",
+                  "time": "1495718672169",
+                  "value": "36.3",
+                  "owner": "87cd2a6e407511e7922eb724f8803770",
+                  "series": "d815ba2f84eb490b8e68d9dd744da397",
+                  "sensor": "d815ba2f84eb490b8e68d9dd744da397",
+                  "srcCategory": "sensor",
+                  "srcDbType": "sensor",
+                  "id": "series.sensor.tOZhgI"
+                }
               }
               ```

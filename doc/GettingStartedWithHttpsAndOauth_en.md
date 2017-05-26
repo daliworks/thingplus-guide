@@ -624,8 +624,7 @@ This document describes how to register gateways and sensors and send sensor val
         
         - If you want to send multiple sensor values, you can send them in an array.
 
-    - Response
-        
+- Response
         - Example
             - 1개의 센서값을 전송했을 경우
 
@@ -649,42 +648,7 @@ This document describes how to register gateways and sensors and send sensor val
                 }
               }
               ```
-              
-            - When multiple sensor values are transmitted
-
-
-             ```json
-              {
-                "statusCode": 200,
-                "message": "OK",
-                "data": {
-                  "type": "series",
-                  "srcType": "temperature",
-                  "seriesPack": [
-                    {
-                      "value": "36.5",
-                      "time": 1495718222169
-                    },
-                    {
-                      "value": "36.3",
-                      "time": 1495718672169
-                    }
-                  ],
-                  "mtime": "1495718691465",
-                  "ctime": "1495717726516",
-                  "time": "1495718672169",
-                  "value": "36.3",
-                  "owner": "87cd2a6e407511e7922eb724f8803770",
-                  "series": "d815ba2f84eb490b8e68d9dd744da397",
-                  "sensor": "d815ba2f84eb490b8e68d9dd744da397",
-                  "srcCategory": "sensor",
-                  "srcDbType": "sensor",
-                  "id": "series.sensor.tOZhgI"
-                }
-              }
-              ```
-
-
+            - 여러 개의 센서값을 전송했을 경우
 
               ```json
               {
@@ -716,5 +680,3 @@ This document describes how to register gateways and sensors and send sensor val
                 }
               }
               ```
-
-

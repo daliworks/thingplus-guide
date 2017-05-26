@@ -19,7 +19,7 @@ This document describes how to register gateways and sensors and send sensor val
 * If the account of the user who provided the privilege at the time of registration is deleted from Thing +, the privileges will disappear and your code will stop working.
 * Acquired privileges are retained for 90 days, so you will need to reissue your access token when your due date expires.
 
-## Preparation
+## 2. Preparation
 * Requires a tool that can call the HTTPS API to call the OAuth Client enrollment API.
 
     - [Google Chrome](https://www.google.com/chrome/browser/desktop): Use this to sign in to Thing+ Portal.
@@ -34,7 +34,7 @@ This document describes how to register gateways and sensors and send sensor val
     
     - For more information about the APIs used, see [Thing + API Reference](https://thingplus.api-docs.io/2.0).
 
-## Creating OAuth Client
+## 3. Creating OAuth Client
 
 1. On `Chrome`, go to Thing + Portal and log in with your service administrator account.
 
@@ -81,20 +81,21 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
 
-## Access Token acquisition
+## 4. Access Token acquisition
 1. Obtain an access token from the application using the following APIs:
     - URL: https://api.sandbox.thingplus.net/v2/oauth2/token
    
    - Method: POST
    
    - Body:
+   
         - Example
 
           ```json
           {
             "Grant_type": "password",
             "Client_id": "testClient",
-            "Client_secret": "testClientPwd12! @",
+            "Client_secret": "testClientPwd12!@",
             "Username": "serviceadmin",
             "Password": "0b54b2a7b72f1efeb2c86885c3247787"
           }
@@ -109,6 +110,7 @@ This document describes how to register gateways and sensors and send sensor val
         - username: Enter the ID of the user (usually the service administrator) who logged in to Thing + Portal when creating the auth client.
         
         - password: Enter the md5 hash value of the user password that was logged into Thing + Portal when creating the auth client.
+        
             - On OSX or Linux, use the following command to get the md5 hash value.
                - OSX
 
@@ -129,6 +131,7 @@ This document describes how to register gateways and sensors and send sensor val
             - [JavsScript-MD5](https://github.com/blueimp/JavaScript-MD5) is also available.
 
 - Response
+
         - Example
 
           ```json
@@ -148,7 +151,7 @@ This document describes how to register gateways and sensors and send sensor val
        $ curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
        ```
 
-## Register Gateway
+## 5. Register Gateway
 1. Obtaining a Site ID
 
     - URL: https://api.sandbox.thingplus.net/v2/sites
@@ -345,7 +348,7 @@ This document describes how to register gateways and sensors and send sensor val
         - reportInterval: This is the `transmission period`, which is the period (msec) at which the gateway transmits the measured value from the sensor to Thing +. This value can be modified in Thing + Portal 's gateway management.
 
 
-## Device registration
+## 6. Device registration
 1. Registration of a Device
 
     - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/devices
@@ -451,7 +454,7 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
 
-## Send Status
+## 8. Send Status
 
 1. Transferring Gateway Status
 

@@ -1,574 +1,579 @@
-# HTTPS와 OAuth2를 이용한 Thing+ 연동 가이드
-## 목차
-1. [개요](#1-개요)
-2. [준비 사항](#2-준비-사항)
-3. [OAuth Client 생성](#3-oauth-client-생성)
-4. [Access Token 획득](#4-access-token-획득)
-5. [Gateway 등록](#5-gateway-등록)
-6. [Device 등록](#6-device-등록)
-7. [Sensor 등록](#7-sensor-등록)
-8. [Status 전송](#8-status-전송)
-9. [Sensor 값 전송](#9-sensor-값-전송)
 
-## 1. 개요
-이 문서는 서비스 관리자나 사이트 관리자처럼 게이트웨이를 등록할 수 있는 사용자의 권한으로 게이트웨이와 센서를 등록하고 센서값을 전송하는 방법을 설명한 문서입니다.
+# Thing + Interworking Guide with HTTPS and OAuth2 - ENGLISH
+## Contents
+1. [Overview] (#1-Overview)
+2. [Preparation] (#2-Preparations)
+3. [Create OAuth Client] (#3-oauth-client-generated)
+4. [Access Token Acquisition] (#4-access-token-Acquisition)
+5. [Gateway registration] (#5-gateway-registration)
+6. [Device Registration] (#6-device-registration)
+7. [Sensor Registration] (#7-sensor-registration)
+8. [Status transmission] (#8-status-transmission)
+9. [Sensor value transfer] (#9-sensor-value-transfer)
 
-* 일반적인 게이트웨이에서는 API key를 사용하지만, API key를 매번 Thing+ Portal에서 발급받아 적용하는 것이 적절하지 않고, 사용자의 ID와 같은 개인정보를 취급할 수 있는 server나 native app이 Thing+에 연동할 때 적용하는 방식입니다.
-* OAuth2를 이용하여 권한을 획득하고, HTTPS를 이용하여 등록, 전송을 수행합니다.
-* Actuator는 이 방식을 이용하여 연동할 수 없습니다.
-* 등록할 때 권한을 제공한 사용자의 계정이 Thing+에서 삭제되면 권한이 사라져서 비정상 동작하게 되므로 가급적이면 서비스 관리자의 권한으로 적용하길 권장합니다.
-* 획득한 권한은 90일 동안 유지되므로, 기한이 만료되면 access token을 재발급 받아야 합니다.
+## 1. Overview
+This document describes how to register gateways and sensors and send sensor values using the privileges of a user who can register the gateway, such as a service administrator or site administrator.
 
-## 2. 준비 사항
-* OAuth Client 등록 API 호출을 위해 HTTPS API를 호출할 수 있는 도구가 필요합니다.
-    - [Google Chrome](https://www.google.co.kr/chrome/browser/desktop): Thing+ Portal에 로그인할 때 사용합니다.
-    - [Postman](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjPiOf6mfvTAhXEJ5QKHbnBBZsQFggoMAI&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpostman%2Ffhbjgbiflinjbdggehcddcbncdddomop%3Fhl%3Den&usg=AFQjCNE_Yq59TT1ZExzJ68FTldg4ho_lGw&cad=rjt): 원하는 HTTPS API를 호출할 때 사용하는 Google Chrome App입니다.
-    - [Postman Interceptor](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwj8p8etmvvTAhVDv5QKHZDDCP8QFgggMAA&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpostman-interceptor%2Faicmkgpgakddgnaphhhpliifpcfhicfo%3Fhl%3Den&usg=AFQjCNEuLccEMU2awxCgNKPUPhTk4AKv0w): Thing+ Portal에 로그인했을 때 생성된 쿠키를 Postman에서 공유할 수 있도록 지원하는 Google Chrome Extension입니다.
-    - 위의 도구를 사용하지 않더라도 Thing+ Portal에서 로그인한 상태로 HTTPS POST API를 호출할 수 있는 도구를 사용하면 수행 가능합니다.
-    - [Thing+ Support 사이트](http://support.thingplus.net/ko/rest-api/getting-started.html#id-step1)를 참고하세요.
-    - 사용된 API에 대해 좀더 자세히 알고 싶을 경우 [Thing+ API Reference](https://thingplus.api-docs.io/2.0)를 참고하세요.
+* Common gateway uses API key but it is not appropriate to apply the API key every time using the Thing+ Portal. It is applied when server or native app that can handle personal information such as user ID is linked with Thing+.
+* Obtain authority using OAuth2, and register and transfer data and values using HTTPS.
+* Actuators can not be linked using this method.
+* If the account of the user who provided the privilege at the time of registration is deleted from Thing +, the privileges will disappear and your code will stop working.
+* Acquired privileges are retained for 90 days, so you will need to reissue your access token when your due date expires.
 
-## 3. OAuth Client 생성
+## Preparation
+* Requires a tool that can call the HTTPS API to call the OAuth Client enrollment API.
+    - [Google Chrome](https://www.google.com/chrome/browser/desktop): Use this to sign in to Thing+ Portal.
+    - [Postman](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjPiOf6mfvTAhXEJ5QKHbnBBZsQFggoMAI&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpostman% 2Ffhbjgbiflinjbdggehcddcbncdddomop%3Fhl%3Den&usg=AFQjCNE_Yq59TT1ZExzJ68FTldg4ho_lGw&cad=rjt): This is the Google Chrome App you can use to call the desired HTTPS API.
+    - [Postman Interceptor](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwj8p8etmvvTAhVDv5QKHZDDCP8QFgggMAMA&url=https%3A%2F%2Fchrome.Google.com%2Fwebstore%2Fdetail%2Fpostman-interceptor% 2Faicmkgpgakddgnaphhhpliifpcfhicfo%3Fhl%3Den&usg=AFQjCNEuLccEMU2awxCgNKPUPhTk4AKv0w): A Google Chrome extension that allows Postman to share cookies created when logged in to the Thing+ Portal.
+    - Even if you do not use the above tool, you can still do so by using a tool that allows you to call the HTTPS POST API while logged in from the Thing+ Portal.
+    - [Thing + Support site](http://support.thingplus.net/en/rest-api/getting-started.html#id-step1).
+    - For more information about the APIs used, see [Thing + API Reference](https://thingplus.api-docs.io/2.0).
 
-1. `Chrome`에서 Thing+ Portal에 접속하여 서비스 관리자 계정으로 로그인합니다.
-2. `Postman`을 실행하고, `Postman Intercepter`를 `on`한 다음 아래 API를 호출합니다.
-    - URL: https://api.sandbox.thingplus.net/v2/authClients
-    - Method: POST
-    - Content-Type: application/json
-    - Body:
-        - Example
+## Creating OAuth Client
 
-          ```json
-          {
-            "name": "Test Client for Daliworks",
-            "reqId": "testClientId",
-            "clientSecret": "testClientPwd12!@",
-            "scopes": ["gateway", "site-read"]
-          }
-          ```
-        - name: auth client의 이름으로 자유롭게 입력하시면 됩니다.
-        - reqId: auth client의 ID로 access token을 얻을 때 입력하게 됩니다. 정하신 값을 입력하시면 됩니다.
-        - clientSecret: auth client의 secret 값으로 access token을 얻을 때 입력하게 됩니다. 정하신 값을 입력하시면 됩니다.
-        - scopes: auth client에 부여할 권한을 나열합니다. scopes에 들어갈 수 있는 값은 [link](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)를 참고하세요.
+1. On `Chrome`, go to Thing + Portal and log in with your service administrator account.
+2. Execute `Postman`,` On` Postman Intercepter, and then call the following API.
+    - URL: https://api.sandbox.thingplus.net/v2/authClients
+    - Method: POST
+    - Content-Type: application / json
+    - Body:
+        - Example
 
-    - Response
-        - Example
+          `` `Json
+          {
+            "Name": "Test Client for Daliworks",
+            "ReqId": "testClientId",
+            "ClientSecret": "testClientPwd12! @",
+            "Scopes": ["gateway", "site-read"]
+          }
+          `` `
+        - name: auth You can freely enter the name of the client.
+        - reqId: auth The ID of the client to be used to obtain the access token. Enter the value you have set.
+        - clientSecret: auth This is used to get the access token from the client's secret value. Enter the value you have set.
+        - scopes: Lists the permissions to grant to the auth client. See [link] (https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes) for the values ​​you can enter in scopes.
 
-          ```json
-          {
-            "statusCode": 201,
-            "message": "Created",
-            "data": {
-              "name": "Test Client for Daliworks",
-              "clientSecret": "testClientPwd12!@",
-              "scopes": [
-                "gateway",
-                "site-read"
-              ],
-              "_user": "1",
-              "mtime": 1495422902432,
-              "ctime": 1495422902432,
-              "id": "testClient"
-            }
-          }
-          ```
+    - Response
+        - Example
 
-## 4. Access Token 획득
-1. Application에서 다음 API를 이용하여 access token을 획득합니다.
-    - URL: https://api.sandbox.thingplus.net/v2/oauth2/token
-    - Method: POST
-    - Body:
-        - Example
+          `` `Json
+          {
+            "StatusCode": 201,
+            "Message": "Created",
+            "Data": {
+              "Name": "Test Client for Daliworks",
+              "ClientSecret": "testClientPwd12! @",
+              "Scopes": [
+                "Gateway",
+                "Site-read"
+              ],
+              "_user": "1",
+              & Quot; mtime & quot ;: 1495422902432,
+              "Ctime": 1495422902432,
+              "Id": "testClient"
+            }
+          }
+          `` `
 
-          ```json
-          {
-            "grant_type": "password",
-            "client_id": "testClient",
-            "client_secret": "testClientPwd12!@",
-            "username": "serviceadmin",
-            "password": "0b54b2a7b72f1efeb2c86885c3247787"
-          }
-          ```
-        - grant_type: "password"라는 문자열 그대로 입력합니다. (**사용자의 password를 입력하는 것이 아닙니다. 주의하세요.**)
-        - client_id: /v2/authClient API로 생성한 auth client의 ID값을 입력합니다.
-        - clientSecret: /v2/authClient API로 생성한 auth client의 secret값을 입력합니다.
-        - username: auth client 생성 시 Thing+ Portal에 로그인했던 사용자(일반적으로 서비스 관리자) ID를 입력합니다.
-        - password: auth client 생성 시 Thing+ Portal에 로그인했던 사용자 비밀번호의 md5 hash 값을 입력합니다.
-            - OSX나 Linux에서는 아래의 명령어를 이용하여 md5 hash 값을 구합니다.
-                - OSX
+## Access Token acquisition
+1. Obtain an access token from the application using the following APIs:
+    - URL: https://api.sandbox.thingplus.net/v2/oauth2/token
+    - Method: POST
+    - Body:
+        - Example
 
-                  <pre>
-                  $ echo -n <b>your_password</b> | md5
-                  0b54b2a7b72f1efeb2c86885c3247787
-                 </pre>
-                 
-               - Linux
-               
-                  <pre>
-                  $ echo -n <b>your_password</b> | md5sum
-                  0b54b2a7b72f1efeb2c86885c3247787  -
-                 </pre>
-               
-            - 위의 명령이 동작하지 않는 환경에서는 인터넷 상의 md5 hash generator 등을 이용하여도 비밀번호의 md5 hash 값을 구할 수도 있지만, 보안에 유의하시기 바랍니다.
-            - [JavsScript-MD5](https://github.com/blueimp/JavaScript-MD5)를 이용할 수도 있습니다.
+          `` `Json
+          {
+            "Grant_type": "password",
+            "Client_id": "testClient",
+            "Client_secret": "testClientPwd12! @",
+            "Username": "serviceadmin",
+            "Password": "0b54b2a7b72f1efeb2c86885c3247787"
+          }
+          `` `
+        - grant_type: Enter the string "password" as it is. (** Please do not enter your password.
+        - client_id: Enter the ID value of the auth client generated by the / v2 / authClient API.
+        - clientSecret: Enter the secret value of the auth client generated by the / v2 / authClient API.
+        - username: Enter the ID of the user (usually the service administrator) who logged in to Thing + Portal when creating the auth client.
+        - password: Enter the md5 hash value of the user password that was logged into Thing + Portal when creating the auth client.
+            - On OSX or Linux, use the following command to get the md5 hash value.
+                - OSX
 
-    - Response
-        - Example
+                  <Pre>
+                  $ Echo -n <b> your_password </ b> | Md5
+                  0b54b2a7b72f1efeb2c86885c3247787
+                 </ Pre>
+                 
+               - Linux
+               
+                  <Pre>
+                  $ Echo -n <b> your_password </ b> | Md5sum
+                  0b54b2a7b72f1efeb2c86885c3247787 -
+                 </ Pre>
+               
+            - In the environment where the above command does not work, you can get the md5 hash value of the password by using the md5 hash generator on the Internet, but be careful about security.
+            - [JavsScript-MD5] (https://github.com/blueimp/JavaScript-MD5) is also available.
 
-          ```json
-          {
-            "access_token": "2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk",
-            "token_type": "Bearer"
-          }
-          ```
-2. 획득한 access token는 API를 호출할 때 아래와 같은 방식으로 사용합니다.
-    - Header에 `Authorization` 필드를 추가하고 value는 `token_type`과 `access_token`을 1칸 띄워 씁니다.
-    - curl 예제
+- Response
+        - Example
 
-       ```bash
-       $ curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
-       ```
+          `` `Json
+          {
+            "Access_token": "2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk",
+            "Token_type": "Bearer"
+          }
+          `` `
+2. Use the acquired access token in the following way when calling the API.
+    - Add an `Authorization` field to the Header and a value of` token_type` and `access_token` in a single space.
+    - curl example
 
-## 5. Gateway 등록
-1. Site ID 구하기
-    - URL: https://api.sandbox.thingplus.net/v2/sites
-    - Method: GET
-    - Response:
-        - Example
+       `` `Bash
+       $ Curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
+       `` `
 
-          ```json
-          {
-             "statusCode": 200,
-             "message": "OK",
-             "data": [
-               {
-                 "billing": "site:1",
-                 "code": "iotservice",
-                 "ctime": "1431416762406",
-                 "_service": "1",
-                 "billingReserve": "site:1:reserve",
-                 "billingLimit": "site:1:limit",
-                 "name": "default",
-                 "id": "1",
-                 "billingMeter": "site:1:meter",
-                 "mtime": "1431416762406",
-                 "billingCurrent": "site:1:current"
-               }
-             ]
-          }
-          ```
-    - response의 `data`에 site의 목록이 반환됩니다. (일반적으로는 1개이지만, 여러 개의 site를 생성했을 경우에는 여러 개의 site data가 반환됩니다.)
-    - 게이트웨이를 등록하고자 하는 site의 ID를 게이트웨이 등록 API에 적용합니다. (예제에서는 `"id": "1"`이 site ID에 해당하는 필드입니다.)
+## Register Gateway
+1. Obtaining a Site ID
+    - URL: https://api.sandbox.thingplus.net/v2/sites
+    - Method: GET
+    - Response:
+        - Example
 
-2. Gateway Model ID 구하기
-    - URL: https://api.sandbox.thingplus.net/v2/gatewayModels/52
-    - Method: GET
-    - Response:
-        - Example
+          `` `Json
+          {
+             "StatusCode": 200,
+             "Message": "OK",
+             "Data": [
+               {
+                 "Billing": "site: 1",
+                 "Code": "iService",
+                 "Ctime": "1431416762406",
+                 "_service": "1",
+                 "BillingReserve": "site: 1: reserve",
+                 "BillingLimit": "site: 1: limit",
+                 "Name": "default",
+                 "Id": "1",
+                 "BillingMeter": "site: 1: meter",
+                 "Mtime": "1431416762406",
+                 "BillingCurrent": "site: 1: current"
+               }
+             ]
+          }
+          `` `
+    - A list of sites is returned in the `data` of the response. (Usually 1, but if you create multiple sites, multiple site data will be returned.)
+    - Apply the ID of the site you want to register the gateway to the gateway registration API. (In the example, `" id ":" 1 "` is the field corresponding to site ID.)
 
-          ```json
-          {
-             "statusCode": 200,
-             "message": "OK",
-             "data": {
-               "reportInterval": "300000",
-               "displayName": "Open API Gateway",
-               "id": "52",
-               "model": "open-api-gateway-v1.0",
-               "deviceModels": [
-                 {
-                   "id": "open-api-device-v1.0",
-                   "displayName": "Open API Device",
-                   "idTemplate": "{gatewayId}-{deviceAddress}",
-                   "discoverable": "y",
-                   "sensors": [
-                     {
-                       "network": "daliworks",
-                       "driverName": "openApiSensor",
-                       "model": "openApiTemp",
-                       "type": "temperature",
-                       "category": "sensor"
-                     },
-                     {
-                       "network": "daliworks",
-                       "driverName": "openApiSensor",
-                       "model": "openApiHumi",
-                       "type": "humidity",
-                       "category": "sensor"
-                     },
-     
-                     ...
-    
-                     {
-                       "network": "daliworks",
-                       "driverName": "openApiSensor",
-                       "model": "openApiConductivity",
-                       "type": "conductivity",
-                       "category": "sensor"
-                     }
-                   ],
-                   "max": 99
-                 }
-               ],
-               "gatewayIdConfig": "n",
-               "mtime": "1495609234518",
-               "idFormat": "uuid",
-               "vendor": "OPEN API",
-               "ctime": "1495609234518",
-               "deviceMgmt": {
-                 "reportInterval": {
-                   "show": "y",
-                   "change": "y"
-                 },
-                 "DM": {
-                   "poweroff": {
-                     "support": "n"
-                   },
-                   "reboot": {
-                     "support": "n"
-                   },
-                   "restart": {
-                     "support": "n"
-                   },
-                   "swUpdate": {
-                     "support": "n"
-                   },
-                   "swInfo": {
-                     "support": "n"
-                   }
-                 }
-               }
-             }
-          }
-          ```
-    - 게이트웨이 모델은 등록할 게이트웨이의 특성을 정의한 것입니다. 어떤 형식의 게이트웨이 ID를 사용할지, 어떤 디바이스와 센서를 등록할 수 있는지 등에 관한 정보가 들어 있습니다.
-    - 이 문서에서 설명하는 방식을 이용하여 게이트웨이를 등록하기 위해서는 게이트웨이 모델 ID `52` (Open API Gateway)를 사용합니다. 만약 다른 게이트웨이 모델을 사용할 경우, 본 API를 호출할 때 URL에서 `52`대신 다른 ID를 대입해서 사용할 수 있습니다.
+2. Obtaining the Gateway Model ID
+    - URL: https://api.sandbox.thingplus.net/v2/gatewayModels/52
+    - Method: GET
+    - Response:
+        - Example
 
-3. Gateway ID 생성하기
-    - `Open API Gateway`의 경우 UUID를 게이트웨이 ID로 사용합니다.
-    - 새로 등록할 게이트웨이의 ID에 사용할 UUID를 구합니다.
-        - OSX의 경우 `uuidgen` 명령으로 생성할 수 있습니다.
-        - Linux(Ubuntu)의 경우 `uuid`라는 package 설치 후 `uuid` 명령으로 생성할 수 있습니다.
-        - UUID는 이 방법 외에도 다양한 방법으로 구할 수 있습니다.
-    - 위에서 구한 UUID에서 `-`를 제거하고, 대분자가 있을 경우 소문자로 변경하여 게이트웨이 ID로 사용합니다.
+          `` `Json
+          {
+             "StatusCode": 200,
+             "Message": "OK",
+             "Data": {
+               "ReportInterval": "300000",
+               "DisplayName": "Open API Gateway",
+               "Id": "52",
+               "Model": "open-api-gateway-v1.0",
+               "DeviceModels": [
+                 {
+                   "Id": "open-api-device-v1.0",
+                   "DisplayName": "Open API Device",
+                   "IdTemplate": "{gatewayId} - {deviceAddress}",
+                   "Discoverable": "y",
+                   "Sensors": [
+                     {
+                       "Network": "daliworks",
+                       "DriverName": "openApiSensor",
+                       "Model": "openApiTemp",
+                       "Type": "temperature",
+                       "Category": "sensor"
+                     },
+                     {
+                       "Network": "daliworks",
+                       "DriverName": "openApiSensor",
+                       "Model": "openApiHumi"
+                       "Type": "humidity",
+                       "Category": "sensor"
+                     },
+     
+                     ...
+    
+                     {
+                       "Network": "daliworks",
+                       "DriverName": "openApiSensor",
+                       "Model": "openApiConductivity",
+                       "Type": "conductivity",
+                       "Category": "sensor"
+                     }
+                   ],
+                   "Max": 99
+                 }
+               ],
+               "GatewayIdConfig": "n",
+               "Mtime": "1495609234518",
+               "IdFormat": "uuid",
+               "Vendor": "OPEN API",
+               "Ctime": "1495609234518",
+               "DeviceMgmt": {
+                 "ReportInterval": {
+                   "Show": "y",
+                   "Change": "y"
+                 },
+                 "DM": {
+                   "Poweroff": {
+                     "Support": "n"
+                   },
+                   "Reboot": {
+                     "Support": "n"
+                   },
+                   "Restart": {
+                     "Support": "n"
+                   },
+                   "SwUpdate": {
+                     "Support": "n"
+                   },
+                   "SwInfo": {
+                     "Support": "n"
+                   }
+                 }
+               }
+             }
+          }
+          `` `
+    - The gateway model defines the characteristics of the gateway to be registered. What type of gateway ID to use, what devices and sensors to register, and so on.
+    - To register the gateway using the method described in this document, use the gateway model ID `52` (Open API Gateway). If you use a different gateway model, you can substitute `52` in the URL when calling this API by substituting another ID.
+3. Creating a Gateway ID
+    - For `Open API Gateway`, UUID is used as gateway ID.
+    - Obtain the UUID to be used for the ID of the newly registered gateway.
+        - In case of OSX, it can be generated with `uuidgen` command.
+        - In case of Linux (Ubuntu), `uuid` package can be created by installing` uuid` command after installation.
+        - UUID can be obtained in various ways besides this method.
+    - Remove the `-` from the UUID obtained above, and change it to lowercase if there is a large block to use as the gateway ID.
 
-       ```bash
-       $ uuidgen | tr -d - | tr [:upper:] [:lower:]
-       366d685f93f5477a8d29e8c45bae0a31
-       ```
+       `` `Bash
+       $ Uuidgen | Tr -d - | Tr [: upper:] [: lower:]
+       366d685f93f5477a8d29e8c45bae0a31
+       `` `
 
-4. Gateway 등록하기
-    - URL: https://api.sandbox.thingplus.net/v2/registerGateway
-    - Method: POST
-    - Body:
-        - Example
+4. Registering the Gateway
+    - URL: https://api.sandbox.thingplus.net/v2/registerGateway
+    - Method: POST
+    - Body:
+        - Example
 
-          ```json
-          {
-            "id": "87cd2a6e407511e7922eb724f8803770",
-            "params": {
-              "siteId": "1",
-              "model": "52",
-              "name": "Open Gateway 1"
-            }
-          }
-          ```
-        - id: UUID로 생성한 ID를 사용합니다.
-        - siteId: 위에서 구한 사이트 ID를 사용합니다.
-        - model: 위에서 구한 게이트웨이 모델 ID를 사용합니다.
-        - name: 게이트웨이의 이름으로 자유롭게 입력하시면 됩니다.
-        - 명시한 항목 외의 옵션에 대해서는 [Thing+ API Reference](https://thingplus.api-docs.io/2.0/non-rest-apis/registergateway)를 참고하세요.
+          `` `Json
+          {
+            "Id": "87cd2a6e407511e7922eb724f8803770",
+            "Params": {
+              "SiteId": "1",
+              "Model": "52",
+              "Name": "Open Gateway 1"
+            }
+          }
+          `` `
+        - id: Uses the ID generated by the UUID.
+        - siteId: use the site ID obtained above.
+        - model: Use the gateway model ID obtained above.
+        - name: You can input it freely in the name of the gateway.
+        - For options other than those specified, see [Thing + API Reference] (https://thingplus.api-docs.io/2.0/non-rest-apis/registergateway).
 
-    - Response
-        - Example
+    - Response
+        - Example
 
-          ```json
-          {
-            "statusCode": 201,
-            "message": "Created",
-            "data": {
-              "name": "Open Gateway 1",
-              "model": "52",
-              "_site": "1",
-              "_service": "1",
-              "reportInterval": "300000",
-              "mtime": 1495626410619,
-              "ctime": 1495626410619,
-              "tree": "87cd2a6e407511e7922eb724f8803770",
-              "id": "87cd2a6e407511e7922eb724f8803770"
-            }
-          }
-          ```
-        - reportInterval: `전송 주기`로서 게이트웨이가 센서에서 측정한 값을 Thing+로 전달하는 주기(msec)를 의미합니다. 이 값은 Thing+ Portal의 `게이트웨이 관리`에서 수정할 수 있습니다.
+          `` `Json
+          {
+            "StatusCode": 201,
+            "Message": "Created",
+            "Data": {
+              "Name": "Open Gateway 1",
+              "Model": "52",
+              "_site": "1",
+              "_service": "1",
+              "ReportInterval": "300000",
+              "Mtime": 1495626410619,
+              "Ctime": 1495626410619,
+              "Tree": "87cd2a6e407511e7922eb724f8803770",
+              "Id": "87cd2a6e407511e7922eb724f8803770"
+            }
+          }
+          `` `
+        - reportInterval: This is the `transmission period`, which is the period (msec) at which the gateway transmits the measured value from the sensor to Thing +. This value can be modified in Thing + Portal 's gateway management.
 
 
-## 6. Device 등록
-1. Device 등록하기
-    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/devices
-        - {owner}: 디바이스가 연결된 게이트웨이의 ID를 입력합니다. 위에서 등록한 게이트웨이 ID를 사용합니다.
-    - Method: POST
-    - Body:
-        - Example
+## Device registration
+1. Registration of Device
+    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/devices
+        - {owner}: Enter the ID of the gateway to which the device is connected. Use the gateway ID registered above.
+    - Method: POST
+    - Body:
+        - Example
 
-          ```json
-          {
-             "reqId": "366d685f93f5477a8d29e8c45bae0a31",
-             "name": "Open Gateway Device 1",
-             "model": "open-api-device-v1.0"
-          }
-          ```
-        - reqId: UUID를 이용하여 디바이스 ID를 생성하여 사용합니다.
-        - name: 디바이스의 이름으로 자유롭게 입력하시면 됩니다.
-        - model: 게이트웨이 모델을 조회했을 때 `deviceModels`에 있는 디바이스 모델 ID를 사용합니다. 이 문서에서 설명하는 방식을 이용하여 디바이스를 등록하기 위해서는 디바이스 모델 ID `open-api-device-v1.0`를 사용합니다. 만약 다른 디바이스 모델이 게이트웨이 모델에 등록되어 있을 경우, 본 API를 호출할 때 다른 디바이스 모델 ID를 대입해서 사용할 수 있습니다.
-        - 명시한 항목 외의 옵션에 대해서는 [Thing+ API Reference](https://thingplus.api-docs.io/2.0/gateway-devices/create-gateway-devices)를 참고하세요.
+          `` `Json
+          {
+             "ReqId": "366d685f93f5477a8d29e8c45bae0a31",
+             "Name": "Open Gateway Device 1",
+             "Model": "open-api-device-v1.0"
+          }
+          `` `
+        - reqId: Creates and uses device ID using UUID.
+        - name: You can freely input the name of the device.
+        - model: Uses the device model ID in `deviceModels` when querying the gateway model. To register a device using the method described in this document, use the device model ID `open-api-device-v1.0`. If another device model is registered in the gateway model, you can substitute another device model ID when calling this API.
+        - See [Thing + API Reference] (https://thingplus.api-docs.io/2.0/gateway-devices/create-gateway-devices) for options other than those specified.
 
-    - Response
-        - Example
+- Response
+        - Example
 
-          ```json
-          {
-            "statusCode": 201,
-            "message": "Created",
-            "data": {
-              "name": "Open Gateway 1",
-              "model": "52",
-              "_site": "1",
-              "_service": "1",
-              "reportInterval": "300000",
-              "mtime": 1495626410619,
-              "ctime": 1495626410619,
-              "tree": "87cd2a6e407511e7922eb724f8803770",
-              "id": "87cd2a6e407511e7922eb724f8803770"
-            }
-          }
-          ```
+          `` `Json
+          {
+            "StatusCode": 201,
+            "Message": "Created",
+            "Data": {
+              "Name": "Open Gateway 1",
+              "Model": "52",
+              "_site": "1",
+              "_service": "1",
+              "ReportInterval": "300000",
+              "Mtime": 1495626410619,
+              "Ctime": 1495626410619,
+              "Tree": "87cd2a6e407511e7922eb724f8803770",
+              "Id": "87cd2a6e407511e7922eb724f8803770"
+            }
+          }
+          `` `
 
-## 7. Sensor 등록
-1. Sensor 등록하기
-    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors
-        - {owner}: 센서가 연결된 게이트웨이의 ID를 입력합니다. 위에서 등록한 게이트웨이 ID를 사용합니다.
-    - Method: POST
-    - Body:
-        - Example
+## 7. Sensor Registration
+1. Registering the Sensor
+    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors
+        - {owner}: Enter the ID of the gateway to which the sensor is connected. Use the gateway ID registered above.
+    - Method: POST
+    - Body:
+        - Example
 
-          ```json
-          {
-            "reqId": "d815ba2f84eb490b8e68d9dd744da397",
-            "name": "온도센서",
-            "type": "temperature",
-            "driverName": "openApiSensor",
-            "model": "openApiTemp",
-            "category": "sensor",
-            "deviceId": "366d685f93f5477a8d29e8c45bae0a31"
-          }
-          ```
-        - reqId: UUID를 이용하여 센서 ID를 생성하여 사용합니다.
-        - name: 디바이스의 이름으로 자유롭게 입력하시면 됩니다.
-        - model: 게이트웨이 모델을 조회했을 때 `deviceModels`에 있는 디바이스 모델 ID를 사용합니다. 이 문서에서 설명하는 방식을 이용하여 디바이스를 등록하기 위해서는 디바이스 모델 ID `open-api-device-v1.0`를 사용합니다. 만약 다른 디바이스 모델이 게이트웨이 모델에 등록되어 있을 경우, 본 API를 호출할 때 다른 디바이스 모델 ID를 대입해서 사용할 수 있습니다.
-        - category: `sensor`라는 문자열 그대로 입력합니다. 현재 HTTPS 방식으로 `actuator`는 지원하지 않습니다.
-        - deviceId: 센서가 연결된 디바이스 ID를 입력합니다.
-        - 명시한 항목 외의 옵션에 대해서는 [Thing+ API Reference](https://thingplus.api-docs.io/2.0/gateway-sensors/create-gateway-sensors)를 참고하세요.
+          `` `Json
+          {
+            "ReqId": "d815ba2f84eb490b8e68d9dd744da397",
+            "Name": "Temperature sensor",
+            "Type": "temperature",
+            "DriverName": "openApiSensor",
+            "Model": "openApiTemp",
+            "Category": "sensor",
+            "DeviceId": "366d685f93f5477a8d29e8c45bae0a31"
+          }
+          `` `
+        - reqId: Generate sensor ID using UUID and use it.
+        - name: You can freely input the name of the device.
+        - model: Uses the device model ID in `deviceModels` when querying the gateway model. To register a device using the method described in this document, use the device model ID `open-api-device-v1.0`. If another device model is registered in the gateway model, you can substitute another device model ID when calling this API.
+        - Type in the string: category: `sensor`. Currently, `actuator` is not supported in HTTPS mode.
+        - deviceId: Enter the device ID to which the sensor is connected.
+        - For options other than those specified, see [Thing + API Reference] (https://thingplus.api-docs.io/2.0/gateway-sensors/create-gateway-sensors).
 
-    - Response
-        - Example
+    - Response
+        - Example
 
-          ```json
-          {
-            "statusCode": 201,
-            "message": "Created",
-            "data": {
-              "name": "온도센서",
-              "type": "temperature",
-              "driverName": "openApiSensor",
-              "model": "openApiTemp",
-              "category": "sensor",
-              "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
-              "owner": "87cd2a6e407511e7922eb724f8803770",
-              "mtime": 1495681664335,
-              "ctime": 1495681664335,
-              "id": "d815ba2f84eb490b8e68d9dd744da397"
-            }
-          }
-          ```
+          `` `Json
+          {
+            "StatusCode": 201,
+            "Message": "Created",
+            "Data": {
+              "Name": "Temperature sensor",
+              "Type": "temperature",
+              "DriverName": "openApiSensor",
+              "Model": "openApiTemp",
+              "Category": "sensor",
+              "DeviceId": "366d685f93f5477a8d29e8c45bae0a31",
+              "Owner": "87cd2a6e407511e7922eb724f8803770",
+              "Mtime": 1495681664335,
+              "Ctime": 1495681664335,
+              "Id": "d815ba2f84eb490b8e68d9dd744da397"
+            }
+          }
+          `` `
 
-## 8. Status 전송
-1. Gateway Status 전송하기
-    - URL: https://api.sandbox.thingplus.net/v2/gateways/{id}/status
-        - {id}: 게이트웨이의 ID를 입력합니다. 위에서 등록한 게이트웨이 ID를 사용합니다.
-    - Method: PUT
-    - Body:
-        - Example
+## Send Status
+1. Transferring Gateway Status
+    - URL: https://api.sandbox.thingplus.net/v2/gateways/{id}/status
+        - {id}: Enter the ID of the gateway. Use the gateway ID registered above.
+    - Method: PUT
+    - Body:
+        - Example
 
-          ```json
-          {
-            "validDuration": 450,
-            "value": "on"
-          }
-          ```
-        - validDuration: `status`가 유효한 기간(sec)을 의미합니다. 일반적으로 `reportInterval`의 1.5배를 사용합니다.
-        - value: 게이트웨이의 상태입니다. 'on', 'off', 'err' 중의 하나를 보내야 합니다.
+          `` `Json
+          {
+            "ValidDuration": 450,
+            "Value": "on"
+          }
+          `` `
+        - validDuration: means the duration (in seconds) for which `status` is valid. Typically you use 1.5 times the `reportInterval`.
+        - value: The status of the gateway. You must send one of 'on', 'off', or 'err'.
 
-    - Response
-        - Example
+    - Response
+        - Example
 
-          ```json
-          {
-            "statusCode": 200,
-            "message": "OK",
-            "data": {
-              "type": "status",
-              "value": "on",
-              "srcDbType": "gateway",
-              "time": "1495703469608",
-              "expireAt": "1495703919608",
-              "vtime": "1495703469608",
-              "status": "87cd2a6e407511e7922eb724f8803770",
-              "owner": "87cd2a6e407511e7922eb724f8803770",
-              "gateway": "87cd2a6e407511e7922eb724f8803770",
-              "mtime": "1495703469610",
-              "ctime": "1495683245619",
-              "id": "status.gateway.pCMjRP"
-            }
-          }
-          ```
-        - expireAt: `status`가 언제까지 유효한지 나타내며, msec 단위의 Unix time입니다.
-    - 게이트웨이 상태는 `reportInterval`마다 한 번씩 전송해야 합니다.
-    - 게이트웨이의 상태가 `on`이라 하더라도 `expireAt`의 시간이 지난 이후에는 해당 게이트웨이가 어떤 상태인지 알 수 없습니다.
+          `` `Json
+          {
+            "StatusCode": 200,
+            "Message": "OK",
+            "Data": {
+              "Type": "status",
+              "Value": "on",
+              "SrcDbType": "gateway",
+              "Time": "1495703469608",
+              "ExpireAt": "1495703919608",
+              "Vtime": "1495703469608",
+              "Status": "87cd2a6e407511e7922eb724f8803770",
+              "Owner": "87cd2a6e407511e7922eb724f8803770",
+              "Gateway": "87cd2a6e407511e7922eb724f8803770",
+              "Mtime": "1495703469610",
+              "Ctime": "1495683245619",
+              "Id": "status.gateway.pCMjRP"
+            }
+          }
+          `` `
+        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
+    - The gateway status must be sent once per `reportInterval`.
+    - Even if the status of the gateway is `on`, after the expireAt time, you can not know what the gateway is.
 
-2. Sensor Status 전송하기
-    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors/{id}/status
-        - {owner}: 센서가 연결된 게이트웨이의 ID를 입력합니다. 위에서 등록한 게이트웨이 ID를 사용합니다.
-        - {id}: 센서 ID를 입력합니다. 위에서 등록한 센서 ID를 사용합니다.
-    - Method: PUT
-    - Body:
-        - Example
+2. Send Sensor Status
+    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors/{id}/status
+        - {owner}: Enter the ID of the gateway to which the sensor is connected. Use the gateway ID registered above.
+        - {id}: Enter the sensor ID. Use the sensor ID registered above.
+    - Method: PUT
+    - Body:
+        - Example
 
-          ```json
-          {
-            "validDuration": 450,
-            "value": "on"
-          }
-          ```
-        - validDuration: `status`가 유효한 기간(sec)을 의미합니다. 일반적으로 `reportInterval`의 1.5배를 사용합니다.
-        - value: 센서의 상태입니다. 'on', 'off', 'err' 중의 하나를 보내야 합니다.
+          `` `Json
+          {
+            "ValidDuration": 450,
+            "Value": "on"
+          }
+          `` `
+        - validDuration: means the duration (in seconds) for which `status` is valid. Typically you use 1.5 times the `reportInterval`.
+        - value: Status of the sensor. You must send one of 'on', 'off', or 'err'.
 
-    - Response
-        - Example
+    - Response
+        - Example
 
-          ```json
-          {
-            "statusCode": 200,
-            "message": "OK",
-            "data": {
-              "type": "status",
-              "value": "on",
-              "srcType": "temperature",
-              "srcCategory": "sensor",
-              "srcDbType": "sensor",
-              "time": "1495715734508",
-              "expireAt": "1495716184508",
-              "vtime": "1495715720489",
-              "status": "d815ba2f84eb490b8e68d9dd744da397",
-              "owner": "87cd2a6e407511e7922eb724f8803770",
-              "sensor": "d815ba2f84eb490b8e68d9dd744da397",
-              "mtime": "1495715734508",
-              "ctime": "1495715720489",
-              "id": "status.sensor.0uRmI2"
-            }
-          }
-          ```
-        - expireAt: `status`가 언제까지 유효한지 나타내며, msec 단위의 Unix time입니다.
-    - 센서 상태는 `reportInterval`마다 한 번씩 전송해야 합니다.
-    - 센서의 상태가 `on`이라 하더라도 `expireAt`의 시간이 지난 이후에는 해당 센서가 어떤 상태인지 알 수 없습니다.
+          `` `Json
+          {
+            "StatusCode": 200,
+            "Message": "OK",
+            "Data": {
+              "Type": "status",
+              "Value": "on",
+              "SrcType": "temperature",
+              "SrcCategory": "sensor",
+              "SrcDbType": "sensor",
+              "Time": "1495715734508",
+              "ExpireAt": "1495716184508",
+              "Vtime": "1495715720489",
+              "Status": "d815ba2f84eb490b8e68d9dd744da397",
+              "Owner": "87cd2a6e407511e7922eb724f8803770",
+              "Sensor": "d815ba2f84eb490b8e68d9dd744da397",
+              "Mtime": "1495715734508",
+              "Ctime": "1495715720489",
+              "Id": "status.sensor.0uRmI2"
+            }
+          }
+          `` `
+        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
+    - The sensor status must be transmitted once per `reportInterval`.
+    - Even if the status of the sensor is `on`, after the expireAt time, it is not possible to know what the sensor is.
 
-## 9. Sensor 값 전송
-1. Sensor Value 전송하기
-    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors/{id}/series
-        - {owner}: 센서가 연결된 게이트웨이의 ID를 입력합니다. 위에서 등록한 게이트웨이 ID를 사용합니다.
-        - {id}: 센서 ID를 입력합니다. 위에서 등록한 센서 ID를 사용합니다.
-    - Method: PUT
-    - Body:
-        - Example
-            - 1개의 센서값을 전송할 경우
+## Send sensor value
+1. Sending Sensor Value
+    - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors/{id}/series
+        - {owner}: Enter the ID of the gateway to which the sensor is connected. Use the gateway ID registered above.
+        - {id}: Enter the sensor ID. Use the sensor ID registered above.
+    - Method: PUT
+    - Body:
+        - Example
+            - When transmitting one sensor value
 
-              ```json
-              {
-                "value": "36.5",
-                "time": 1495715734508
-              }
-              ```
-            - 여러 개의 센서값을 전송할 경우
+              `` `Json
+              {
+                "Value": "36.5",
+                "Time": 1495715734508
+              }
+              `` `
+            - When sending multiple sensor values
 
-              ```json
-              [
-                {
-                  "value": "36.5",
-                  "time": 1495716734508
-                },
-                {
-                  "value": "36.3",
-                  "time": 1495717184508
-                }
-              ]
-              ```
+              `` `Json
+              [
+                {
+                  "Value": "36.5",
+                  "Time": 1495716734508
+                },
+                {
+                  "Value": "36.3",
+                  "Time": 1495717184508
+                }
+              ]
+              `` `
 
-        - value: 센서값입니다. 문자열이나 오브젝트값을 넣어야 하며, 센서 타입에 맞아야 합니다. 단, 센서값이 숫자일 경우 문자열로 보냅니다.
-        - time: 센서값이 측정된 시간이며, msec 단위의 Unix time입니다.
-        - 여러 개의 센서값을 보낼 경우 배열로 묶어서 보낼 수 있습니다.
+        - value: The sensor value. You must enter a string or object value and it must match the sensor type. However, if the sensor value is numeric, it is sent as a string.
+        - time: The time at which the sensor value was measured, in Unix time in msec.
+        - If you want to send multiple sensor values, you can send them in an array.
 
-    - Response
-        - Example
-            - 1개의 센서값을 전송했을 경우
+    - Response
+        - Example
+            - When one sensor value is transmitted
 
-              ```json
-              {
-                "statusCode": 200,
-                "message": "OK",
-                "data": {
-                  "name": "온도센서",
-                  "type": "temperature",
-                  "driverName": "openApiSensor",
-                  "model": "openApiTemp",
-                  "category": "sensor",
-                  "deviceId": "366d685f93f5477a8d29e8c45bae0a31",
-                  "owner": "87cd2a6e407511e7922eb724f8803770",
-                  "mtime": "1495717726517",
-                  "ctime": "1495681664335",
-                  "status": "status.sensor.0uRmI2",
-                  "series": "series.sensor.tOZhgI",
-                  "id": "d815ba2f84eb490b8e68d9dd744da397"
-                }
-              }
-              ```
-            - 여러 개의 센서값을 전송했을 경우
+              `` `Json
+              {
+                "StatusCode": 200,
+                "Message": "OK",
+                "Data": {
+                  "Name": "Temperature sensor",
+                  "Type": "temperature",
+                  "DriverName": "openApiSensor",
+                  "Model": "openApiTemp",
+                  "Category": "sensor",
+                  "DeviceId": "366d685f93f5477a8d29e8c45bae0a31",
+                  "Owner": "87cd2a6e407511e7922eb724f8803770",
+                  "Mtime": "1495717726517",
+                  "Ctime": "1495681664335",
+                  "Status": "status.sensor.0uRmI2",
+                  "Series": "series.sensor.tOZhgI",
+                  "Id": "d815ba2f84eb490b8e68d9dd744da397"
+                }
+              }
+              `` `
+            - When multiple sensor values ​​are transmitted
 
-              ```json
-              {
-                "statusCode": 200,
-                "message": "OK",
-                "data": {
-                  "type": "series",
-                  "srcType": "temperature",
-                  "seriesPack": [
-                    {
-                      "value": "36.5",
-                      "time": 1495718222169
-                    },
-                    {
-                      "value": "36.3",
-                      "time": 1495718672169
-                    }
-                  ],
-                  "mtime": "1495718691465",
-                  "ctime": "1495717726516",
-                  "time": "1495718672169",
-                  "value": "36.3",
-                  "owner": "87cd2a6e407511e7922eb724f8803770",
-                  "series": "d815ba2f84eb490b8e68d9dd744da397",
-                  "sensor": "d815ba2f84eb490b8e68d9dd744da397",
-                  "srcCategory": "sensor",
-                  "srcDbType": "sensor",
-                  "id": "series.sensor.tOZhgI"
-                }
-              }
-              ```
+              `` `Json
+              {
+                "StatusCode": 200,
+                "Message": "OK",
+                "Data": {
+                  "Type": "series",
+                  "SrcType": "temperature",
+                  "SeriesPack": [
+                    {
+                      "Value": "36.5",
+                      "Time": 1495718222169
+                    },
+                    {
+                      "Value": "36.3",
+                      "Time": 1495718672169
+                    }
+                  ],
+                  "Mtime": "1495718691465",
+                  "Ctime": "1495717726516",
+                  "Time": "1495718672169",
+                  "Value": "36.3",
+                  "Owner": "87cd2a6e407511e7922eb724f8803770",
+                  "Series": "d815ba2f84eb490b8e68d9dd744da397",
+                  "Sensor": "d815ba2f84eb490b8e68d9dd744da397",
+                  "SrcCategory": "sensor",
+                  "SrcDbType": "sensor",
+                  "Id": "series.sensor.tOZhgI"
+                }
+              }
+              `` `
+
+
+
+
+

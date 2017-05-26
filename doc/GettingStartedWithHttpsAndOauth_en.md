@@ -95,7 +95,8 @@ This document describes how to register gateways and sensors and send sensor val
    
    - Method: POST
    
-  - Body:
+   - Body:
+  
         - Example
 
           ```json
@@ -119,7 +120,8 @@ This document describes how to register gateways and sensors and send sensor val
         - password: Enter the md5 hash value of the user password that was logged into Thing + Portal when creating the auth client.
         
             - On OSX or Linux, use the following command to get the md5 hash value.
-               - OSX
+              
+              - OSX
 
                   <pre>
                   $ echo -n <b>your_password</b> | md5
@@ -138,7 +140,8 @@ This document describes how to register gateways and sensors and send sensor val
             - [JavsScript-MD5](https://github.com/blueimp/JavaScript-MD5) is also available.
 
 - Response
-        - Example
+       
+       - Example
 
           ```json
           {
@@ -165,6 +168,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: GET
     
      - Response:
+        
         - Example
 
           ```json
@@ -199,6 +203,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: GET
     
     - Response:
+        
         - Example
 
           ```json
@@ -283,7 +288,8 @@ This document describes how to register gateways and sensors and send sensor val
 
 
 3. Creating a Gateway ID
-    - For `Open API Gateway`, UUID is used as gateway ID.
+    
+    - For `Open API Gateway`, UUID is used as gateway ID.
     
     - Obtain the UUID to be used for the ID of the newly registered gateway.
     
@@ -306,7 +312,8 @@ This document describes how to register gateways and sensors and send sensor val
     
     - Method: POST
     
-     - Body:
+    - Body:
+        
         - Example
 
           ```json
@@ -331,6 +338,7 @@ This document describes how to register gateways and sensors and send sensor val
         - For options other than those specified, see [Thing + API Reference] (https://thingplus.api-docs.io/2.0/non-rest-apis/registergateway).
 
      - Response
+        
         - Example
 
           ```json
@@ -363,7 +371,8 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: POST
     
     - Body:
-       - Example
+       
+       - Example
 
           ```json
           {
@@ -373,8 +382,8 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
           
-        - reqId: Creates and uses device ID using UUID
-        .
+        - reqId: Creates and uses device ID using UUID.
+        
         - name: You can freely input the name of the device.
         
         - model: Uses the device model ID in `deviceModels` when querying the gateway model. To register a device using the method described in this document, use the device model ID `open-api-device-v1.0`. If another device model is registered in the gateway model, you can substitute another device model ID when calling this API.
@@ -382,6 +391,7 @@ This document describes how to register gateways and sensors and send sensor val
         - See [Thing + API Reference] (https://thingplus.api-docs.io/2.0/gateway-devices/create-gateway-devices) for options other than those specified.
 
 - Response
+        
         - Example
 
           ```json
@@ -412,6 +422,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: POST
     
     - Body:
+        
         - Example
 
           ```json
@@ -439,6 +450,7 @@ This document describes how to register gateways and sensors and send sensor val
        - For options other than those specified, see [Thing + API Reference] (https://thingplus.api-docs.io/2.0/gateway-sensors/create-gateway-sensors).
 
      - Response
+        
         - Example
 
           ```json
@@ -470,6 +482,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: PUT
     
     - Body:
+        
         - Example
 
           ```json
@@ -484,6 +497,7 @@ This document describes how to register gateways and sensors and send sensor val
         - value: The status of the gateway. You must send one of 'on', 'off', or 'err'.
 
     - Response
+        
         - Example
 
           ```json
@@ -506,7 +520,8 @@ This document describes how to register gateways and sensors and send sensor val
             }
           }
           ```
-        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
+        
+        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
         
     - The gateway status must be sent once per `reportInterval`.
     
@@ -521,6 +536,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: PUT
     
      - Body:
+        
         - Example
 
           ```json
@@ -536,6 +552,7 @@ This document describes how to register gateways and sensors and send sensor val
 
 
    - Response
+        
         - Example
 
           ```json
@@ -576,6 +593,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Method: PUT
     
      - Body:
+        
         - Example
             - 1개의 센서값을 전송할 경우
 
@@ -607,6 +625,7 @@ This document describes how to register gateways and sensors and send sensor val
         - If you want to send multiple sensor values, you can send them in an array.
 
     - Response
+        
         - Example
             - 1개의 센서값을 전송했을 경우
 
@@ -665,7 +684,7 @@ This document describes how to register gateways and sensors and send sensor val
               ```
 
 
- ```json
+            ```json
               {
                 "statusCode": 200,
                 "message": "OK",

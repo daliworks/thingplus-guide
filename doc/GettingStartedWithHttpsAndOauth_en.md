@@ -1,14 +1,14 @@
 # Thing + Interworking Guide with HTTPS and OAuth2 - ENGLISH
 ## Contents
-1. [Overview](#1-Overview)
-2. [Preparation](#2-Preparations)
-3. [Create OAuth Client](#3-oauth-client-generated)
+1. [Overview](#1-overview)
+2. [Preparation](#2-preparations)
+3. [Create OAuth Client](#3-create-oauth-client)
 4. [Access Token Acquisition](#4-access-token-Acquisition)
-5. [Gateway registration](#5-gateway-registration)
+5. [Gateway Registration](#5-gateway-registration)
 6. [Device Registration](#6-device-registration)
 7. [Sensor Registration](#7-sensor-registration)
-8. [Status transmission](#8-status-transmission)
-9. [Sensor value transfer](#9-sensor-value-transfer)
+8. [Status Transmission](#8-status-transmission)
+9. [Sensor Value Transfer](#9-sensor-value-transfer)
 
 ## 1. Overview
 This document describes how to register gateways and sensors and send sensor values using the privileges of a user who can register the gateway, such as a service administrator or site administrator.
@@ -21,17 +21,11 @@ This document describes how to register gateways and sensors and send sensor val
 
 ## 2. Preparation
 * Requires a tool that can call the HTTPS API to call the OAuth Client enrollment API.
-
     - [Google Chrome](https://www.google.com/chrome/browser/desktop): Use this to sign in to Thing+ Portal.
-    
     - [Postman](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjPiOf6mfvTAhXEJ5QKHbnBBZsQFggoMAI&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpostman%2Ffhbjgbiflinjbdggehcddcbncdddomop%3Fhl%3Den&usg=AFQjCNE_Yq59TT1ZExzJ68FTldg4ho_lGw&cad=rjt): This is the Google Chrome App you can use to call the desired HTTPS API.
-    
     - [Postman Interceptor](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwj8p8etmvvTAhVDv5QKHZDDCP8QFgggMAMA&url=https%3A%2F%2Fchrome.Google.com%2Fwebstore%2Fdetail%2Fpostman-interceptor%2Faicmkgpgakddgnaphhhpliifpcfhicfo%3Fhl%3Den&usg=AFQjCNEuLccEMU2awxCgNKPUPhTk4AKv0w): A Google Chrome extension that allows Postman to share cookies created when logged in to the Thing+ Portal.
-    
     - Even if you do not use the above tool, you can still do so by using a tool that allows you to call the HTTPS POST API while logged in from the Thing+ Portal.
-    
     - [Thing + Support site](http://support.thingplus.net/en/rest-api/getting-started.html#id-step1).
-    
     - For more information about the APIs used, see [Thing + API Reference](https://thingplus.api-docs.io/2.0).
 
 ## 3. Creating OAuth Client

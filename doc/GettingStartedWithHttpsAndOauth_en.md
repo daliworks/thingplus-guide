@@ -41,9 +41,13 @@ This document describes how to register gateways and sensors and send sensor val
 2. Execute `Postman`, On Postman Intercepter, and then call the following API.
 
     - URL: https://api.sandbox.thingplus.net/v2/authClients
+    
     - Method: POST
+    
     - Content-Type: application / json
+    
     - Body:
+    
         - Example
 
           ```json
@@ -55,8 +59,11 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
         - name: auth You can freely enter the name of the client.
+        
         - reqId: auth The ID of the client to be used to obtain the access token. Enter the value you have set.
+        
         - clientSecret: auth This is used to get the access token from the client's secret value. Enter the value you have set.
+        
         - scopes: Lists the permissions to grant to the auth client. See [link](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes) for the values you can enter in scopes.
 
  - Response
@@ -83,6 +90,7 @@ This document describes how to register gateways and sensors and send sensor val
 
 ## 4. Access Token acquisition
 1. Obtain an access token from the application using the following APIs:
+
     - URL: https://api.sandbox.thingplus.net/v2/oauth2/token
    
    - Method: POST

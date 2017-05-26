@@ -125,9 +125,9 @@
     - Header에 `Authorization` 필드를 추가하고 value는 `token_type`과 `access_token`을 1칸 띄워 씁니다.
     - curl 예제
 
-     ```bash
-     $ curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
-     ```
+       ```bash
+       $ curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
+       ```
 
 ## 5. Gateway 등록
 1. Site ID 구하기
@@ -252,10 +252,10 @@
         - UUID는 이 방법 외에도 다양한 방법으로 구할 수 있습니다.
     - 위에서 구한 UUID에서 `-`를 제거하고, 대분자가 있을 경우 소문자로 변경하여 게이트웨이 ID로 사용합니다.
 
-     ```bash
-     $ uuidgen | tr -d - | tr [:upper:] [:lower:]
-     366d685f93f5477a8d29e8c45bae0a31
-     ```
+       ```bash
+       $ uuidgen | tr -d - | tr [:upper:] [:lower:]
+       366d685f93f5477a8d29e8c45bae0a31
+       ```
 
 4. Gateway 등록하기
     - URL: https://api.sandbox.thingplus.net/v2/registerGateway

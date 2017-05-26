@@ -652,6 +652,7 @@ This document describes how to register gateways and sensors and send sensor val
               
             - When multiple sensor values are transmitted
 
+
              ```json
               {
                 "statusCode": 200,
@@ -684,7 +685,8 @@ This document describes how to register gateways and sensors and send sensor val
               ```
 
 
-            ```json
+
+              ```json
               {
                 "statusCode": 200,
                 "message": "OK",

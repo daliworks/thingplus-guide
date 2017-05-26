@@ -95,11 +95,20 @@
         - username: auth client 생성 시 Thing+ Portal에 로그인했던 사용자(일반적으로 서비스 관리자) ID를 입력합니다.
         - password: auth client 생성 시 Thing+ Portal에 로그인했던 사용자 비밀번호의 md5 hash 값을 입력합니다.
             - OSX나 Linux에서는 아래의 명령어를 이용하여 md5 hash 값을 구합니다.
+                - OSX
 
-              <pre>
-              $ echo -n <b>your_password</b> | md5sum
-              0b54b2a7b72f1efeb2c86885c3247787
-              </pre>
+                  <pre>
+                  $ echo -n <b>your_password</b> | md5
+                  0b54b2a7b72f1efeb2c86885c3247787
+                 </pre>
+                 
+               - Linux
+               
+                  <pre>
+                  $ echo -n <b>your_password</b> | md5sum
+                  0b54b2a7b72f1efeb2c86885c3247787  -
+                 </pre>
+               
             - 위의 명령이 동작하지 않는 환경에서는 인터넷 상의 md5 hash generator 등을 이용하여도 비밀번호의 md5 hash 값을 구할 수도 있지만, 보안에 유의하시기 바랍니다.
             - [JavsScript-MD5](https://github.com/blueimp/JavaScript-MD5)를 이용할 수도 있습니다.
 

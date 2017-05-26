@@ -1,14 +1,14 @@
 # Thing + Interworking Guide with HTTPS and OAuth2 - ENGLISH
 ## Contents
 1. [Overview](#1-overview)
-2. [Preparation](#2-preparations)
+2. [Preparation](#2-preparation)
 3. [Create OAuth Client](#3-create-oauth-client)
 4. [Access Token Acquisition](#4-access-token-Acquisition)
 5. [Gateway Registration](#5-gateway-registration)
 6. [Device Registration](#6-device-registration)
 7. [Sensor Registration](#7-sensor-registration)
 8. [Status Transmission](#8-status-transmission)
-9. [Sensor Value Transfer](#9-sensor-value-transfer)
+9. [Sensor Value Transmission](#9-sensor-value-transfer)
 
 ## 1. Overview
 This document describes how to register gateways and sensors and send sensor values using the privileges of a user who can register the gateway, such as a service administrator or site administrator.
@@ -21,14 +21,20 @@ This document describes how to register gateways and sensors and send sensor val
 
 ## 2. Preparation
 * Requires a tool that can call the HTTPS API to call the OAuth Client enrollment API.
+
     - [Google Chrome](https://www.google.com/chrome/browser/desktop): Use this to sign in to Thing+ Portal.
+
     - [Postman](https://www.google.co.kr/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjPiOf6mfvTAhXEJ5QKHbnBBZsQFggoMAI&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpostman%2Ffhbjgbiflinjbdggehcddcbncdddomop%3Fhl%3Den&usg=AFQjCNE_Yq59TT1ZExzJ68FTldg4ho_lGw&cad=rjt): This is the Google Chrome App you can use to call the desired HTTPS API.
+
     - [Postman Interceptor](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&sqi=2&ved=0ahUKEwj8p8etmvvTAhVDv5QKHZDDCP8QFgggMAMA&url=https%3A%2F%2Fchrome.Google.com%2Fwebstore%2Fdetail%2Fpostman-interceptor%2Faicmkgpgakddgnaphhhpliifpcfhicfo%3Fhl%3Den&usg=AFQjCNEuLccEMU2awxCgNKPUPhTk4AKv0w): A Google Chrome extension that allows Postman to share cookies created when logged in to the Thing+ Portal.
+
     - Even if you do not use the above tool, you can still do so by using a tool that allows you to call the HTTPS POST API while logged in from the Thing+ Portal.
+
     - [Thing + Support site](http://support.thingplus.net/en/rest-api/getting-started.html#id-step1).
+
     - For more information about the APIs used, see [Thing + API Reference](https://thingplus.api-docs.io/2.0).
 
-## 3. Creating OAuth Client
+## 3. Create OAuth Client
 
 1. On `Chrome`, go to Thing + Portal and log in with your service administrator account.
 
@@ -82,7 +88,7 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
 
-## 4. Access Token acquisition
+## 4. Access Token Acquisition
 1. Obtain an access token from the application using the following APIs:
 
    - URL: https://api.sandbox.thingplus.net/v2/oauth2/token
@@ -154,7 +160,7 @@ This document describes how to register gateways and sensors and send sensor val
        $ curl -H "Authorization: Bearer 2yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIxIiwiY2xpZW50SWQiOiJ0ZXN0Q2xpZW50SWQiLCJpYXQiOjE0OTU0MzYwMzksImV4cCI6MTUwMzIxMjAzOX0.dQ65zRCgRml96fTc8CDnExAukrFPSLd7NzDlUkf4eYk" https://api.sandbox.thingplus.net/v2/gateways
        ```
 
-## 5. Register Gateway
+## 5. Gateway Registration
 1. Obtaining a Site ID
 
     - URL: https://api.sandbox.thingplus.net/v2/sites
@@ -356,7 +362,7 @@ This document describes how to register gateways and sensors and send sensor val
         - reportInterval: This is the `transmission period`, which is the period (msec) at which the gateway transmits the measured value from the sensor to Thing +. This value can be modified in Thing + Portal 's gateway management.
 
 
-## 6. Device registration
+## 6. Device Registration
 1. Registration of a Device
 
     - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/devices
@@ -466,7 +472,7 @@ This document describes how to register gateways and sensors and send sensor val
           }
           ```
 
-## 8. Send Status
+## 8. Status Transmission
 
 1. Transferring Gateway Status
 
@@ -578,7 +584,7 @@ This document describes how to register gateways and sensors and send sensor val
     - Even if the status of the sensor is `on`, after the expireAt time, it is not possible to know what the sensor is.
 
 
-## 9. Send sensor value
+## 9. Sensor Value Transmission
 1. Sending Sensor Value
     - URL: https://api.sandbox.thingplus.net/v2/gateways/{owner}/sensors/{id}/series
         - {owner}: Enter the ID of the gateway to which the sensor is connected. Use the gateway ID registered above.

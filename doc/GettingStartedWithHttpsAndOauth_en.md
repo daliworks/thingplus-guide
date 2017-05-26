@@ -626,7 +626,7 @@ This document describes how to register gateways and sensors and send sensor val
 
 - Response
         - Example
-            - 1개의 센서값을 전송했을 경우
+            - When 1 sensor value is transmitted
 
               ```json
               {
@@ -648,7 +648,8 @@ This document describes how to register gateways and sensors and send sensor val
                 }
               }
               ```
-            - 여러 개의 센서값을 전송했을 경우
+              
+            - When multiple sensor values are transmitted
 
               ```json
               {

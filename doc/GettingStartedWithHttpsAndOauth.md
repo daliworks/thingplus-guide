@@ -250,7 +250,7 @@
         - OSX의 경우 `uuidgen` 명령으로 생성할 수 있습니다.
         - Linux(Ubuntu)의 경우 `uuid`라는 package 설치 후 `uuid` 명령으로 생성할 수 있습니다.
         - UUID는 이 방법 외에도 다양한 방법으로 구할 수 있습니다.
-    - 위에서 구한 UUID에서 `-`를 제거하고, 대분자가 있을 경우 소문자로 변경하여 게이트웨이 ID로 사용합니다.
+    - 위에서 구한 UUID에서 `-`를 제거하고, 대문자가 있을 경우 소문자로 변경하여 게이트웨이 ID로 사용합니다.
 
        ```bash
        $ uuidgen | tr -d - | tr [:upper:] [:lower:]
@@ -363,8 +363,10 @@
           }
           ```
         - reqId: UUID를 이용하여 센서 ID를 생성하여 사용합니다.
-        - name: 디바이스의 이름으로 자유롭게 입력하시면 됩니다.
-        - model: 게이트웨이 모델을 조회했을 때 `deviceModels`에 있는 디바이스 모델 ID를 사용합니다. 이 문서에서 설명하는 방식을 이용하여 디바이스를 등록하기 위해서는 디바이스 모델 ID `open-api-device-v1.0`를 사용합니다. 만약 다른 디바이스 모델이 게이트웨이 모델에 등록되어 있을 경우, 본 API를 호출할 때 다른 디바이스 모델 ID를 대입해서 사용할 수 있습니다.
+        - name: 센서의 이름으로 자유롭게 입력하시면 됩니다.
+        - type: 게이트웨이 모델을 조회했을 때 `deviceModels.sensors`에서 해당하는 센서 타입 값(`type`)을 찾아 사용합니다. 
+        - driverName: 게이트웨이 모델을 조회했을 때 `deviceModels.sensors`에서 `type`에 해당하는 `driverName` 값을 사용합니다.
+        - model: 게이트웨이 모델을 조회했을 때 `deviceModels.sensors`에서 `type`에 해당하는 `model` 값을 사용합니다.
         - category: `sensor`라는 문자열 그대로 입력합니다. 현재 HTTPS 방식으로 `actuator`는 지원하지 않습니다.
         - deviceId: 센서가 연결된 디바이스 ID를 입력합니다.
         - 명시한 항목 외의 옵션에 대해서는 [Thing+ API Reference](https://thingplus.api-docs.io/2.0/gateway-sensors/create-gateway-sensors)를 참고하세요.

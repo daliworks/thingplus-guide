@@ -1,4 +1,4 @@
-# Thing + Interworking Guide with HTTPS and OAuth2 - ENGLISH
+# Thing+ Interworking Guide with HTTPS and OAuth2 - ENGLISH
 ## Contents
 1. [Overview](#1-overview)
 2. [Preparation](#2-preparation)

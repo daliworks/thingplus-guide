@@ -68,7 +68,7 @@
               "_user": "1",
               "mtime": 1495422902432,
               "ctime": 1495422902432,
-              "id": "testClient"
+              "id": "testClientId"
             }
           }
           ```
@@ -83,7 +83,7 @@
           ```json
           {
             "grant_type": "password",
-            "client_id": "testClient",
+            "client_id": "testClientId",
             "client_secret": "testClientPwd12!@",
             "username": "serviceadmin",
             "password": "0b54b2a7b72f1efeb2c86885c3247787"

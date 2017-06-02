@@ -105,7 +105,7 @@
 [Link](https://thingplus.api-docs.io/2.0/)
 
 ### 4.1 Test URL
-https://nocert.sandbox.thingplus.net/
+https://www.sandbox.thingplus.net/
 
 ### 4.2 API 버전
 Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 있습니다.

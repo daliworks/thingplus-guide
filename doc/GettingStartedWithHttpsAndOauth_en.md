@@ -265,7 +265,7 @@ This document describes how to register gateways and sensors and send sensor val
 
           ```json
           {
-            "id": "87cd2a6e407511e7922eb724f8803770",
+            "reqId": "87cd2a6e407511e7922eb724f8803770",
             "params": {
               "siteId": "1",
               "model": "52",
@@ -273,7 +273,7 @@ This document describes how to register gateways and sensors and send sensor val
             }
           }
           ```
-        - id: Use the UUID generated above.
+        - reqId: Use the UUID generated above.
         - siteId: Use the site ID obtained above.
         - model: Use the gateway model ID obtained above.
         - name: You can freely input the name of the gateway.

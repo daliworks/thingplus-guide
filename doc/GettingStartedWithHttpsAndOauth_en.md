@@ -433,7 +433,7 @@ This document describes how to register gateways and sensors and send sensor val
             }
           }
           ```
-        - expireAt: Indicates how long the `status` is valid, in Unix timme in msec.
+        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
     - The gateway status must be sent once per `reportInterval`.
     - Even if the status of the gateway is `on`, after the expireAt time, you can not know what it is.
 
@@ -479,7 +479,7 @@ This document describes how to register gateways and sensors and send sensor val
             }
           }
           ```
-        - expireAt: Indicates how long the `status` is valid, in Unix timme in msec.
+        - expireAt: Indicates how long the `status` is valid, in Unix time in msec.
     - The sensor status must be sent once per `reportInterval`.
     - Even if the status of the sensor is `on`, after the expireAt time, you can not know what it is.
 

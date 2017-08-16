@@ -72,13 +72,13 @@ From time to time, the `SandBox` will also have new features that are still in t
 
 ## 2. Workflow
 
-### 2.1 for hardware interlock with Thing+(embedded)
+### 2.1 for hardware interoperation with Thing+(embedded)
  - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5DWorkflow%20for%20hardware%20interlock_v1.3.pdf)
 
 ### 2.2 for utilizing OAuth/App
  - [Download](https://github.com/daliworks/thingplus-guide/raw/master/doc/src/dist/%5Ben%5Dworkflow%20for%20utilizing%20oauth_v1.2.pdf)
 
-### 2.3 for interlocking with another Iot platform
+### 2.3 for interoperation with another Iot platform
  - [To be provided later]
 
 ## 3. Guides
@@ -113,14 +113,8 @@ From time to time, the `SandBox` will also have new features that are still in t
 ### 4.1 Test URL
 https://www.sandbox.thingplus.net/
 
-
 ### 4.2 API Version
 The current Thing+ API version and documentation is v2.0.
-
-However, for the time being, only sandbox.thingplus.net is on the v2.0 system.
-Other services are currently using v1.0 of the API.
-
-This is temporary, and we intend to update all service locations to v2.0 soon.
 
 ## Changes history
 

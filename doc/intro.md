@@ -3,14 +3,13 @@ It explains the APIs provided by Thing+.
 
 It is highly recommended that you read [Thing+ Developer Guide](https://github.com/daliworks/thingplus-guide) before you use Thing+ API. 
 
-We provide Thing+ APIs for 3rd parties who want to use Thing+'s various fucntion and currently we are expanding the scope of the functions with Thing+ APIs. 
+We provide Thing+ APIs for 3rd parties who want to build upon Thing+. The API is still being expanded.
 
 
 ## Possible scope
 The resources accessible with Thing+ API are decided by the scope. 
 
-You can refer to the detailed Scope at #docTextSection:3T3twjpBjxwMyo6Xs 
-
+You can refer to the detailed Scope [here](./OAuth2.md#Scopes)
 
 ## Requirement 
 You need the authority for each resources to use Thing+ API and the authority can be obtained with `OAuth2`.
@@ -32,12 +31,11 @@ We offers two types to obtain OAuth token.
 1. #endpoint:Pv7MmRuhWcoXziFPa
 2. #endpoint:7RcNk9pBovabaZL96
 
+You use the obtained token by putting it into the request's Header.
 
-You use the obtained token inputting into `request Header`.
+If you want to delegate resource privileges to specific users, take `1. Authorization Code grant` method.
 
-If you want to delegate resource privileges to specific users, take `1. Authorization Code grunt` method.
-
-If you want to access resources of management scope with the authority of administrator (Admin) other than specific user, please take `2. Resource owner password Credentials grant.
+If you want to access resources of management scope with the authority of administrator (Admin) other than specific user, please take `2. Resource owner password Credentials grant.`
 
 You can find more datails [here](
 https://github.com/daliworks/thingplus-guide/blob/master/doc/README_en.md#22-for-utilizing-oauthapp)

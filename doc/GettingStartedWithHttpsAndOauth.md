@@ -31,7 +31,7 @@
 ## 3. OAuth Client 생성
 
 1. `Chrome`에서 Thing+ Portal에 접속하여 서비스 관리자 계정으로 로그인합니다.
-2. `Postman`을 실행하고, `Postman Intercepter`를 `on`한 다음 아래 API를 호출합니다.
+2. `Postman`을 실행하고, `Postman Interceptor`를 `on`한 다음 아래 API를 호출합니다.
     - URL: https://api.sandbox.thingplus.net/v2/authClients
     - Method: POST
     - Content-Type: application/json

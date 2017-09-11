@@ -31,7 +31,7 @@ This document describes how to register gateways and sensors and send sensor val
 ## 3. Create OAuth Client
 
 1. On `Chrome`, go to Thing+ Portal and log in with your service administrator account.
-2. Execute `Postman`, set `Postman Intercepter` `on`, and then call the following API.
+2. Execute `Postman`, set `Postman Interceptor` `on`, and then call the following API.
     - URL: https://api.sandbox.thingplus.net/v2/authClients
     - Method: POST
     - Content-Type: application/json

@@ -127,6 +127,7 @@ Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 
 
 #### 2017.10.10
 add `sandbox` url on `oauth2` detail page
-add [3.9 Gateway-Thing+ 등록/연동 가이드](#39-portal-사용-가이드)
+
+add [3.9 Gateway-Thing+ 등록/연동 가이드](#39-gateway-thing-등록연동-가이드)
 
 ## License

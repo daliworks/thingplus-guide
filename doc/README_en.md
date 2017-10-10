@@ -101,7 +101,7 @@ From time to time, the `SandBox` will also have new features that are still in t
 ### 3.6 Embedded Development Guide
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md)
 
-### 3.7 OAuth Development Guide
+### 3.7 OAuth Use Guide
 [Link](./OAuth2Guide_en.md)
 
 ### 3.8 Portal Usage Guide

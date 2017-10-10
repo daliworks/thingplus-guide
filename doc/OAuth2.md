@@ -13,11 +13,18 @@ All developers need to register their application before getting started. A regi
 #### Step 1
 Redirect the user to allow or not for the Web Server(or Confidential Client) to access the resources of the user with registered scopes
 
+> sandbox
 ```json
-GET https://api.thingplus.net/v1/oauth2/authorize
-
+GET https://api.sandbox.thingplus.net/v2/oauth2/authorize
 Example>
-  GET https://api.thingplus.net/v1/oauth2/authorize?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}
+  GET https://api.sandbox.thingplus.net/v2/oauth2/authorize?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}
+```
+
+> commercial
+```json
+GET https://api.thingplus.net/v2/oauth2/authorize
+Example>
+  GET https://api.thingplus.net/v2/oauth2/authorize?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}
 ```
 
 * URL Query parameters
@@ -38,9 +45,15 @@ ThingPlus redirects back to your site with "code" in url when the user accepted 
 #### Step 3
 Exchange code for an Access token
 
+> sandbox
+```json
+POST https://api.sandbox.thingplus.net/v2/oauth2/token
+Content-Type : application/x-www-form-urlencoded
 ```
-POST https://api.thingplus.net/v1/oauth2/token
 
+> commercial
+```json
+POST https://api.thingplus.net/v2/oauth2/token
 Content-Type : application/x-www-form-urlencoded
 ```
 
@@ -61,9 +74,15 @@ Get an Access token with resource owner(user) password credentials
 
 NOTE: This grant is not allowed for the 3rd party applications
 
+> sandbox
+```json
+POST https://api.sandbox.thingplus.net/v2/oauth2/token
+Content-Type : application/x-www-form-urlencoded
 ```
-POST https://api.thingplus.net/v1/oauth2/token
 
+> commercial
+```json
+POST https://api.thingplus.net/v2/oauth2/token
 Content-Type : application/x-www-form-urlencoded
 ```
 

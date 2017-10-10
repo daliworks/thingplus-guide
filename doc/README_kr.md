@@ -95,11 +95,14 @@
 ### 3.6 임베디드 개발 가이드
 [Link](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)
 
-### 3.7 OAuth 개발 가이드
+### 3.7 OAuth 이용 가이드
 [Link](./OAuth2Guide_kr.md)
 
-### 3.8 Portal 사용 가이드
+### 3.8 Portal(웹 페이지) 이용 가이드
 [Link](http://support.thingplus.net/ko/user-guide/registration.html#id-enduser)
+
+### 3.9 Gateway-Thing+ 등록/연동 가이드
+[Link](./registerGateway_kr.md)
 
 ## 4. API 문서
 [Link](https://thingplus.api-docs.io/2.0/)
@@ -122,5 +125,8 @@ Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 
 
 ## Changes history
 
+#### 2017.10.10
+add `sandbox` url on `oauth2` detail page
+add [3.9 Gateway-Thing+ 등록/연동 가이드](#39-portal-사용-가이드)
 
 ## License

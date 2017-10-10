@@ -115,7 +115,7 @@ https://www.sandbox.thingplus.net/
 
 ### 4.2 Commercial Service URL
 You need request to us for use commercial Service
-https://***.thingplus.net/ (*** is your own service)
+`https://***.thingplus.net/` (*** is your own service)
 
 ex) https://myiot.thingplus.net/
 

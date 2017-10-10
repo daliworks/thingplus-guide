@@ -7,13 +7,13 @@ Thing+ IoT는 게이트웨이 / 센서와 함께 시작합니다.
 Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 1. `게이트웨이`와 `Thing+ Server`간의 연동
-  - 게이트웨이에서 Thing의 정보를 서버로 전달하는 과정입니다
-  - 게이트웨이와 Thing+ Server간 통신에 필요한 인증은 `APIKEY` 를 이용합니다.
-  - `APIKEY`를 획득하는 과정은 [여기](#1-apikey-생성)를 참조하시기 바랍니다.
-  - `게이트웨이`와 `Thing+ Server`의 연동의 자세한 내용은 [여기](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)를 참조하시기 바랍니다.
+    * 게이트웨이에서 Thing의 정보를 서버로 전달하는 과정입니다
+    * 게이트웨이와 Thing+ Server간 통신에 필요한 인증은 `APIKEY` 를 이용합니다.
+    * `APIKEY`를 획득하는 과정은 [여기](#1-apikey-생성)를 참조하시기 바랍니다.
+    * `게이트웨이`와 `Thing+ Server`의 연동의 자세한 내용은 [여기](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide.md)를 참조하시기 바랍니다.
 2. 사용자에게 `게이트웨이` 등록
-  - 특정 사용자가 해당 게이트웨이를 등록/획득 하는 과정입니다
-  - `Thing+ Server`와 연동된 `게이트웨이`와 `센서`에 대한 정보를 조회 하기 위해 반드시 필요한 절차입니다.
+    * 특정 사용자가 해당 게이트웨이를 등록/획득 하는 과정입니다
+    * `Thing+ Server`와 연동된 `게이트웨이`와 `센서`에 대한 정보를 조회 하기 위해 반드시 필요한 절차입니다.
 
 
 ## 1. APIKEY 생성
@@ -21,7 +21,7 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 1. `APIKEY`를 생성후 게이트웨이에 전달하는 방법
 2. 게이트웨이가 직접 `APIKEY`를 획득 하는 방법
-  - 해당 기능을 위해서는 vendorKey가 필요하며 별도로 Thing+에 vendorKey 요청이 필요합니다. <contact@thingplus.net>
+    * 해당 기능을 위해서는 vendorKey가 필요하며 별도로 Thing+에 vendorKey 요청이 필요합니다. <contact@thingplus.net>
 
 해당 방법은 게이트웨이나 개발환경에 따라 차이가 있습니다.
 

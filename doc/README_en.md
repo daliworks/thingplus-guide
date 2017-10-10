@@ -113,7 +113,15 @@ From time to time, the `SandBox` will also have new features that are still in t
 ### 4.1 Test URL
 https://www.sandbox.thingplus.net/
 
-### 4.2 API Version
+### 4.2 Commercial Service URL
+You need request to us for use commercial Service
+https://***.thingplus.net/ (*** is your own service)
+
+ex) https://myiot.thingplus.net/
+ex) https://www.hello.thingplus.net/
+
+
+### 4.3 API Version
 The current Thing+ API version and documentation is v2.0.
 
 ## Changes history

@@ -107,13 +107,17 @@
 ### 4.1 Test URL
 https://www.sandbox.thingplus.net/
 
-### 4.2 API 버전
+### 4.2 상용(정식) Service URL
+상용(정식) 서비스를 이용하시기 위해서는 `Thing+`에 요청이 필요합니다.
+https://***.thingplus.net/ (*** 는 서비스 고유의 url 입니다)
+
+ex) https://myiot.thingplus.net/
+
+ex) https://www.hello.thingplus.net/
+
+
+### 4.3 API Version
 Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 있습니다.
-
-하지만, sandbox.thingplus.net 에서만 당분간 v2.0으로 서비스되고 있고,
-iot.thingplus.net 등은 v1.0으로 서비스되고 있습니다.
-
-추후 iot.thingplus.net 도 v2.0으로 업그레이드 될 예정입니다.
 
 
 ## Changes history

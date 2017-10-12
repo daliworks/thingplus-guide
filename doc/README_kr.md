@@ -21,6 +21,7 @@
   * [3.7 OAuth 개발 가이드](#37-oauth-이용-가이드)
   * [3.8 Portal 사용 가이드](#38-portal웹-페이지-이용-가이드)
   * [3.9 Gateway-Thing+ 등록/연동 가이드](#39-gateway-thing-등록연동-가이드)
+  * [3.10 Thing+ API 이용 가이드](#310-thing-api-이용-가이드)
 * [4. API 문서](#4-api-문서)
   * [4.1 Test URL](#41-test-url)
   * [4.2 API 버전](#42-api-버전)
@@ -106,7 +107,7 @@
 [Link](./registerGateway_kr.md)
 
 ### 3.10 Thing+ API 이용 가이드
-[Link](./apiuse_kr.md)
+[Link](./intro_kr.md)
 
 ## 4. API 문서
 [Link](https://thingplus.api-docs.io/2.0/)

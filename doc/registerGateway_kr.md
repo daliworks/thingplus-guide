@@ -21,12 +21,16 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 1. `APIKEY`를 생성후 게이트웨이에 전달하는 방법
 2. 게이트웨이가 직접 `APIKEY`를 획득 하는 방법
-    * 해당 기능을 위해서는 vendorKey가 필요하며 별도로 Thing+에 vendorKey 요청이 필요합니다. <contact@thingplus.net>
+    * 해당 기능을 위해서는 `vendorKey`가 필요하며 별도로 Thing+에 `vendorKey` 요청이 필요합니다. <contact@thingplus.net>
 
 해당 방법은 게이트웨이나 개발환경에 따라 차이가 있습니다.
 
 
 ### 1.1 APIKEY 생성 후 전달
+`APIKEY` 를 획득 할 수 있는 두가지 방법 중 선택하여 `APIKEY` 획득 후
+수동적인 방법이나 별도의 App에서의 `게이트웨이`간의 통신을 통해 `게이트웨이`에 `APIKEY`를 전달합니다.
+
+오픈하드웨어(open hard ware)의 경우 [여기](http://support.thingplus.net/ko/open-hardware/openhardware-list.html)를 참고 합니다.
 
 #### Thing+ Portal(웹 페이지) 에서 획득
 
@@ -34,23 +38,24 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 #### Thing+ API를 통한 획득
 
-1. registerGatewayKey API의 body에 ```authType = apikey ``` 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey){:target="_blank"}
+1. `registerGatewayKey` API의 body에 ```authType = apikey ``` 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
 
-생성한 APIKEY를 게이트웨이 코드에 입력하거나 다른 방법을 통해 전달
 
 ### 1.2 게이트웨이가 APIKEY를 획득
+게이트웨이(장비)가 AP 로 동작하며 직접 `APIKEY` 획득을 할 경우 사용합니다.
 
-주의: 해당 기능을 위해서는 vendorKey가 필요하며 Thing+에 vendorKey 요청이 필요합니다.
+해당 기능을 위해서는 `vendorKey`가 필요하며 Thing+에 `vendorKey` 요청이 필요합니다.
+
 
 #### Thing+ Portal(웹 페이지) 에서 APIKEY 획득 가능상태로 변경
 
 1. 사용하려는 게이트웨이의 model과 고유 ID를 입력하여 API 키 활성화 상태로 만듬 [영상보기]()
-2. 게이트웨이에서 activateGatewayKey API를 사용하여 APIKEY 획득 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/activategatewaykey)
+2. 게이트웨이에서 `activateGatewayKey` API를 사용하여 APIKEY 획득 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/activategatewaykey)
 
 #### Thing+ API를 통한 획득
 
-1. registerGatewayKey API의 body에 ```authType = apikeyReady ``` 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
-2. 게이트웨이에서 activateGatewayKey API를 사용하여 APIKEY 획득 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/activategatewaykey)
+1. `registerGatewayKey` API의 body에 ```authType = apikeyReady ``` 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
+2. 게이트웨이에서 `activateGatewayKey` API를 사용하여 APIKEY 획득 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/activategatewaykey)
 
 
 ## 2. 게이트웨이 등록
@@ -62,5 +67,7 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 
 #### Thing+ API를 통한 등록
-1. registerGateway API 를 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergateway)
-2. [상세 설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth.md#5-gateway-등록)
+1. 별도의 앱에서 API를 통한 `게이트웨이` 등록이 필요하다면 `oAuth2` 를 통한 `accessToken`을 획득하여야 합니다. 자세한 내용은 [여기](./OAuth2Guide_kr.md)를 참조하세요
+2. `registerGateway` API 를 사용 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/registergateway)
+3. [상세 설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth.md#5-gateway-등록)
+4. ~~`registerGateway` parameter generator 준비중~~

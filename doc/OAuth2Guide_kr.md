@@ -18,10 +18,14 @@ https://oauth.net/2/
 2. authClient 생성
     - api guide의 authClients 항목을 참조하여 authClient를 생성
     - 생성된 authClient 에 대하여 별도 유지/관리 필요
+    - authClient 생성시 사용할 `scope`는 [여기](./OAuth2.md#scopes)를 참조
  
  
 ## [Authorization Code 방식](./OAuth2.md#authorization-code-grant-or-web-server)
-특정 user의 지정된 권한에 대한 위임을 받는다
+특정 user의 지정된 권한에 대한 위임을 받는다.
+별도의 앱/웹에서 유저별로 관리가 필요할 경우 사용한다.
+
+추가 요청시 oAuth Login 페이지에 대한 customizing 이 가능하다.
 
 1. oauth2/authorize API를 통해 thing+ page 이동
 1. 로그인이 되어 있지 않을경우 Login. 이미 로그인이 되어있다면 다음 단계로

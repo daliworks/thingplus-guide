@@ -25,6 +25,8 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 해당 방법은 게이트웨이나 개발환경에 따라 차이가 있습니다.
 
+API방식을 이용할 경우 경우에 따라 `oAuthToken`이 필요 할 수 있습니다.
+`oAuthToken`에 대한 상세 내용은 [여기](./OAuth2Guide_kr.md)를 참조하세요.
 
 ### 1.1 APIKEY 생성 후 전달
 `APIKEY` 를 획득 할 수 있는 두가지 방법 중 선택하여 `APIKEY` 획득 후
@@ -34,7 +36,7 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 #### Thing+ Portal(웹 페이지) 에서 획득
 
-1. 사용하려는 게이트웨이의 model과 고유 ID를 입력하여 `APIKEY` 생성 [영상보기](https://github.com/daliworks/thingplus-guide/blob/master/doc/video/registeGateway1_kr.mov)
+1. 사용하려는 게이트웨이의 model과 고유 ID를 입력하여 `APIKEY` 생성 [영상보기](https://youtu.be/UJZDL9bmiHE)
 
 #### Thing+ API를 통한 획득
 
@@ -49,7 +51,7 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 
 #### Thing+ Portal(웹 페이지) 에서 APIKEY 획득 가능상태로 변경
 
-1. 사용하려는 게이트웨이의 model과 고유 ID를 입력하여 API 키 활성화 상태로 만듬 [영상보기]()
+1. 사용하려는 게이트웨이의 model과 고유 ID를 입력하여 API 키 활성화 상태로 만듬 [영상보기](https://youtu.be/IA-YGqDeu54)
 2. 게이트웨이에서 `activateGatewayKey` API를 사용하여 APIKEY 획득 [API 가이드](https://thingplus.api-docs.io/2.0/non-rest-apis/activategatewaykey)
 
 #### Thing+ API를 통한 획득
@@ -62,8 +64,8 @@ Thing+ IoT 서비스를 이용하기 위해 아래 절차가 필요합니다
 서버와 통신에 성공한 게이트웨이 정보를 사용자가 보기 위해서는 게이트웨이 등록이 반드시 필요합니다.
 
 #### Thing+ Portal(웹 페이지) 에서 등록
-1. 게이트웨이 등록 화면으로 이동. [영상보기]()
-2. 사용하려는 게이트웨이를 선택하고 등록 [영상보기]()
+1. 게이트웨이 등록 화면으로 이동. [영상보기](https://youtu.be/oYoi327DQQM)
+2. 사용하려는 게이트웨이를 선택하고 등록 [영상보기](https://youtu.be/tnJ9y1ncyV4)
 
 
 #### Thing+ API를 통한 등록

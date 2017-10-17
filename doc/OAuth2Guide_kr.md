@@ -6,14 +6,14 @@
 
 현재 Thing+ 는 AccessToken 획득에 **Authorization Code Grant 방식** 또는 **Resource Owner Password Credentials Grant 방식**을 지원하고 있습니다.
 
-|획득 방식|유효 기간|설명
-|---|---|----
-|Authorization Code Grant|15일|특정 사용자에게 리소스 접근권한을 위임받기 원하는 경우
-|Resource Owner Password Credentials Grant|90일|관리자(Admin)의 권한으로 관리 범위의 리소스에 접근하기 원하는 경우
+|획득 방식|설명
+|---|----
+|Authorization Code Grant|사용자에게 리소스 접근 권한을 지정하고자 하는 경우 사용합니다.
+|Resource Owner Password Credentials Grant|관리자(Admin)의 권한으로 관리 범위의 리소스에 접근하기 원하는 경우 사용합니다.
 
 **주의 : 등록한 OAuth client ID, OAuth client secret 과 획득한 AccessToken 을 잘 보관하시기 바랍니다.**
 
-획득한 AccessToken 은 Thing+ 운영 정책에 따라 변경될 수 있습니다.
+획득한 AccessToken 과 이에 포함된 정보는 Thing+ 운영 정책에 따라 변경될 수 있습니다.
 
 [Thing+ 기본 가이드 문서를 찾으려면 이 문서를 참조하십시오.](../README.md)
 

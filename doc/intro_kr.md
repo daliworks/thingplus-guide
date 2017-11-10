@@ -160,21 +160,24 @@ Thing+에서는 `GCM`과 `APN`을 지원하고 있습니다.
 ##### 7.1.1 GCM
 1. 3rd Party 고객으로부터 달리웍스에게 Native Push 연동 요청
 2. 달리웍스에서 3rd Pary 고객에게 Native Push 연동을 위한 정보 요청
-   - GCM용으로 사용한 Project의 서버 인증을 위한 `Server Access Key` 요청
-   - Server Access Key `사용 제한은 IP Address`로 되어 있어야하며, `0.0.0.0/0`으로 모든 서버에서 사용할 수 있도록 설정해야 함
+   - `Server Access Key`: Push 서버 인증을 위한 GCM용으로 사용한 Google API Project의 Access Key
+      - Server Access Key `사용 제한은 IP Address`로 되어 있어야하며, `0.0.0.0/0`으로 모든 서버에서 사용할 수 있도록 설정해야 함
       - Google API Developer([Link](https://console.developers.google.com/apis/credentials))
-   - App ID로 `Application Package Name`을 받아야 함
-   - `authClient`의 ID를 받아야 함. 
-3. 달리웍스가 3rd Party 고객으로부터 전달 받은 연동을 위한 Server 인증 키 적용
+   - `Auth Client ID`: Thing+ OAuth2 Client ID
+   - `Application Package Name`
+   - [dev@dalwiorks.net](mailto:dev@dalwiorks.net)으로 연동 정보 전달
+3. 달리웍스가 3rd Party 고객으로부터 전달 받은 Server Access Key 적용
 4. 3rd Party App에서 Native Push를 수신할 장치를 Thing+에 등록
 
 ##### 7.1.2 APN
 1. 3rd Party 고객으로부터 달리웍스에게 Native Push 연동 요청
 2. 달리웍스에서 3rd Pary 고객에게 Native Push 연동을 위한 정보 요청
-   - 서버 인증을 위한 Apple에 의해 인증받은 `Private Key`와 `Cert` 요청
-   - App ID로 `Bundle ID`를 받아야 함
-   - `authClient`의 ID를 받아야 함. 
-3. 달리웍스가 3rd Party 고객으로부터 연동을 위한 Certificates 적용
+   - `Certificates`: Push 서버 인증을 위한 Apple에 의해 인증받은 `Private Key` & `Cert`
+      - How to create the Apple Push Notification Certificate and Key([Link](https://vivocha.atlassian.net/wiki/spaces/VVCJ/pages/1048822/How+to+create+the+Apple+Push+Notification+Certificate+and+Key))
+   - `Auth Client ID`: Thing+ OAuth2 Client ID
+   - `Bundle ID`
+   - [dev@dalwiorks.net](mailto:dev@dalwiorks.net)으로 연동 정보 전달
+3. 달리웍스가 3rd Party 고객으로부터 전달 받은 Certificates 적용
 4. 3rd Party App에서 Native Push를 수신할 장치를 Thing+에 등록
 
 https://thingplus.api-docs.io/2.0/pushdevices

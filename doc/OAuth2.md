@@ -120,8 +120,10 @@ For the Authorization Code Grant, requested scopes will be displayed to the user
 | user-profile       | User Profile Read and Update     | users/me, /changePassword | ___TBD___ Read and update the profile of the user
 | user-profile-read  | User Profile Read                | users/me | Read the profile of the user
 | gateway            | Gateway Ceate/Read/Update/Delete | /gateways, /registerGateway, /registerGatewayKey, /manageGateway, /controlActuator, /sensorTypes, /sensorDrivers, /gatewayModels | ___TBD___ Register a gateway/device/sensor and read, update, delete gateways/devices/sensors for which the user has permissions
-| gateway-read       | Gateway Read                     | /gateways, /controlActuator | Read gateways/devices/sensors and control actuator for which the user has permissions
-| gateway-update     | Gateway Read/Update              | /gateways, /manageGateway, /controlActuator | Read and update gateways/devices/sensors, control actuator, and manage the gateways for which the user has permissions
+| gateway-read       | Gateway Read                     | /gateways | Read gateways/devices/sensors for which the user has permissions
+| gateway-update     | Gateway Read/Update              | /gateways | Read and update gateways/devices/sensors for which the user has permissions
+| gateway-management | Management Gateway               | /manageGateway | Management the gateways(reboot, poweroff, setProperty more) for which the user has permissions
+| actuator-command   | Actuator execute                 | /controlActuator | Execute actuator(control Actuator) for which the user has permissions
 | timeline-read      | Timeline Read                    | /timelines | Read timelines of the user
 | tag                | Tag Ceate/Read/Update/Delete     | /tags | Create, read, update and delete tags of the user
 | tag-read           | Tag Read                         | /tags | Read tags of the user

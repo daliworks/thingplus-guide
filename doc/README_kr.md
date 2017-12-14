@@ -128,8 +128,8 @@ ex2) https://www.hello.thingplus.net/
 > 주의: 개설한 서비스가 속해있는 지역을 확인하세요. 현재 Thing+는 월드와이드(.net), EU지역(.eu)를 지원하고 있습니다.
 
 상용 API 서버 URL:
-For thingplus.net services: https://api.thingplus.net/v2
-For thingplus.eu services: https://api.thingplus.eu/v2
+- For thingplus.net services: https://api.thingplus.net/v2
+- For thingplus.eu services: https://api.thingplus.eu/v2
 
 ### 4.3 API Version
 Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 있습니다.

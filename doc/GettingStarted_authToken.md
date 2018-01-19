@@ -62,7 +62,7 @@
 - Select _raw_
 - Put your OAuth client ID in the `reqId` field. This should be unique across all applications connected to Thing+
 - Put your OAuth client secret in the `clientSecret` field. These two fields should not be exposed to anyone. Keep it **secret**
-- Put the name of your applicaiton into the `name` field. This is used to identify your application. You should put either your company or service name
+- Put the name of your applicaiton into the `name` field. This is used to identify your application. You should enter here your SERVICE NAME, which you can see by going to "service management" in the settings tab when logged in as a service admin. Your service name is also the prefix of your address. For example "my_service.thingplus.net" - in this case, "my_service" is the name of your service.
 - Change the field `scopes` to determine the rights for your application. Read more about acceptable scopes [here](./OAuth2.md)
 - Click the _Send_ button
 

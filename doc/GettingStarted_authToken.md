@@ -1,10 +1,15 @@
 # Getting Started with the Thing+ REST APIs
 
-## Step 1. Set up the system
-
-  - [Register thing+ service](http://support.thingplus.net/en/user-guide/registration.html)
+## Step 1. Set up the system   
+  - [Register a Thing+ service](https://iot.thingplus.net/#/register)
+      - Or, your service may have already have been set up by our team
   - Hardware installation/procurement. See [list of Available Open Hardware](/en/open-hardware/openhardware-list.html)
   - If you are making an app, make sure your application can receveice web requests from Thing+
+  - NOTE: Please check your Thing+ service's location before continuing
+      - api.thingplus.net - This is the Japanese API server - if you registered your own service, this will be the API server you should use
+      - api.thingplus.eu - This is the EU API server
+      - api.sandbox.thingplus.net - This is a commercial API test server from Seoul
+      ** You MUST ensure that you use the correct API server, depending on where your service (SERVICE_NAME.thingplus) is registered
 
 ## Step 2. Prepare Postman
 
@@ -60,9 +65,9 @@
 - Select **_Getting a client ID and secret_** on the collection
 - Select the _Body_ tab
 - Select _raw_
-- Put your OAuth client ID in the `reqId` field. This should be unique across all applications connected to Thing+
-- Put your OAuth client secret in the `clientSecret` field. These two fields should not be exposed to anyone. Keep it **secret**
-- Put the name of your applicaiton into the `name` field. This is used to identify your application. You should put either your company or service name
+- Put your OAuth client ID in the `reqId` field. This should be unique across all applications connected to Thing+. You may choose any ID here - something simple and easy to remember is fine.
+- Put your OAuth client secret in the `clientSecret` field. You may choose anything as your OAuth Client Secret - consider it a password of sorts. These two fields (client ID and Client Secret) should not be exposed to anyone. Keep it **secret**
+- Put the name of your application into the `name` field. This is used to identify your application. You should put the name of your company or service here, along with something to make it unique. (If Thing+ has any other application with the same name, you will run into an error). For example, leland_0144 is a much better application name then "leland".
 - Change the field `scopes` to determine the rights for your application. Read more about acceptable scopes [here](./OAuth2.md)
 - Click the _Send_ button
 
@@ -87,17 +92,17 @@
 https://api.thingplus.net/v2/oauth2/authorize?response_type=code&client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}
 ``` 
 
-  - Replace `{CLIENT_ID}` with Thing+ OAuth Client ID to received at Step 1-4
+  - Replace `{CLIENT_ID}` with the Thing+ OAuth Client ID you used as your reqID in steps 3-1 to 3-6
   - Replace `{REDIRECT_URI}` with your callback URL. This URL should we able to take a 'code' parameter. For example `http://yoururl/?code={AUTHORIZATION_CODE}`
 
   ![OAuth authorization screen](images/oauth-authorize.png)
 
 3. User should click the 'Allow' button
 
-4. Thing+ will redirectsback to your `{REDIRECT_URI}` with the "code" in query string
+4. Thing+ will redirect back to your `{REDIRECT_URI}` with the "code" in your query string
   ![interceptor enable](images/oauth-code.png)
 
-4. Exchange code for an OAuth Access token
+5. Exchange code for an OAuth Access token
 
 > This step should be automated in your code, the method below is for demonstration purpose only
 
@@ -151,7 +156,7 @@ https://api.thingplus.net/v2/oauth2/authorize?response_type=code&client_id={CLIE
 
 ### Step 5-2. Authorization in your app
 
-When you are sending requests to Thing+ API, be sure to include the token you acquired from step 2 into the header with
+When you are sending requests to the Thing+ API, be sure to include the token you acquired from step 4 into the header with
 
 ```
 Authorization: Bearer {AccessToken}
@@ -159,7 +164,7 @@ Authorization: Bearer {AccessToken}
 
 <div id='id-step3'></div>
 
-## Step 6. Tips and trickes for working with Thing+ API
+## Step 6. Tips and Tricks for working with the Thing+ API
 
 ### Postman lets you generate code snippets in more than 15 languages.
 From [Writing front-end API code with Postman](http://blog.getpostman.com/2015/08/31/writing-front-end-api-code-with-postman)
@@ -174,7 +179,7 @@ From [Writing front-end API code with Postman](http://blog.getpostman.com/2015/0
 
   ![http header](images/reading-gateways.png)
 
-### Reading gateways information with filters
+### Reading gateway information including filters
   - Select a **_Reading gateways_** on the collection and Click the 'Send' button.
   - Request URL: [GET] `https://api.thingplus.net/v2/gateways?count=10`
   - <a href="https://thingplus.api-docs.io/2.0/getting-started/query-string" target="_blank">Accepted Parameters</a>

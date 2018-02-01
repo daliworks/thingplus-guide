@@ -2,7 +2,7 @@
 
 ## Step 1. Set up the system   
   - [Register a Thing+ service](https://iot.thingplus.net/#/register)
-      - Or, your service may have already have been set up by our team
+      - Or, your service may have already have been set up by our team, if you are a commercial partner
   - Hardware installation/procurement. See [list of Available Open Hardware](/en/open-hardware/openhardware-list.html)
   - If you are making an app, make sure your application can receveice web requests from Thing+
   - NOTE: Please check your Thing+ service's location before continuing
@@ -164,12 +164,43 @@ Authorization: Bearer {AccessToken}
 
 <div id='id-step3'></div>
 
-## Step 6. Tips and Tricks for working with the Thing+ API
+## Step 6. Pushing sensor data directly to your Dashboard
+### Step 6-1. Learning how the API functions
+
+Now, you should be able to use our API directly in combination with your service.
+
+To start, the API documentation is located [HERE](https://thingplus.api-docs.io/2.0/getting-started/how-to-use-thing-api).
+> Note: You *must* make sure you are using the correct API server location. It will be some variation on api.thingplus.xxxxx. Please see the beginning of this guide for more info.
+
+Note that within each section of the API docs, you will see a summary of the API action, a definition of it (Definition Tab) and a try it out section (Try It Out tab). 
+
+In the "Try It Out" section, you will see what a typical request body looks like, as well as the ability to edit the request body, header, etc.. and click the "Send Request" button to see what a request using that information would look like, immediately. 
+
+Finally, at the bottom of the "Try It Out" section, you will notice a "Code Generation" drop down box - clicking this will allow you to see what the actual code might look like in order to place this request into your own application, which you will want to use if you are pushing data directly from Google Cloud, nodeRed, or another method. 
+
+### Step 6-2. Seeing your device's data on your dashboard
+
+The easiest way to get data flowing to something on the dashboard is create a open source gateway via the UI with the sensor(s) types you would like to test. Via using the create gateway prompt (from the settings menu), select "Open Source Gateway" from the gateway menu, and then use your PC's MAC address (or any other MAC address) as the gateway ID. Following that, you can add a device and "attach" whatever sensors you would like.
+
+After this is created, you can directly push your data into these sensors via using MQTT. See the guide [HERE](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md#226-transmission-of-the-sensor-value-data). Note that the gateway ID, device ID, and sensor ID are all shown when you created the gateway, and can also be seen by going to the gateway in "Gateway Management".
+
+Gateway -> Device -> Sensor
+
+Alternatively, it is possible to directly push sensor data via the REST API using the [Update Sensor-series](https://thingplus.api-docs.io/2.0/sensor-series/update-sensor-series) request. However, for anything more then a single data push, MQTT should *always* be used.
+
+Assuming you were able to send your sensor values via MQTT, you should see the sensor's value changing if you created a sensor widget on the dashboard.
+
+Congrats. :)
+
+## Step 7. Tips and Tricks for working with the Thing+ API
 
 ### Postman lets you generate code snippets in more than 15 languages.
 From [Writing front-end API code with Postman](http://blog.getpostman.com/2015/08/31/writing-front-end-api-code-with-postman)
 
 ![Code generation](images/postman-code.png)
+
+### Using MQTT to send sensor data/values
+  - [MQTT Guide](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md#226-transmission-of-the-sensor-value-data)
 
 ### Reading gateway information
   - Select **_Reading gateways_** in the collection and Click the 'Send' button

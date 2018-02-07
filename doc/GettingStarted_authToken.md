@@ -183,11 +183,11 @@ Finally, at the bottom of the "Try It Out" section, you will notice a "Code Gene
 ![api-docs-2](images/api-docs-2.png)
 
 ## Step 7 Pushing sensor data to your Dashboard
-### Step 7-1. If you have a real device
+### Step 7-1. If you have a physical device
 
 Connect your device to Thing+. We have a detailed list of supported device and connection guide [here](http://support.thingplus.net/en/open-hardware/openhardware-list.html).
 
-### Step 7-2. If you don't have a real device
+### Step 7-2. If you don't have a physical device
 
 > This step will walk you through creating Gateway &rarr; Device &rarr; Sensor
 
@@ -199,14 +199,14 @@ The easiest way to get data flowing to something on the dashboard is create a op
 
 3. Use your PC's MAC address (or any other MAC address) as the gateway ID.
 4. Deselect all sensors. You'll be asked to restart the gateway, choose No
-5. Create a device following step 6 as described [here](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth_en.md#6-device-registration). You can generate any UUID string and use it as Device ID
-6. Create a sensor following step 7 as described [here](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth_en.md#7-sensor-registration). You can generate any UUID string and use it as Sensor ID
+5. Create a device following step 6 as described [here](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth_en.md#6-device-registration).
+6. Create a sensor following step 7 as described [here](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth_en.md#7-sensor-registration).
 
 After this is created, you can directly push your data into these sensors via using MQTT. See the guide [HERE](https://github.com/daliworks/thingplus-embedded/blob/master/docs/Thingplus_Embedded_Guide_EN.md#226-transmission-of-the-sensor-value-data).
 
 Alternatively, it is possible to directly push sensor data via the REST API using the [Update Sensor-series](https://thingplus.api-docs.io/2.0/sensor-series/update-sensor-series) request. However, for anything more then a single data push, MQTT should *always* be used.
 
-Assuming you were able to send your sensor values via MQTT, you should see the sensor's value changing if you created a sensor widget on the dashboard.
+Assuming you were able to send your sensor values via MQTT or HTTPS, you should see the sensor's value changing if you created a sensor widget on the dashboard.
 
 Congrats. :)
 

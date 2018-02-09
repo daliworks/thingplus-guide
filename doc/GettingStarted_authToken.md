@@ -8,6 +8,7 @@
   - api.thingplus.net - This is the Japanese API server - if you registered your own service, this will be the API server you should use
   - api.thingplus.eu - This is the EU API server
   - api.sandbox.thingplus.net - This is a commercial API test server from Seoul.
+  - service-name.your-domain.com/api - If you have signed up for our custom domain service
   **You MUST ensure that you use the correct API server, depending on where your service (SERVICE_NAME.thingplus) is registered**
 
 ## Step 2. Prepare Postman

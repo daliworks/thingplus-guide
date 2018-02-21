@@ -101,14 +101,14 @@ This document describes how to register gateways and sensors and send sensor val
                   $ echo -n <b>your_password</b> | md5
                   0b54b2a7b72f1efeb2c86885c3247787
                  </pre>
-                 
+
                - Linux
-               
+
                   <pre>
                   $ echo -n <b>your_password</b> | md5sum
                   0b54b2a7b72f1efeb2c86885c3247787  -
                  </pre>
-               
+
             - In the environment where the above command does not work, you can get the md5 hash value of the password by using the md5 hash generator on the Internet, but be careful about security.
             - [JavsScript-MD5](https://github.com/blueimp/JavaScript-MD5) is also available.
 
@@ -196,9 +196,9 @@ This document describes how to register gateways and sensors and send sensor val
                        "type": "humidity",
                        "category": "sensor"
                      },
-     
+
                      ...
-    
+
                      {
                        "network": "daliworks",
                        "driverName": "openApiSensor",
@@ -317,9 +317,9 @@ This document describes how to register gateways and sensors and send sensor val
              "model": "open-api-device-v1.0"
           }
           ```
-        - reqId: Generate a device ID using UUID and use it.
-        - name: You can freely input the name of the device.
-        - model: Use the device model ID in `deviceModels` when querying the gateway model. To register a device using the method described in this document, use the device model ID `open-api-device-v1.0`. If another device model is registered in the gateway model, you can substitute another device model ID when calling this API.
+        - `reqId`: [Generate a UUID](https://www.uuidgenerator.net/) and use it as the device ID.
+        - `name`: You can freely input the name of the device.
+        - `model`: Use the device model ID in `deviceModels` when [querying the gateway model you want to use](https://thingplus.api-docs.io/2.0/gatewaymodels/list-gatewaymodels). You'll see a field named `id` under `deviceModels` for each gateway model. To register a device using the method described in this document, use the device model ID `open-api-device-v1.0`. If another device model is registered in the gateway model, you can substitute another device model ID when calling this API.
         - For options other than those specified, see [Thing+ API Reference](https://thingplus.api-docs.io/2.0/gateway-devices/create-gateway-devices).
 
     - Response
@@ -362,7 +362,7 @@ This document describes how to register gateways and sensors and send sensor val
             "deviceId": "366d685f93f5477a8d29e8c45bae0a31"
           }
           ```
-        - reqId: Generate a sensor ID using UUID and use it.
+        - reqId: [Generate a UUID](https://www.uuidgenerator.net/) and use it as the sensor ID.
         - name: You can freely input the name for the sensor.
         - type: Use the sensor type value, `type` in `deviceModels.sensors` when querying the gateway model.
         - driverName: Use the value, `driverName` corresponing to the `type` in `deviceModels.sensors` when querying the gateway model.

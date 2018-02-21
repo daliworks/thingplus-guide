@@ -1,11 +1,11 @@
 # Getting Started with the Thing+ REST APIs
 
 ## Step 1. Service set up
-  - [Register a Thing+ service](https://iot.thingplus.net/#/register)
+  - Register a Thing+ service at [https://iot.thingplus.net/#/register](https://iot.thingplus.net/#/register)
       - Or, your service may have already have been set up by our team, if you are a commercial partner
   - If you are making an app, make sure your application can receive web requests from Thing+ (i.e. It has a public IP or URL)
   > NOTE: Please check your Thing+ service's location before continuing
-  - api.thingplus.net - This is the Japanese API server - if you registered your own service, this will be the API server you should use
+  - api.thingplus.net - This is the main API server - if you registered your own service, this will be the API server you should use
   - api.thingplus.eu - This is the EU API server
   - api.sandbox.thingplus.net - This is a commercial API test server from Seoul.
   - service-name.your-domain.com/api - If you have signed up for our custom domain service
@@ -17,7 +17,9 @@
   - Install [Google Chrome](http://www.google.com/chrome)
   - Install <a href="https://www.getpostman.com/docs/introduction" target="_blank">Postman</a>. <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop" target="_blank">Direct link for Chrome browser users</a>
   - You don't need to sign up, just click the 'Go to the app' button
+
       ![import](images/postman-first-launch.png)
+
   - Postman guide: <a href="https://www.getpostman.com/docs/launch" target="_blank">Launching Postman</a> and <a href="https://www.getpostman.com/docs/requests" target="_blank"> sending requests</a>
 
 ### 2.2. Import a Postman collection

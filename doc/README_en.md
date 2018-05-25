@@ -110,17 +110,24 @@ From time to time, the `SandBox` will also have new features that are still in t
 ## 4.  API documentation
 [Link](https://thingplus.api-docs.io/2.0)
 
-### 4.1 Test URL
-https://www.sandbox.thingplus.net/
+### 4.1 Test Service URL
+Our team can set up a test service for you for proof of concept and other small-project work. Please contact the bizteam at contact@daliworks.net if you would like to set up a sandbox test service. This will also allow you to use our API via the sandbox API server below:
+
+https://api.sandbox.thingplus.net/v2
 
 ### 4.2 Commercial Service URL
-You need request to us for use commercial Service
+You will need to have a commercial service with us before using our API. Please connect with our biz team via contact@thingplus.net if you would like to open a commercial account.
 `https://***.thingplus.net/` (*** is your own service)
 
-ex) https://myiot.thingplus.net/
+ex1) https://myiot.thingplus.net/
 
-ex) https://www.hello.thingplus.net/
+ex2) https://www.hello.thingplus.net/
 
+> NOTE: Please be mindful of what instance your service is on. Currently we support our worldwide instance (.net) and our EU instance (.eu)
+
+Current commercial API server address:
+- For thingplus.net services: https://api.thingplus.net/v2
+- For thingplus.eu services: https://api.thingplus.eu/v2
 
 ### 4.3 API Version
 The current Thing+ API version and documentation is v2.0.

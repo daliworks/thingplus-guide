@@ -112,17 +112,24 @@
 ## 4. API 문서
 [Link](https://thingplus.api-docs.io/2.0/)
 
-### 4.1 Test URL
-https://www.sandbox.thingplus.net/
+### 4.1 Test Service URL
+PoC(Proof of Concept) 또는 소규모 프로젝트를 위해 테스트 서비스를 개설하고 있습니다. 서비스 개설을 원하신다면, contact@thingplus.net 으로 연락을 부탁드립니다. 서비스 개설 이후에는 아래 Sandbox 서버를 통해 API를 사용하실 수 있습니다.
+
+https://api.sandbox.thingplus.net/v2
 
 ### 4.2 상용(정식) Service URL
-상용(정식) 서비스를 이용하시기 위해서는 `Thing+`에 요청이 필요합니다.
+상용(정식) 서비스를 이용하시기 위해서는 `Thing+`에 요청이 필요합니다. 상용 서비스에 개설을 원하신다면,  contact@thingplus.net 으로 연락을 부탁드립니다.
 https://***.thingplus.net/ (*** 는 서비스 고유의 url 입니다)
 
-ex) https://myiot.thingplus.net/
+ex1) https://myiot.thingplus.net/
 
-ex) https://www.hello.thingplus.net/
+ex2) https://www.hello.thingplus.net/
 
+> 주의: 개설한 서비스가 속해있는 지역을 확인하세요. 현재 Thing+는 월드와이드(.net), EU지역(.eu)를 지원하고 있습니다.
+
+상용 API 서버 URL:
+- For thingplus.net services: https://api.thingplus.net/v2
+- For thingplus.eu services: https://api.thingplus.eu/v2
 
 ### 4.3 API Version
 Thing+ API의 최신 버전은 v2.0이며 API 문서도 v2.0기준으로 되어 있습니다.

@@ -57,8 +57,6 @@ get | gatewayModels |
 get | gatewayModels/:id |
 get | ruleAgents |
 get | ruleAgents/:id |
-get | agents |
-get | agents/:id |
 post | activateGatewayKey | 게이트웨이의 APIKEY가 동작하도록 변경 (활성화)
 
 ## REST API - Login 필요

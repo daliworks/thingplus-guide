@@ -196,7 +196,7 @@ Connect your device to Thing+. We have a detailed list of supported device and c
 
 The easiest way to get data flowing to something on the dashboard is create a open source gateway via the UI with the sensor(s) types you would like to test.
 1. Use the create gateway prompt (from the settings menu &rarr; gateway management &rarr; plus button),
-2. Select "Open Source Gateway" from the gateway model menu
+2. Select "Open Source Gateway v2" from the gateway model menu
 
 ![create-gateway](images/create-gateway.png)
 
